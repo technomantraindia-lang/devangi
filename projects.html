@@ -7,8 +7,9 @@
   <title>Projects | Devangi Power Private Limited</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <style>
     body { font-family: "Open Sans", sans-serif; }
     .nav-dropdown-wrap:hover .nav-dropdown, .nav-dropdown-wrap:focus-within .nav-dropdown { opacity: 1 !important; visibility: visible !important; transform: translateX(-50%) translateY(0) !important; }
@@ -21,6 +22,9 @@
     #mobile-solutions-menu.open { max-height: 400px; }
     #mobile-solutions-btn.open .mobile-chev { transform: rotate(180deg); }
     .footer-energy { background: radial-gradient(circle at 12% 0%, rgba(162,202,247,0.14), transparent 28%), linear-gradient(135deg, #07131f 0%, #0a3d62 100%); }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; cursor: grab; }
+    .hide-scrollbar:active { cursor: grabbing; }
   </style>
 </head>
 
@@ -78,24 +82,588 @@
     </div>
   </header>
 
-  <main class="min-h-screen bg-[#07131f] pt-28"></main>
+  <main class="min-h-screen bg-[#F9FAFC] pt-24 text-[#52606d] pb-24">
+    
+    <!-- 1. Hero / Gallery Banner: Infrastructure in Motion -->
+    <section class="relative w-full min-h-[75vh] lg:min-h-[82vh] flex flex-col lg:flex-row items-center overflow-hidden bg-[#082943] pt-28 lg:pt-32 pb-20 px-5 md:px-12 z-10">
+      
+      <!-- Background details -->
+      <div class="absolute inset-0 z-0">
+        <!-- Secondary Background Layer gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#082943] via-[#103B58] to-[#082943] opacity-80"></div>
+        <!-- Grid pattern -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwem0zOSAzOUgxdjFoMzh6bS0zOC0xSDBWMWgxeiIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjAzKSIvPjwvc3ZnPg==')] opacity-50"></div>
+        <!-- Coordinates and Line-art -->
+        <div class="absolute top-1/4 left-4 md:left-10 text-[10px] font-mono text-[rgba(155,195,224,0.3)] tracking-widest rotate-90 origin-left">N 21° 10' 32" / E 72° 49' 48"</div>
+        <div class="absolute bottom-1/4 right-4 md:right-10 text-[10px] font-mono text-[rgba(155,195,224,0.3)] tracking-widest -rotate-90 origin-right">DPPL / EXECUTION GRID</div>
+        <!-- Large Transparent Word -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] md:text-[15vw] font-['Montserrat'] font-black text-white/[0.02] tracking-tighter pointer-events-none whitespace-nowrap">PROJECTS</div>
+        <!-- Thin cable line art -->
+        <div class="absolute left-0 top-1/3 w-full h-px bg-[rgba(155,195,224,0.12)] mix-blend-screen"></div>
+        <div class="absolute left-1/3 top-0 w-px h-full bg-[rgba(155,195,224,0.12)] mix-blend-screen"></div>
+      </div>
+
+      <div class="relative z-10 w-full max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-8 mt-6">
+        
+        <!-- Left Content Area (38%-42%) -->
+        <div class="w-full lg:w-5/12 flex flex-col justify-center text-left">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-8 h-0.5 bg-[#EE9146]"></div>
+            <span class="text-[#EE9146] font-mono text-xs font-bold uppercase tracking-[0.2em]">Project Gallery</span>
+          </div>
+          
+          <h1 class="font-['Montserrat'] text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#F4F8FC] mb-6 leading-[1.15] max-w-lg">
+            Power Infrastructure,<br>Executed with Precision.
+          </h1>
+          
+          <p class="text-[rgba(244,248,252,0.72)] font-['Open_Sans'] text-base lg:text-lg mb-10 max-w-md leading-relaxed">
+            Explore DPPL’s execution capability across transmission lines, substations, underground cabling and integrated EPC power infrastructure solutions.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <a href="#project-grid" class="inline-flex items-center justify-center gap-2 bg-[#EE9146] text-[#082943] font-bold text-sm uppercase tracking-wider px-7 py-3.5 rounded-full hover:bg-white hover:text-[#082943] transition-all shadow-[0_10px_20px_rgba(238,145,70,0.2)] hover:-translate-y-1">
+              Explore Projects <span class="material-symbols-outlined text-lg">arrow_downward</span>
+            </a>
+          </div>
+          
+          <div class="mt-12 lg:mt-16 text-[9px] md:text-[10px] font-mono text-[rgba(244,248,252,0.4)] uppercase tracking-[0.2em] max-w-sm leading-relaxed hidden sm:block">
+            TRANSMISSION &nbsp;/&nbsp; SUBSTATIONS &nbsp;/&nbsp; UNDERGROUND CABLING &nbsp;/&nbsp; EPC
+          </div>
+        </div>
+        
+        <!-- Right Side: Layered Project Image Gallery -->
+        <div class="w-full lg:w-7/12 relative min-h-[400px] lg:min-h-[600px] flex items-center justify-center lg:justify-end mt-8 lg:mt-0">
+          
+          <!-- Vertical Project Counter -->
+          <div class="absolute left-0 lg:-left-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 z-30 hidden lg:flex">
+            <span class="text-[10px] font-mono text-[rgba(244,248,252,0.5)] uppercase tracking-widest -rotate-90 mb-12 whitespace-nowrap">Featured Work</span>
+            <span id="hero-counter-current" class="text-[#EE9146] font-bold font-mono text-sm transition-all duration-300">01</span>
+            <span class="w-px h-8 bg-[rgba(244,248,252,0.2)]"></span>
+            <span class="text-[rgba(244,248,252,0.5)] font-mono text-sm">03</span>
+          </div>
+
+          <!-- The Image Composition -->
+          <div class="relative w-full max-w-[650px] aspect-square md:aspect-auto md:h-[550px]" id="hero-gallery">
+            
+            <!-- Secondary Image 2: Cabling (Back/Left) -->
+            <div class="hero-card absolute top-1/4 left-0 w-[55%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 z-10 transform -translate-x-4 -rotate-3 transition-all duration-1000 ease-in-out hidden md:block cursor-pointer">
+              <img src="site_image-1.avif" alt="Underground Cable Works" class="hero-img w-full h-full object-cover filter grayscale opacity-70 transition-all duration-1000 ease-in-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#082943]/90 to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="w-4 h-px bg-[#EE9146]"></span>
+                  <span class="text-[9px] font-mono text-[#EE9146] uppercase tracking-wider font-bold">Cable Works</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secondary Image 1: Substation (Bottom/Right) -->
+            <div class="hero-card absolute bottom-0 right-4 w-[50%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 z-20 transform translate-y-4 rotate-2 transition-all duration-1000 ease-in-out hidden md:block cursor-pointer">
+              <img src="site_image-1.avif" alt="Substation Execution" class="hero-img w-full h-full object-cover filter sepia-[.3] contrast-125 opacity-80 transition-all duration-1000 ease-in-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#082943]/90 to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="w-4 h-px bg-[#EE9146]"></span>
+                  <span class="text-[9px] font-mono text-[#EE9146] uppercase tracking-wider font-bold">Substation Execution</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Featured Image (Front/Center-Right on Desktop, Full on Mobile) -->
+            <div class="hero-card absolute inset-0 md:inset-auto md:top-4 md:right-8 md:w-[70%] md:aspect-[3/4] rounded-3xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-[rgba(255,255,255,0.14)] z-30 transform transition-all duration-1000 ease-in-out cursor-pointer">
+              <img src="site_image-1.avif" alt="EHV Transmission Infrastructure" class="hero-img w-full h-full object-cover transition-all duration-1000 ease-in-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#082943] via-transparent to-transparent opacity-90"></div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-0.5 bg-[#EE9146]"></span>
+                    <span class="text-[#EE9146] font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">Active Project</span>
+                  </div>
+                  <h3 class="text-white font-['Montserrat'] font-bold text-lg md:text-2xl leading-tight">EHV TRANSMISSION INFRASTRUCTURE</h3>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+
+    <div class="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16 relative -mt-10 z-20">
+      
+      <!-- 2. Project Portfolio Section -->
+      <section class="relative w-full bg-[#F5F9FC] py-16 lg:py-24 z-20 rounded-b-3xl" id="project-portfolio">
+        <!-- Faint Technical Grid Background -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwem0zOSAzOUgxdjFoMzh6bS0zOC0xSDBWMWgxeiIgZmlsbD0icmdiYSg4OCwgMTEzLCAxMzUsIDAuMDUpIi8+PC9zdmc+')] pointer-events-none opacity-50"></div>
+        
+        <div class="relative z-10 max-w-[1400px] mx-auto px-5 md:px-12">
+          <!-- Top Heading Area -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div class="max-w-[600px]">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-6 h-0.5 bg-[#E99146]"></div>
+                <span class="text-[#E99146] font-mono text-xs font-bold uppercase tracking-[0.2em]">Project Portfolio</span>
+              </div>
+              <h2 class="font-['Montserrat'] text-3xl md:text-4xl font-extrabold text-[#0A304E] mb-4">
+                Explore Completed Works
+              </h2>
+              <p class="text-[#587187] font-['Open_Sans'] leading-relaxed">
+                Browse DPPL’s project execution across transmission infrastructure, substations, underground cabling and turnkey power solutions.
+              </p>
+            </div>
+            <div class="hidden md:block text-right">
+              <span class="text-[10px] font-mono text-[#587187] uppercase tracking-widest block mb-1">Total Projects</span>
+              <span class="text-[#0A304E] font-mono font-bold text-lg">PROJECTS / 12</span>
+            </div>
+          </div>
+
+          <!-- Filter Pill Row -->
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10">
+            <div class="flex flex-row overflow-x-auto hide-scrollbar gap-3 pb-2 lg:pb-0 w-full lg:w-auto" id="portfolio-filters">
+              <button class="filter-btn shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#0A304E] text-white font-semibold text-sm transition-all border border-[#0A304E] active" data-filter="all">
+                <span class="filter-dot w-1.5 h-1.5 rounded-full bg-[#E99146]"></span> All Projects
+              </button>
+              <button class="filter-btn shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#0A304E] font-semibold text-sm transition-all border border-[rgba(10,48,78,0.1)] hover:border-[#E99146] hover:bg-white" data-filter="transmission">
+                <span class="filter-dot w-1.5 h-1.5 rounded-full bg-transparent"></span> Transmission Lines
+              </button>
+              <button class="filter-btn shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#0A304E] font-semibold text-sm transition-all border border-[rgba(10,48,78,0.1)] hover:border-[#E99146] hover:bg-white" data-filter="substation">
+                <span class="filter-dot w-1.5 h-1.5 rounded-full bg-transparent"></span> Substations
+              </button>
+              <button class="filter-btn shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#0A304E] font-semibold text-sm transition-all border border-[rgba(10,48,78,0.1)] hover:border-[#E99146] hover:bg-white" data-filter="cables">
+                <span class="filter-dot w-1.5 h-1.5 rounded-full bg-transparent"></span> Underground Cable Works
+              </button>
+              <button class="filter-btn shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#0A304E] font-semibold text-sm transition-all border border-[rgba(10,48,78,0.1)] hover:border-[#E99146] hover:bg-white" data-filter="epc">
+                <span class="filter-dot w-1.5 h-1.5 rounded-full bg-transparent"></span> Turnkey EPC
+              </button>
+              <button class="filter-btn shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#0A304E] font-semibold text-sm transition-all border border-[rgba(10,48,78,0.1)] hover:border-[#E99146] hover:bg-white" data-filter="renewable">
+                <span class="filter-dot w-1.5 h-1.5 rounded-full bg-transparent"></span> Renewable Energy
+              </button>
+            </div>
+
+            <!-- Sorting Dropdown -->
+            <div class="relative shrink-0 w-full lg:w-auto">
+              <select class="w-full lg:w-auto appearance-none bg-white border border-[rgba(10,48,78,0.1)] text-[#0A304E] font-bold text-sm rounded-full pl-5 pr-10 py-2.5 focus:outline-none focus:border-[#E99146] cursor-pointer transition-colors">
+                <option>Latest First</option>
+                <option>Oldest First</option>
+                <option>Name A-Z</option>
+              </select>
+              <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-[#0A304E] pointer-events-none text-[18px]">expand_more</span>
+            </div>
+          </div>
+
+          <style>
+            #project-gallery-grid:not(.is-filtered) .featured-card {
+              grid-column: span 1 / span 1;
+              grid-row: span 1 / span 1;
+            }
+            #project-gallery-grid:not(.is-filtered) .featured-small-card {
+              grid-column: span 1 / span 1;
+            }
+            @media (min-width: 1024px) {
+              #project-gallery-grid:not(.is-filtered) .featured-card {
+                grid-column: span 2 / span 2;
+                grid-row: span 2 / span 2;
+                height: 624px !important;
+              }
+              #project-gallery-grid:not(.is-filtered) .featured-small-card {
+                grid-column: span 2 / span 2;
+              }
+            }
+          </style>
+
+          <!-- Unified Gallery Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="project-gallery-grid">
+            
+            <!-- Featured Large Card (Left) -->
+            <div class="project-card featured-card h-[300px] lg:h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="transmission" onclick="openModal('220kV Transmission Infrastructure', 'Gujarat', '2023', 'Major transmission corridor spanning across complex terrains.', ['Transmission', 'EPC'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="Featured Transmission Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/20 to-transparent"></div>
+              
+              <!-- Hover Circular Arrow -->
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-3xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 lg:p-8 z-10 flex flex-col justify-end">
+                <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-3 py-1.5 rounded-full self-start mb-3">TRANSMISSION LINES</span>
+                <h3 class="font-['Montserrat'] text-2xl lg:text-3xl font-bold text-white mb-2 leading-tight">220kV Transmission Infrastructure</h3>
+                <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-white/70">
+                  <span class="material-symbols-outlined text-[14px]">location_on</span> Gujarat, India
+                </div>
+              </div>
+            </div>
+
+            <!-- Small Card 1 -->
+            <div class="project-card featured-small-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="substation" onclick="openModal('Substation Construction & Commissioning', 'Surat', '2022', 'Complete 66kV substation setup.', ['Substation'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="Substation Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale contrast-125" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
+              
+              <!-- Hover Circular Arrow -->
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 z-10">
+                <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">SUBSTATIONS</span>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">Substation Construction & Commissioning</h3>
+              </div>
+            </div>
+
+            <!-- Small Card 2 -->
+            <div class="project-card featured-small-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="cables" onclick="openModal('XLPE Cable Route Execution', 'Ahmedabad', '2021', 'Underground routing in dense urban area.', ['Cables'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="Underground Cabling Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter sepia-[.3]" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
+              
+              <!-- Hover Circular Arrow -->
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 z-10">
+                <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">UNDERGROUND CABLING</span>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">XLPE Cable Route Execution</h3>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="project-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="renewable epc" onclick="openModal('Solar EPC & BESS', 'Renewable Energy Pilot', '2023', 'Cutting-edge renewable energy pilot with integrated Battery Energy Storage System.', ['Renewable', 'EPC'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="Solar EPC & BESS" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter hue-rotate-15" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
+              
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 z-10">
+                <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">RENEWABLE & EPC</span>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">Solar EPC & BESS</h3>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="project-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="transmission" onclick="openModal('400kV Line Augmentation', 'Maharashtra', '2022', 'Capacity enhancement of existing 400kV transmission infrastructure.', ['Transmission'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="400kV Line Augmentation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale contrast-[1.1]" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
+              
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 z-10">
+                <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">TRANSMISSION LINES</span>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">400kV Line Augmentation</h3>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="project-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="substation epc" onclick="openModal('220kV Turnkey Substation', 'Madhya Pradesh', '2023', 'Turnkey execution of greenfield 220kV substation yard.', ['Substation', 'EPC'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="220kV Turnkey Substation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter sepia-[.2]" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
+              
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 z-10">
+                <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">SUBSTATIONS & EPC</span>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">220kV Turnkey Substation</h3>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="project-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="cables" onclick="openModal('Urban EHV Cable Network', 'Mumbai', '2024', 'High-density urban area 132kV EHV cable network laying and jointing.', ['Cables'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="Urban EHV Cable Network" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
+              
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 z-10">
+                <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">UNDERGROUND CABLING</span>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">Urban EHV Cable Network</h3>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="project-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="substation" onclick="openModal('132kV Substation Upgradation', 'Pune', '2021', 'Comprehensive capacity upgrade and relay automation for an aging 132kV substation.', ['Substation'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="132kV Substation Upgradation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter saturate-[0.8]" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
+              
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 z-10">
+                <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">SUBSTATIONS</span>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">132kV Substation Upgradation</h3>
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="project-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="renewable epc" onclick="openModal('Utility-Scale Wind Farm Grid Connectivity', 'Tamil Nadu', '2023', 'End-to-end grid connectivity infrastructure for a 150MW wind farm including a dedicated pooling substation.', ['Renewable', 'EPC'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="Wind Farm Grid Connectivity" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter sepia-[.1]" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
+              
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 z-10">
+                <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">RENEWABLE & EPC</span>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">Wind Farm Grid Connectivity</h3>
+              </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="project-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="transmission" onclick="openModal('River Crossing Transmission Towers', 'Brahmaputra Basin', '2024', 'Erection of specially designed 150m tall transmission towers for a critical river crossing.', ['Transmission'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="River Crossing Towers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter hue-rotate-15 contrast-[1.1]" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
+              
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 z-10">
+                <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">TRANSMISSION LINES</span>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">River Crossing Transmission Towers</h3>
+              </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="project-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="cables epc" onclick="openModal('Smart City Underground Network', 'Smart City Initiative', '2022', 'Conversion of overhead utility lines into an organized underground EHV/HV network.', ['Cables', 'EPC'], 'site_image-1.avif')">
+              <img src="site_image-1.avif" alt="Smart City Underground Network" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-125" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
+              
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E99146] text-white flex items-center justify-center opacity-0 transform scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 shadow-lg">
+                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full p-6 z-10">
+                <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">CABLING & EPC</span>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">Smart City Underground Network</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 5. Project Modal / Lightbox -->
+  <div id="project-modal" class="fixed inset-0 z-[100] flex items-center justify-center px-4 md:px-12 opacity-0 pointer-events-none transition-opacity duration-300">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-[#07131f]/90 backdrop-blur-md cursor-pointer" onclick="closeModal()"></div>
+    
+    <!-- Modal Content -->
+    <div class="relative w-full max-w-6xl bg-white rounded-3xl overflow-hidden shadow-2xl transform scale-95 opacity-0 transition-all duration-300 flex flex-col lg:flex-row max-h-[90vh]" id="modal-container">
+      
+      <!-- Close Button -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 lg:top-6 lg:right-6 z-20 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm lg:bg-gray-100 flex items-center justify-center text-white lg:text-gray-600 hover:bg-[#E9924A] hover:text-white transition-colors border border-white/30 lg:border-transparent">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <!-- Image Area -->
+      <div class="lg:w-3/5 h-[300px] lg:h-auto lg:min-h-[600px] relative">
+        <img id="modal-img" src="site_image-1.avif" alt="Project Image" class="w-full h-full object-cover" />
+      </div>
+
+      <!-- Info Area -->
+      <div class="lg:w-2/5 p-8 lg:p-12 flex flex-col overflow-y-auto">
+        <div class="flex items-center gap-3 mb-4 text-xs font-mono uppercase tracking-widest text-gray-500 font-bold">
+          <span id="modal-location" class="text-[#0B3558]">Gujarat</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#E9924A]"></span>
+          <span id="modal-year" class="text-[#0B3558]">2022</span>
+        </div>
+        
+        <h3 id="modal-title" class="font-['Montserrat'] text-3xl font-bold text-[#0B3558] mb-6 leading-tight">400kV Transmission Expansion</h3>
+        
+        <div id="modal-tags" class="flex flex-wrap items-center gap-2 text-[10px] font-mono font-bold uppercase tracking-widest mb-8">
+          <span class="bg-[#F4F8FC] text-[#0B3558] px-3 py-1.5 rounded">Transmission</span>
+        </div>
+
+        <div class="w-12 h-1 bg-[#E9924A] mb-8"></div>
+        
+        <p id="modal-desc" class="text-[#52606d] text-base leading-relaxed mb-10 flex-grow">
+          Detailed description of the project goes here. It was a landmark project delivering high-capacity energy transfer capability across the state.
+        </p>
+
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-[#0B3558] text-white font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-xl hover:bg-[#E9924A] transition-colors self-start w-full md:w-auto shadow-[0_10px_20px_rgba(11,53,88,0.15)] hover:-translate-y-0.5">
+          Discuss a Similar Project
+        </a>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer-energy relative overflow-hidden text-white">
     <div class="mx-auto max-w-[1400px] px-5 py-12 md:px-12 md:py-16">
       <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.25fr_0.75fr_1fr_0.75fr]">
-        <div><a href="index.html" class="inline-flex items-center rounded-2xl bg-white/[0.92] px-4 py-3 shadow-[0_20px_55px_rgba(0,0,0,0.28),0_0_0_1px_rgba(255,255,255,0.65),0_0_34px_rgba(162,202,247,0.20)]"><img src="logo.png" alt="Devangi Power Private Limited" class="h-14 w-auto object-contain md:h-20" /></a><p class="mt-4 max-w-sm text-white/68">Powering Tomorrow's Infrastructure</p><div class="mt-6 h-px w-40 bg-gradient-to-r from-[#a2caf7] to-transparent"></div></div>
+        <div><a href="index.html" class="inline-flex items-center rounded-2xl bg-white/[0.92] px-4 py-3 shadow-[0_20px_55px_rgba(0,0,0,0.28),0_0_0_1px_rgba(255,255,255,0.65),0_0_34px_rgba(162,202,247,0.20)]"><img src="logo.png" alt="Devangi Power Private Limited" class="h-14 w-auto object-contain md:h-20" /></a><p class="mt-4 max-w-sm text-white/68">Powered by Commitment</p><p class="mt-2 max-w-sm text-sm leading-6 text-white/52">Specialists in EHV Cable Transmission Line | Substation EPC Project</p><div class="mt-6 h-px w-40 bg-gradient-to-r from-[#a2caf7] to-transparent"></div></div>
         <div><h3 class="mb-5 font-mono text-xs uppercase tracking-[0.1em] text-[#a2caf7]">Quick Links</h3><nav class="grid gap-3 text-white/68"><a class="hover:text-white" href="index.html">Home</a><a class="hover:text-white" href="about.html">About</a><a class="hover:text-white" href="services.html">Services</a><a class="hover:text-white" href="projects.html">Projects</a><a class="hover:text-white" href="contact.html">Contact</a></nav></div>
-        <div><h3 class="mb-5 font-mono text-xs uppercase tracking-[0.1em] text-[#a2caf7]">Contact Info</h3><div class="space-y-4 text-white/68"><p>+91 97256 61325</p><p>admin@devangipower.com</p><p class="leading-7">Shop No. 91, Krishna Park Society-2, Simadagam, Surat - 395006</p></div></div>
+        <div><h3 class="mb-5 font-mono text-xs uppercase tracking-[0.1em] text-[#a2caf7]">Contact Info</h3><div class="space-y-4 text-white/68"><p>+91 97256 61325</p><p>admin@devangipower.com</p><p>www.devangipower.com</p><p class="leading-7">Office No.520 &amp; 521, The Galleria Business Hub 2, Near Maharaja Chowk, Varachha, Surat, Gujarat - 395010</p></div></div>
         <div><h3 class="mb-5 font-mono text-xs uppercase tracking-[0.1em] text-[#a2caf7]">Connect</h3><div class="flex gap-3"><a class="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/8 font-bold text-white hover:bg-[#a2caf7] hover:text-[#0a3d62]" href="#">in</a><a class="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/8 font-bold text-white hover:bg-[#a2caf7] hover:text-[#0a3d62]" href="#">X</a><a class="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/8 font-bold text-white hover:bg-[#a2caf7] hover:text-[#0a3d62]" href="#">IG</a></div></div>
       </div>
-      <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/52 md:flex-row md:items-center md:justify-between"><p>(c) 2026 Devangi Power Pvt. Ltd. All rights reserved.</p><p class="font-mono text-xs uppercase tracking-[0.1em] text-white/42">Engineering Excellence in Power EPC</p></div>
+      <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/52 md:flex-row md:items-center md:justify-between"><p>(c) 2026 Devangi Power Pvt. Ltd. All rights reserved.</p><p class="font-mono text-xs uppercase tracking-[0.1em] text-white/42">Specialists in EHV Cable Transmission Line | Substation EPC Project</p></div>
     </div>
   </footer>
   <script>
+    // Navigation logic (reused from global)
     const navGlass = document.querySelector('.nav-glass'); window.addEventListener('scroll', () => { navGlass.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
     const mobileMenuBtn = document.getElementById('mobile-menu-btn'); const mobileMenu = document.getElementById('mobile-menu'); mobileMenuBtn.addEventListener('click', () => { mobileMenuBtn.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
     mobileMenu.querySelectorAll('a').forEach((link) => { link.addEventListener('click', () => { mobileMenuBtn.classList.remove('open'); mobileMenu.classList.remove('open'); }); });
     const mobileSolutionsBtn = document.getElementById('mobile-solutions-btn'); const mobileSolutionsMenu = document.getElementById('mobile-solutions-menu'); mobileSolutionsBtn.addEventListener('click', () => { mobileSolutionsBtn.classList.toggle('open'); mobileSolutionsMenu.classList.toggle('open'); });
+
+    // Project Portfolio Filter Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // 1. Update active button styling
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-[#0A304E]', 'text-white', 'active');
+            b.classList.add('bg-white', 'text-[#0A304E]');
+            const dot = b.querySelector('.filter-dot');
+            if(dot) dot.classList.replace('bg-[#E99146]', 'bg-transparent');
+          });
+          btn.classList.remove('bg-white', 'text-[#0A304E]');
+          btn.classList.add('bg-[#0A304E]', 'text-white', 'active');
+          const activeDot = btn.querySelector('.filter-dot');
+          if(activeDot) activeDot.classList.replace('bg-transparent', 'bg-[#E99146]');
+
+          const filterValue = btn.getAttribute('data-filter');
+          const grid = document.getElementById('project-gallery-grid');
+          
+          if (filterValue === 'all') {
+            grid.classList.remove('is-filtered');
+          } else {
+            grid.classList.add('is-filtered');
+          }
+
+          // 2. Animate and Filter Cards
+          projectCards.forEach(card => {
+            // First fade out
+            card.classList.remove('opacity-100', 'scale-100');
+            card.classList.add('opacity-0', 'scale-95');
+            
+            setTimeout(() => {
+              // Hide or show based on category
+              const categories = card.getAttribute('data-category').split(' ');
+              if (filterValue === 'all' || categories.includes(filterValue)) {
+                card.style.display = 'block'; // using block to keep layout flow
+                
+                // Slight delay to ensure display:block takes effect before fading in
+                setTimeout(() => {
+                  card.classList.remove('opacity-0', 'scale-95');
+                  card.classList.add('opacity-100', 'scale-100');
+                }, 50);
+              } else {
+                card.style.display = 'none';
+              }
+            }, 300); // Wait for fade out transition
+          });
+        });
+      });
+    });
+
+    // Hero Image Rotation Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = Array.from(document.querySelectorAll('.hero-card'));
+      const counter = document.getElementById('hero-counter-current');
+      
+      if (cards.length === 3) {
+        // Store original wrapper classes and inner image classes
+        const wrapperClasses = cards.map(c => c.className);
+        const imgClasses = cards.map(c => c.querySelector('.hero-img').className);
+        
+        let currentIndex = 0;
+        
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % 3;
+          
+          if(counter) {
+            counter.innerText = '0' + (currentIndex + 1);
+          }
+          
+          cards.forEach((card, i) => {
+            // Calculate which state this card should receive
+            const stateIndex = (i - currentIndex + 3) % 3;
+            card.className = wrapperClasses[stateIndex];
+            card.querySelector('.hero-img').className = imgClasses[stateIndex];
+          });
+          
+        }, 5000); // Shift every 5 seconds
+      }
+    });
+
+    // Modal Logic
+    const modal = document.getElementById('project-modal');
+    const modalContainer = document.getElementById('modal-container');
+    
+    function openModal(title, location, year, desc, tagsArray, imgSrc) {
+      // Inject Data
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-location').innerText = location;
+      document.getElementById('modal-year').innerText = year;
+      document.getElementById('modal-desc').innerText = desc;
+      document.getElementById('modal-img').src = imgSrc;
+
+      // Inject Tags
+      const tagsContainer = document.getElementById('modal-tags');
+      tagsContainer.innerHTML = ''; // clear existing
+      tagsArray.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'bg-[#F4F8FC] text-[#0B3558] px-3 py-1.5 rounded';
+        span.innerText = tag;
+        tagsContainer.appendChild(span);
+      });
+
+      // Show Modal
+      modal.classList.remove('pointer-events-none', 'opacity-0');
+      modalContainer.classList.remove('scale-95', 'opacity-0');
+      modalContainer.classList.add('scale-100', 'opacity-100');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeModal() {
+      modalContainer.classList.remove('scale-100', 'opacity-100');
+      modalContainer.classList.add('scale-95', 'opacity-0');
+      
+      setTimeout(() => {
+        modal.classList.add('pointer-events-none', 'opacity-0');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    // Drag to scroll for filter pills on desktop
+    const slider = document.getElementById('portfolio-filters');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    if (slider) {
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+      slider.addEventListener('mouseleave', () => {
+        isDown = false;
+      });
+      slider.addEventListener('mouseup', () => {
+        isDown = false;
+      });
+      slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll speed multiplier
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    }
   </script>
 </body>
 

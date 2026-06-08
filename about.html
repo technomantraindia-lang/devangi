@@ -65,6 +65,167 @@
         radial-gradient(circle at 12% 0%, rgba(162, 202, 247, 0.14), transparent 28%),
         linear-gradient(135deg, #07131f 0%, #0a3d62 100%);
     }
+
+    .about-inner-hero {
+      background:
+        radial-gradient(circle at 18% 22%, rgba(162, 202, 247, 0.26), transparent 30%),
+        radial-gradient(circle at 86% 72%, rgba(249, 186, 126, 0.14), transparent 28%),
+        #f4f8fc;
+    }
+
+    .about-hero-year {
+      -webkit-text-stroke: 1px rgba(10, 61, 98, 0.16);
+      color: transparent;
+    }
+
+    .about-hero-image {
+      filter: saturate(0.9) hue-rotate(184deg) contrast(1.04);
+    }
+
+    .journey-section {
+      background:
+        radial-gradient(circle at 14% 16%, rgba(162, 202, 247, 0.2), transparent 28%),
+        radial-gradient(circle at 86% 74%, rgba(249, 186, 126, 0.12), transparent 30%),
+        linear-gradient(180deg, #f8fafc 0%, #eef5fb 100%);
+    }
+
+    .journey-year {
+      -webkit-text-stroke: 1px rgba(10, 61, 98, 0.18);
+      color: transparent;
+      animation: journeyRise 900ms ease-out both;
+    }
+
+    .journey-copy {
+      animation: journeyFade 800ms ease-out 120ms both;
+    }
+
+    .journey-tag::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 9999px;
+      background: #f2a65a;
+      box-shadow: 0 0 18px rgba(242, 166, 90, 0.55);
+      flex: 0 0 auto;
+    }
+
+    .timeline-line {
+      background: linear-gradient(90deg, #0a3d62, #386188, #0a3d62);
+      animation: timelineDraw 1100ms ease-out both;
+      transform-origin: left;
+    }
+
+    .timeline-node {
+      box-shadow: 0 0 0 6px rgba(242, 166, 90, 0.16), 0 0 28px rgba(242, 166, 90, 0.36);
+      animation: nodeGlow 2.6s ease-in-out infinite;
+    }
+
+    .timeline-node:nth-of-type(2) {
+      animation-delay: 0.3s;
+    }
+
+    .timeline-node:nth-of-type(3) {
+      animation-delay: 0.6s;
+    }
+
+    .timeline-node:nth-of-type(4) {
+      animation-delay: 0.9s;
+    }
+
+    .tower-outline {
+      opacity: 0.08;
+      animation: towerDrift 8s ease-in-out infinite;
+    }
+
+    @keyframes journeyRise {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes journeyFade {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes timelineDraw {
+      from {
+        transform: scaleX(0);
+      }
+
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes nodeGlow {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    @keyframes towerDrift {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-14px);
+      }
+    }
+
+    @keyframes scrollMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: scrollMarquee 40s linear infinite;
+    }
+    .client-logo-text {
+      font-family: 'JetBrains Mono', monospace;
+      -webkit-text-stroke: 1px rgba(162, 202, 247, 0.3);
+      color: transparent;
+      transition: all 0.3s ease;
+    }
+    .client-logo-text:hover {
+      color: #a2caf7;
+      -webkit-text-stroke: 1px #a2caf7;
+      text-shadow: 0 0 20px rgba(162, 202, 247, 0.6);
+    }
+    
+    .value-strip:hover .value-icon-box {
+      box-shadow: 0 0 25px rgba(249, 186, 126, 0.4);
+      background: rgba(249, 186, 126, 0.15);
+    }
+    .power-line {
+      background: linear-gradient(90deg, transparent, #a2caf7, transparent);
+      background-size: 200% 100%;
+      animation: powerFlow 2s linear infinite;
+    }
+    @keyframes powerFlow {
+      0% { background-position: 100% 0; }
+      100% { background-position: -100% 0; }
+    }
+
   </style>
 </head>
 
@@ -156,7 +317,714 @@
     </div>
   </header>
 
-  <main class="min-h-screen bg-[#07131f] pt-28"></main>
+  <main class="bg-[#f4f8fc] text-[#0a3d62]">
+    <section class="about-inner-hero relative overflow-hidden pt-28 lg:min-h-[660px]">
+      <div class="pointer-events-none absolute left-[8%] top-32 font-mono text-xs uppercase tracking-[0.28em] text-[#0a3d62]/18">
+        X 21.1702 / Y 72.8311
+      </div>
+      <div class="pointer-events-none absolute right-[8%] top-44 hidden h-px w-52 bg-gradient-to-r from-transparent via-[#0a3d62]/24 to-transparent md:block"></div>
+      <div class="about-hero-year pointer-events-none absolute bottom-10 left-[6%] hidden font-['Montserrat'] text-[170px] font-extrabold leading-none tracking-tight opacity-80 lg:block">
+        2017
+      </div>
+
+      <div class="relative z-10 mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-5 pb-20 md:px-12 lg:min-h-[560px] lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
+        <div class="relative max-w-2xl py-8 lg:py-0">
+          <div class="about-hero-year pointer-events-none absolute -left-3 top-2 font-['Montserrat'] text-[92px] font-extrabold leading-none tracking-tight opacity-55 lg:hidden">
+            2017
+          </div>
+          <div class="relative z-10">
+            <p class="mb-5 font-mono text-xs font-medium uppercase tracking-[0.22em] text-[#386188]">
+              About Devangi Power
+            </p>
+            <h1 class="font-['Montserrat'] text-[42px] font-extrabold leading-[1.05] tracking-tight text-[#0a3d62] sm:text-[54px] lg:text-[64px]">
+              Built on Execution.<br />
+              Driven by Trust.
+            </h1>
+            <p class="mt-7 max-w-xl text-lg leading-8 text-[#52606d] md:text-xl">
+              Devangi Power Pvt. Ltd. is a Surat-based EPC company specializing in EHV cable transmission line and
+              substation EPC projects through disciplined engineering, skilled execution and a safety-first approach.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3 text-sm font-semibold uppercase tracking-[0.08em] text-[#386188]">
+              <span>Established 2017</span>
+              <span class="hidden h-4 w-px bg-[#0a3d62]/22 sm:block"></span>
+              <span>Surat, Gujarat</span>
+              <span class="hidden h-4 w-px bg-[#0a3d62]/22 sm:block"></span>
+              <span>EPC Power Infrastructure</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative pb-10 lg:pb-0">
+          <div class="absolute -right-3 top-4 z-20 hidden rounded-full border border-[#0a3d62]/12 bg-white/80 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[#386188] shadow-[0_16px_45px_rgba(10,61,98,0.10)] backdrop-blur-md md:block">
+            Engineering - Procurement - Construction
+          </div>
+          <div class="relative ml-auto max-w-[620px]">
+            <img src="site_image-1.avif" alt="Power infrastructure execution site"
+              class="about-hero-image h-[360px] w-full rounded-2xl border border-white object-cover object-center shadow-[0_34px_90px_rgba(10,61,98,0.22)] sm:h-[460px] lg:h-[540px]" />
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#0a3d62]/14 via-transparent to-[#07131f]/26"></div>
+            <div class="absolute -bottom-8 left-5 right-5 rounded-2xl border border-white bg-white/95 p-5 shadow-[0_24px_70px_rgba(10,61,98,0.22)] backdrop-blur-xl sm:left-8 sm:right-auto sm:w-[330px]">
+              <p class="font-['Montserrat'] text-4xl font-extrabold leading-none text-[#0a3d62]">220kV+</p>
+              <p class="mt-2 font-semibold text-[#386188]">Transmission Capability</p>
+              <p class="mt-3 text-sm font-semibold leading-6 text-[#334155]">
+                Integrated EPC execution for utility and industrial power infrastructure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="journey-section relative overflow-hidden py-20 md:py-28">
+      <svg class="tower-outline pointer-events-none absolute -right-10 top-16 hidden h-[560px] w-[360px] text-[#0a3d62] lg:block"
+        viewBox="0 0 220 360" fill="none" aria-hidden="true">
+        <path d="M110 12L28 340M110 12L192 340M70 130H150M48 220H172M28 340H192M84 70H136M58 172H162"
+          stroke="currentColor" stroke-width="3" />
+        <path d="M110 12L70 130L162 172L48 220L192 340M110 12L150 130L58 172L172 220L28 340"
+          stroke="currentColor" stroke-width="2" />
+      </svg>
+
+      <div class="pointer-events-none absolute left-[8%] top-16 hidden font-mono text-xs uppercase tracking-[0.22em] text-[#0a3d62]/18 md:block">
+        GRID REF / DPPL / SURAT / EPC
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-[1400px] px-5 md:px-12">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-20">
+          <aside class="relative border-l-4 border-[#f2a65a] pl-6">
+            <p class="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-[#386188]">
+              Established
+            </p>
+            <p class="journey-year mt-4 font-['Montserrat'] text-[96px] font-extrabold leading-none sm:text-[132px] lg:text-[170px]">
+              2017
+            </p>
+            <p class="mt-5 font-mono text-sm font-semibold uppercase tracking-[0.18em] text-[#52606d]">
+              Surat, Gujarat
+            </p>
+          </aside>
+
+          <div class="journey-copy">
+            <p class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-[#386188]">
+              Our Journey
+            </p>
+            <h2 class="font-['Montserrat'] text-[34px] font-extrabold leading-tight text-[#0a3d62] md:text-[48px]">
+              From Ground-Level Execution<br class="hidden md:block" />
+              to Integrated Power Solutions
+            </h2>
+            <div class="mt-7 max-w-4xl space-y-5 text-[17px] leading-8 text-[#52606d] md:text-[18px]">
+              <p>
+                Devangi Power Pvt. Ltd. began its journey in Surat with hands-on expertise in underground cabling and
+                transmission line works. Built on technical understanding, disciplined field execution and a strong
+                commitment to reliability, DPPL has grown into an EPC company delivering solutions across transmission
+                infrastructure, substations, underground cable projects and industrial power distribution.
+              </p>
+              <p>
+                Today, DPPL continues to strengthen its capabilities with a safety-first approach, skilled workforce and
+                an end-to-end execution model for evolving power infrastructure requirements.
+              </p>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <span class="journey-tag flex items-center gap-3 border border-[#0a3d62]/12 bg-white/44 px-4 py-3 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#0a3d62]">
+                Transmission Infrastructure
+              </span>
+              <span class="journey-tag flex items-center gap-3 border border-[#0a3d62]/12 bg-white/44 px-4 py-3 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#0a3d62]">
+                Substation Execution
+              </span>
+              <span class="journey-tag flex items-center gap-3 border border-[#0a3d62]/12 bg-white/44 px-4 py-3 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#0a3d62]">
+                Underground Cabling
+              </span>
+              <span class="journey-tag flex items-center gap-3 border border-[#0a3d62]/12 bg-white/44 px-4 py-3 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#0a3d62]">
+                Turnkey EPC Delivery
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 hidden lg:block">
+          <div class="relative h-2">
+            <div class="timeline-line absolute left-0 right-0 top-1/2 h-[3px] -translate-y-1/2"></div>
+            <div class="absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-[#f2a65a] timeline-node"></div>
+            <div class="absolute left-1/3 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f2a65a] timeline-node"></div>
+            <div class="absolute left-2/3 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f2a65a] timeline-node"></div>
+            <div class="absolute right-0 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-[#f2a65a] timeline-node"></div>
+          </div>
+          <div class="mt-8 grid grid-cols-4 gap-8">
+            <div>
+              <p class="font-mono text-xs font-semibold text-[#386188]">01</p>
+              <h3 class="mt-2 font-['Montserrat'] text-xl font-bold text-[#0a3d62]">Origin</h3>
+              <p class="mt-3 text-sm leading-6 text-[#52606d]">Started with underground cabling and transmission line works.</p>
+            </div>
+            <div>
+              <p class="font-mono text-xs font-semibold text-[#386188]">02</p>
+              <h3 class="mt-2 font-['Montserrat'] text-xl font-bold text-[#0a3d62]">Expertise</h3>
+              <p class="mt-3 text-sm leading-6 text-[#52606d]">Built execution strength across EHV infrastructure and utility projects.</p>
+            </div>
+            <div>
+              <p class="font-mono text-xs font-semibold text-[#386188]">03</p>
+              <h3 class="mt-2 font-['Montserrat'] text-xl font-bold text-[#0a3d62]">Expansion</h3>
+              <p class="mt-3 text-sm leading-6 text-[#52606d]">Expanded capabilities into substations, distribution and turnkey EPC solutions.</p>
+            </div>
+            <div>
+              <p class="font-mono text-xs font-semibold text-[#386188]">04</p>
+              <h3 class="mt-2 font-['Montserrat'] text-xl font-bold text-[#0a3d62]">Today</h3>
+              <p class="mt-3 text-sm leading-6 text-[#52606d]">Delivering reliable, future-ready power infrastructure solutions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-0 border-l-2 border-[#0a3d62]/22 pl-6 lg:hidden">
+          <div class="relative pb-8">
+            <span class="timeline-node absolute -left-[33px] top-1 h-4 w-4 rounded-full bg-[#f2a65a]"></span>
+            <p class="font-mono text-xs font-semibold text-[#386188]">01</p>
+            <h3 class="mt-2 font-['Montserrat'] text-xl font-bold text-[#0a3d62]">Origin</h3>
+            <p class="mt-2 text-sm leading-6 text-[#52606d]">Started with underground cabling and transmission works.</p>
+          </div>
+          <div class="relative pb-8">
+            <span class="timeline-node absolute -left-[33px] top-1 h-4 w-4 rounded-full bg-[#f2a65a]"></span>
+            <p class="font-mono text-xs font-semibold text-[#386188]">02</p>
+            <h3 class="mt-2 font-['Montserrat'] text-xl font-bold text-[#0a3d62]">Expertise</h3>
+            <p class="mt-2 text-sm leading-6 text-[#52606d]">Built technical execution capabilities.</p>
+          </div>
+          <div class="relative pb-8">
+            <span class="timeline-node absolute -left-[33px] top-1 h-4 w-4 rounded-full bg-[#f2a65a]"></span>
+            <p class="font-mono text-xs font-semibold text-[#386188]">03</p>
+            <h3 class="mt-2 font-['Montserrat'] text-xl font-bold text-[#0a3d62]">Expansion</h3>
+            <p class="mt-2 text-sm leading-6 text-[#52606d]">Expanded into EPC solutions.</p>
+          </div>
+          <div class="relative">
+            <span class="timeline-node absolute -left-[33px] top-1 h-4 w-4 rounded-full bg-[#f2a65a]"></span>
+            <p class="font-mono text-xs font-semibold text-[#386188]">04</p>
+            <h3 class="mt-2 font-['Montserrat'] text-xl font-bold text-[#0a3d62]">Today</h3>
+            <p class="mt-2 text-sm leading-6 text-[#52606d]">Future-ready power infrastructure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative py-24 md:py-32 overflow-hidden bg-[#07131f]">
+      <!-- Background Effects -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#a2caf7]/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute -right-40 -bottom-40 w-[600px] h-[600px] bg-[#f9ba7e]/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[1400px] mx-auto px-5 md:px-12">
+        <!-- Section Header -->
+        <div class="text-center mb-16 md:mb-24 relative">
+          <span class="inline-block font-mono text-xs font-bold tracking-[0.2em] text-[#a2caf7] uppercase border border-[#a2caf7]/20 px-5 py-2.5 rounded-full bg-[#a2caf7]/5 backdrop-blur-md mb-6">Leadership Vision</span>
+          <h2 class="font-['Montserrat'] text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
+            Message from the <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#a2caf7] to-[#f9ba7e]">Director</span>
+          </h2>
+        </div>
+
+        <!-- Main Card -->
+        <div class="group relative rounded-none bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 p-8 md:p-14 lg:p-20 backdrop-blur-3xl shadow-[0_30px_100px_rgba(0,0,0,0.4)] transition-all duration-500 hover:border-white/20 hover:bg-white/[0.06]">
+          <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#a2caf7]/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center relative">
+            <!-- Image Column -->
+            <div class="lg:col-span-5 relative">
+              <div class="relative w-full max-w-[460px] mx-auto lg:mx-0 aspect-[4/5] rounded-none overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+                <!-- Glowing border effect around image container -->
+                <div class="absolute inset-0 bg-gradient-to-b from-[#a2caf7]/30 to-transparent p-[1px] rounded-none">
+                  <div class="absolute inset-0 bg-[#07131f] rounded-none"></div>
+                </div>
+                
+                <img src="site_image-1.avif" alt="Mr. Nilesh Patel" class="absolute inset-[1px] w-[calc(100%-2px)] h-[calc(100%-2px)] rounded-none object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-[1px] bg-gradient-to-t from-[#07131f] via-[#07131f]/20 to-transparent rounded-none pointer-events-none"></div>
+                
+                <!-- Overlay Card -->
+                <div class="absolute bottom-6 left-6 right-6 lg:bottom-8 lg:left-8 lg:right-8 transition-transform duration-500 translate-y-0 group-hover:-translate-y-2">
+                  <div class="bg-[#07131f]/60 backdrop-blur-xl border border-white/10 p-5 rounded-none shadow-xl flex items-center gap-4">
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#f9ba7e] to-[#d49960] text-[#07131f]">
+                      <span class="material-symbols-outlined font-bold text-[28px]">engineering</span>
+                    </div>
+                    <div>
+                      <p class="font-['Montserrat'] text-[22px] font-extrabold text-white leading-tight">Mr. Nilesh Patel</p>
+                      <p class="text-sm text-[#a2caf7] mt-1 font-mono tracking-widest uppercase font-semibold">Director</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Content Column -->
+            <div class="lg:col-span-7 relative">
+              
+              <div class="relative z-10 space-y-8">
+                <h3 class="font-['Montserrat'] text-[28px] md:text-[36px] leading-[1.3] font-bold text-white tracking-tight">
+                  Building reliable power infrastructure with <span class="text-[#f9ba7e]">trust</span>, <span class="text-[#a2caf7]">safety</span>, and disciplined execution.
+                </h3>
+                
+                <div class="space-y-6 text-lg text-white/70 leading-[1.8] font-['Open_Sans']">
+                  <p>
+                    At Devangi Power Pvt. Ltd., our journey has been shaped by hands-on execution, technical discipline and the trust placed in us by our clients and stakeholders. From transmission infrastructure and underground cabling to substations and integrated EPC solutions, every project reflects our commitment to quality, safety and dependable delivery.
+                  </p>
+                  <p>
+                    As power requirements continue to evolve, our focus remains clear - to build reliable, efficient and future-ready infrastructure through responsible engineering and a dedicated workforce.
+                  </p>
+                </div>
+                
+                <!-- Values row -->
+                <div class="pt-10 mt-10 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-2 text-[#a2caf7]">
+                      <span class="material-symbols-outlined text-[20px]">architecture</span>
+                      <p class="font-mono text-[11px] uppercase tracking-widest font-bold">Focus</p>
+                    </div>
+                    <p class="font-['Montserrat'] font-bold text-white text-[15px]">Technical Discipline</p>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-2 text-[#f9ba7e]">
+                      <span class="material-symbols-outlined text-[20px]">verified_user</span>
+                      <p class="font-mono text-[11px] uppercase tracking-widest font-bold">Priority</p>
+                    </div>
+                    <p class="font-['Montserrat'] font-bold text-white text-[15px]">Safety-First</p>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-2 text-emerald-400">
+                      <span class="material-symbols-outlined text-[20px]">trending_up</span>
+                      <p class="font-mono text-[11px] uppercase tracking-widest font-bold">Goal</p>
+                    </div>
+                    <p class="font-['Montserrat'] font-bold text-white text-[15px]">Responsible Growth</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Powering Purpose Section (Mission, Vision, Values) -->
+    <section class="relative py-24 md:py-32 bg-[#eef5fb] overflow-hidden">
+      <!-- Technical Blueprint Background -->
+      <div class="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(10,61,98,1)_1px,transparent_1px),linear-gradient(90deg,rgba(10,61,98,1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#eef5fb] via-transparent to-[#eef5fb] opacity-80 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[1500px] mx-auto px-5 md:px-8">
+        <div class="text-center mb-16 md:mb-20">
+          <span class="inline-block font-mono text-xs font-bold tracking-[0.2em] text-[#0a3d62] uppercase border border-[#0a3d62]/20 px-5 py-2.5 rounded-full bg-white/50 backdrop-blur-md mb-6 shadow-sm">Powering Purpose</span>
+          <h2 class="font-['Montserrat'] text-4xl md:text-5xl font-extrabold text-[#0a3d62] tracking-tight">
+            Our Core DNA
+          </h2>
+        </div>
+
+        <div class="relative grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-stretch">
+          
+          <!-- Animated Connection Lines (Desktop only) -->
+          <div class="hidden lg:block absolute top-[50%] left-[30%] w-[6%] h-[2px] power-line z-20"></div>
+          <div class="hidden lg:block absolute top-[50%] left-[64%] w-[6%] h-[2px] power-line z-20"></div>
+          
+          <!-- Mission Panel (Left) -->
+          <div class="relative z-10 flex flex-col justify-center">
+            <div class="bg-white rounded-[2rem] p-10 lg:p-12 shadow-[0_20px_60px_rgba(10,61,98,0.08)] border border-[#a2caf7]/20 relative transition-transform hover:-translate-y-2 duration-500 h-full flex flex-col justify-center">
+              <div class="w-16 h-16 rounded-full bg-[#f4f8fc] flex items-center justify-center mb-8 border border-[#a2caf7]/30 shadow-inner">
+                <span class="material-symbols-outlined text-3xl text-[#386188]">flag</span>
+              </div>
+              <h3 class="font-['Montserrat'] text-3xl md:text-4xl font-bold text-[#0a3d62] mb-6">Mission</h3>
+              <p class="font-['Open_Sans'] text-[#52606d] text-lg leading-[1.8]">
+                "Delivering safe, reliable and high-quality power infrastructure solutions through disciplined engineering, skilled execution and responsible project management."
+              </p>
+            </div>
+          </div>
+
+          <!-- Vision Panel (Center) -->
+          <div class="relative z-20 flex flex-col justify-center">
+            <div class="bg-gradient-to-b from-[#0a2540] to-[#041827] rounded-[2.5rem] p-10 lg:p-14 shadow-[0_40px_100px_rgba(10,37,64,0.4)] border border-[#a2caf7]/20 relative text-white transition-transform hover:-translate-y-2 duration-500 py-16 lg:py-20 lg:scale-[1.05] h-full flex flex-col justify-center">
+              <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#a2caf7]/10 rounded-full blur-[40px] pointer-events-none"></div>
+              
+              <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-8 border border-white/10 backdrop-blur-md shadow-inner">
+                <span class="material-symbols-outlined text-3xl text-[#a2caf7]">visibility</span>
+              </div>
+              <h3 class="font-['Montserrat'] text-3xl md:text-4xl font-bold text-white mb-6">Vision</h3>
+              <p class="font-['Open_Sans'] text-white/80 text-lg md:text-xl leading-[1.8] font-light">
+                "To become a trusted infrastructure partner contributing to modern, efficient and sustainable energy development."
+              </p>
+              
+              <!-- Decorative element -->
+              <div class="absolute bottom-10 left-10 right-10 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+            </div>
+          </div>
+
+          <!-- Core Values (Right) -->
+          <div class="relative z-10 flex flex-col justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5 relative h-full content-center">
+              <!-- Safety First -->
+              <div class="value-strip bg-white/90 backdrop-blur-xl rounded-[1.5rem] p-6 shadow-[0_15px_40px_rgba(10,61,98,0.06)] border border-white transition-all duration-300 hover:bg-white sm:translate-y-0">
+                <div class="value-icon-box w-12 h-12 rounded-full bg-[#fff4eb] flex items-center justify-center mb-4 text-[#f2a65a] transition-colors duration-300">
+                  <span class="material-symbols-outlined">health_and_safety</span>
+                </div>
+                <h4 class="font-['Montserrat'] font-bold text-[#0a3d62] text-base mb-2">Safety First</h4>
+                <p class="text-sm text-[#52606d] leading-relaxed">Every project begins with responsible site practices and workforce protection.</p>
+              </div>
+              
+              <!-- Technical Excellence -->
+              <div class="value-strip bg-white/90 backdrop-blur-xl rounded-[1.5rem] p-6 shadow-[0_15px_40px_rgba(10,61,98,0.06)] border border-white transition-all duration-300 hover:bg-white sm:translate-y-6 mt-4 sm:mt-0">
+                <div class="value-icon-box w-12 h-12 rounded-full bg-[#f0f6fc] flex items-center justify-center mb-4 text-[#386188] transition-colors duration-300">
+                  <span class="material-symbols-outlined">settings_suggest</span>
+                </div>
+                <h4 class="font-['Montserrat'] font-bold text-[#0a3d62] text-base mb-2">Technical Excellence</h4>
+                <p class="text-sm text-[#52606d] leading-relaxed">Engineering decisions guided by precision, compliance and reliability.</p>
+              </div>
+              
+              <!-- Commitment -->
+              <div class="value-strip bg-white/90 backdrop-blur-xl rounded-[1.5rem] p-6 shadow-[0_15px_40px_rgba(10,61,98,0.06)] border border-white transition-all duration-300 hover:bg-white sm:translate-y-0 mt-4 sm:mt-6">
+                <div class="value-icon-box w-12 h-12 rounded-full bg-[#f0f6fc] flex items-center justify-center mb-4 text-[#386188] transition-colors duration-300">
+                  <span class="material-symbols-outlined">verified</span>
+                </div>
+                <h4 class="font-['Montserrat'] font-bold text-[#0a3d62] text-base mb-2">Commitment</h4>
+                <p class="text-sm text-[#52606d] leading-relaxed">Delivering work with accountability, transparency and timely execution.</p>
+              </div>
+              
+              <!-- Sustainable Progress -->
+              <div class="value-strip bg-white/90 backdrop-blur-xl rounded-[1.5rem] p-6 shadow-[0_15px_40px_rgba(10,61,98,0.06)] border border-white transition-all duration-300 hover:bg-white sm:translate-y-6 mt-4 sm:mt-6">
+                <div class="value-icon-box w-12 h-12 rounded-full bg-[#fff4eb] flex items-center justify-center mb-4 text-[#f2a65a] transition-colors duration-300">
+                  <span class="material-symbols-outlined">eco</span>
+                </div>
+                <h4 class="font-['Montserrat'] font-bold text-[#0a3d62] text-base mb-2">Sustainable Progress</h4>
+                <p class="text-sm text-[#52606d] leading-relaxed">Supporting infrastructure that enables long-term energy growth.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: EXECUTION STRENGTH -->
+    <section class="relative bg-[#F5F9FC] py-24 md:py-32" id="execution-strength">
+      <!-- Decorative background lines -->
+      <div class="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(11,53,88,1)_1px,transparent_1px),linear-gradient(90deg,rgba(11,53,88,1)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
+
+      <div class="max-w-[1400px] mx-auto px-5 md:px-12 flex flex-col lg:flex-row items-start gap-12 lg:gap-[8%] relative z-10">
+        
+        <!-- Left Sticky Panel (34%) -->
+        <div class="lg:w-[34%] lg:sticky lg:top-32 relative pt-4">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-1.5 h-6 bg-[#E9924A] rounded-full inline-block"></span>
+            <span class="font-mono text-xs font-bold tracking-[0.2em] text-[#0B3558] uppercase">Execution Strength</span>
+          </div>
+          
+          <h2 class="font-['Montserrat'] text-[40px] md:text-[52px] leading-[1.1] font-extrabold text-[#0B3558] mb-6">
+            Excellence at<br />Ground Level
+          </h2>
+          
+          <p class="text-[#52606d] text-[17px] leading-[1.8] mb-8 font-['Open_Sans']">
+            DPPL’s strength lies in disciplined field execution. From high-voltage tower installation and underground cable works to safety-led operations, every activity is carried out with precision, responsibility and attention to project requirements.
+          </p>
+          
+          <p class="font-mono text-xs font-bold tracking-widest text-[#0B3558]/60 uppercase mb-12 flex items-center gap-2">
+            ENGINEERING <span class="text-[#E9924A]">•</span> SAFETY <span class="text-[#E9924A]">•</span> DELIVERY
+          </p>
+          
+          <!-- Desktop Progress Navigation -->
+          <div class="hidden lg:flex flex-col gap-6 relative ml-2">
+            <div class="absolute left-[7px] top-2 bottom-2 w-px bg-[#0B3558]/10"></div>
+            
+            <div class="flex items-center gap-5 cursor-pointer group">
+              <div class="w-4 h-4 rounded-full border-2 border-[#E9924A] bg-[#E9924A] relative z-10 transition-colors duration-300 execution-nav-dot" data-index="0"></div>
+              <span class="font-mono text-sm font-semibold text-[#E9924A] transition-colors duration-300 execution-nav-text">01 &nbsp; Tower Installation</span>
+            </div>
+            
+            <div class="flex items-center gap-5 cursor-pointer group">
+              <div class="w-4 h-4 rounded-full border-2 border-[#0B3558]/30 bg-[#F5F9FC] relative z-10 transition-colors duration-300 execution-nav-dot" data-index="1"></div>
+              <span class="font-mono text-sm font-semibold text-[#0B3558]/50 transition-colors duration-300 execution-nav-text">02 &nbsp; Road Cutting</span>
+            </div>
+            
+            <div class="flex items-center gap-5 cursor-pointer group">
+              <div class="w-4 h-4 rounded-full border-2 border-[#0B3558]/30 bg-[#F5F9FC] relative z-10 transition-colors duration-300 execution-nav-dot" data-index="2"></div>
+              <span class="font-mono text-sm font-semibold text-[#0B3558]/50 transition-colors duration-300 execution-nav-text">03 &nbsp; Cable Laying</span>
+            </div>
+            
+            <div class="flex items-center gap-5 cursor-pointer group">
+              <div class="w-4 h-4 rounded-full border-2 border-[#0B3558]/30 bg-[#F5F9FC] relative z-10 transition-colors duration-300 execution-nav-dot" data-index="3"></div>
+              <span class="font-mono text-sm font-semibold text-[#0B3558]/50 transition-colors duration-300 execution-nav-text">04 &nbsp; Safety Operations</span>
+            </div>
+          </div>
+          
+          <div class="mt-8 flex items-center gap-2 text-[#E9924A] font-medium text-sm lg:hidden">
+            Scroll to Explore
+            <span class="material-symbols-outlined text-lg animate-bounce">arrow_downward</span>
+          </div>
+        </div>
+        
+        <!-- Right Scroll Panels (58%) -->
+        <div class="lg:w-[58%] flex flex-col gap-10 lg:gap-32 w-full execution-panels-container">
+          
+          <!-- Panel 01 -->
+          <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(11,53,88,0.06)] execution-panel transition-all duration-700 lg:min-h-[580px] flex flex-col transform origin-top">
+            <div class="relative h-[260px] md:h-[340px] w-full overflow-hidden bg-[#0a2540]">
+              <img src="layer-1.png" alt="220kV Monopole Tower Installation" class="w-full h-full object-cover object-center opacity-90 transition-transform duration-700 hover:scale-105" />
+              <div class="absolute top-5 right-5 bg-[#0B3558]/80 backdrop-blur-md border border-white/20 text-white font-mono text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">
+                EHV TRANSMISSION INFRASTRUCTURE
+              </div>
+            </div>
+            <div class="p-8 md:p-12 flex flex-col flex-grow bg-white relative">
+              <div class="absolute top-0 right-10 -translate-y-1/2 bg-white rounded-full p-2 shadow-xl border border-gray-100">
+                <div class="w-14 h-14 bg-[#E9924A] rounded-full flex items-center justify-center font-['Montserrat'] text-2xl font-bold text-white shadow-inner">01</div>
+              </div>
+              <h3 class="font-['Montserrat'] text-2xl md:text-3xl font-bold text-[#0B3558] mb-5 pr-16 leading-tight">
+                220kV Monopole Tower Installation
+              </h3>
+              <p class="text-[#52606d] text-[17px] leading-[1.8] font-['Open_Sans']">
+                Execution of monopole erection for high-voltage infrastructure in space-sensitive and urban corridors, supported by foundation preparation, lifting, alignment, tensioning and hardware installation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Panel 02 -->
+          <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(11,53,88,0.06)] execution-panel transition-all duration-700 lg:min-h-[580px] flex flex-col lg:opacity-40 lg:scale-[0.95] transform origin-top">
+            <div class="relative h-[260px] md:h-[340px] w-full overflow-hidden bg-[#0a2540]">
+              <img src="layer-2 final 2.png" alt="Precision Road Cutting & Trenching" class="w-full h-full object-cover object-center opacity-90 transition-transform duration-700 hover:scale-105" />
+              <div class="absolute top-5 right-5 bg-[#0B3558]/80 backdrop-blur-md border border-white/20 text-white font-mono text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">
+                UNDERGROUND CABLE PROJECTS
+              </div>
+            </div>
+            <div class="p-8 md:p-12 flex flex-col flex-grow bg-white relative">
+              <div class="absolute top-0 right-10 -translate-y-1/2 bg-white rounded-full p-2 shadow-xl border border-gray-100">
+                <div class="w-14 h-14 bg-[#E9924A] rounded-full flex items-center justify-center font-['Montserrat'] text-2xl font-bold text-white shadow-inner">02</div>
+              </div>
+              <h3 class="font-['Montserrat'] text-2xl md:text-3xl font-bold text-[#0B3558] mb-5 pr-16 leading-tight">
+                Precision Road Cutting & Trenching
+              </h3>
+              <p class="text-[#52606d] text-[17px] leading-[1.8] font-['Open_Sans']">
+                Controlled road cutting and trench preparation for underground cable ducts, supporting efficient installation with cleaner execution, safer working zones and reduced disruption.
+              </p>
+            </div>
+          </div>
+
+          <!-- Panel 03 -->
+          <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(11,53,88,0.06)] execution-panel transition-all duration-700 lg:min-h-[580px] flex flex-col lg:opacity-40 lg:scale-[0.95] transform origin-top">
+            <div class="relative h-[260px] md:h-[340px] w-full overflow-hidden bg-[#0a2540]">
+              <img src="site_image-1.avif" alt="Cable Laying in Trefoil Formation" class="w-full h-full object-cover object-center opacity-90 transition-transform duration-700 hover:scale-105" />
+              <div class="absolute top-5 right-5 bg-[#0B3558]/80 backdrop-blur-md border border-white/20 text-white font-mono text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">
+                XLPE CABLE EXECUTION
+              </div>
+            </div>
+            <div class="p-8 md:p-12 flex flex-col flex-grow bg-white relative">
+              <div class="absolute top-0 right-10 -translate-y-1/2 bg-white rounded-full p-2 shadow-xl border border-gray-100">
+                <div class="w-14 h-14 bg-[#E9924A] rounded-full flex items-center justify-center font-['Montserrat'] text-2xl font-bold text-white shadow-inner">03</div>
+              </div>
+              <h3 class="font-['Montserrat'] text-2xl md:text-3xl font-bold text-[#0B3558] mb-5 pr-16 leading-tight">
+                Cable Laying in Trefoil Formation
+              </h3>
+              <p class="text-[#52606d] text-[17px] leading-[1.8] font-['Open_Sans']">
+                Structured three-phase cable installation with appropriate spacing, bedding and earthing practices to support effective thermal performance and reduced electromagnetic interference.
+              </p>
+            </div>
+          </div>
+
+          <!-- Panel 04 -->
+          <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(11,53,88,0.06)] execution-panel transition-all duration-700 lg:min-h-[580px] flex flex-col lg:opacity-40 lg:scale-[0.95] transform origin-top">
+            <div class="relative h-[260px] md:h-[340px] w-full overflow-hidden bg-[#0a2540]">
+              <img src="layer-1.png" alt="Safety Before Execution" class="w-full h-full object-cover object-center opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0B3558]/60 to-transparent"></div>
+              <div class="absolute top-5 right-5 bg-[#0B3558]/80 backdrop-blur-md border border-white/20 text-white font-mono text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">
+                SAFETY-FIRST WORK CULTURE
+              </div>
+            </div>
+            <div class="p-8 md:p-12 flex flex-col flex-grow bg-white relative">
+              <div class="absolute top-0 right-10 -translate-y-1/2 bg-white rounded-full p-2 shadow-xl border border-gray-100">
+                <div class="w-14 h-14 bg-[#E9924A] rounded-full flex items-center justify-center font-['Montserrat'] text-2xl font-bold text-white shadow-inner">04</div>
+              </div>
+              <h3 class="font-['Montserrat'] text-2xl md:text-3xl font-bold text-[#0B3558] mb-5 pr-16 leading-tight">
+                Safety Before Execution
+              </h3>
+              <p class="text-[#52606d] text-[17px] leading-[1.8] font-['Open_Sans']">
+                Regular toolbox talks and site briefings focused on excavation hazards, PPE, machinery operation and work-zone awareness help reinforce safe and compliant execution practices.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust & Compliance / Certifications Band -->
+    <section class="relative bg-gradient-to-r from-[#F4F8FC] to-[#eef5fb] py-16 md:py-20 border-t border-[#0B3558]/5 overflow-hidden z-10">
+      <!-- Animated subtle spark particles / Glowing connecting lines (Optional advanced effect) -->
+      <div class="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E9924A]/30 to-transparent -translate-y-1/2 shadow-[0_0_15px_rgba(233,146,74,0.4)] pointer-events-none hidden lg:block"></div>
+      
+      <div class="max-w-[1400px] mx-auto px-5 md:px-12 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          
+          <!-- Left: Section label & headline -->
+          <div class="lg:w-[35%] text-center lg:text-left relative">
+            <span class="inline-block font-mono text-xs font-bold tracking-[0.2em] text-[#E9924A] uppercase mb-4 bg-white px-4 py-1.5 rounded-full border border-[#E9924A]/20 shadow-sm">
+              Trust & Compliance
+            </span>
+            <h2 class="font-['Montserrat'] text-3xl md:text-[34px] font-extrabold text-[#0A3D62] leading-tight">
+              Built on Approval,<br class="hidden lg:block"/> Safety & Reliability
+            </h2>
+            <div class="w-16 h-1 bg-[#E9924A] mt-6 mx-auto lg:mx-0 rounded-full"></div>
+          </div>
+          
+          <!-- Right: Approval badges and certifications -->
+          <div class="lg:w-[65%] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
+            
+            <!-- Badge 1 -->
+            <div class="group relative bg-white rounded-2xl p-5 shadow-[0_10px_30px_rgba(10,61,98,0.06)] border border-white hover:border-[#E9924A]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(233,146,74,0.12)] cursor-pointer flex flex-col items-center text-center">
+              <span class="material-symbols-outlined text-4xl text-[#386188] group-hover:text-[#E9924A] transition-colors duration-300 mb-3">engineering</span>
+              <span class="font-bold text-[#0A3D62] text-[13px] leading-tight">GETCO / DGVCL<br/>Approved</span>
+              
+              <!-- Hover Info -->
+              <div class="absolute inset-0 bg-[#0A3D62] text-white rounded-2xl p-4 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <span class="text-xs font-mono text-[#E9924A] mb-1">Status</span>
+                <span class="text-sm font-semibold text-center">Registered EPC Vendor</span>
+              </div>
+            </div>
+
+            <!-- Badge 2 -->
+            <div class="group relative bg-white rounded-2xl p-5 shadow-[0_10px_30px_rgba(10,61,98,0.06)] border border-white hover:border-[#E9924A]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(233,146,74,0.12)] cursor-pointer flex flex-col items-center text-center lg:translate-y-4">
+              <span class="material-symbols-outlined text-4xl text-[#386188] group-hover:text-[#E9924A] transition-colors duration-300 mb-3">gavel</span>
+              <span class="font-bold text-[#0A3D62] text-[13px] leading-tight mt-1">CEIG<br/>Compliant</span>
+              
+              <!-- Hover Info -->
+              <div class="absolute inset-0 bg-[#0A3D62] text-white rounded-2xl p-4 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <span class="text-xs font-mono text-[#E9924A] mb-1">Standard</span>
+                <span class="text-sm font-semibold text-center">Inspectorate Compliant</span>
+              </div>
+            </div>
+            
+            <!-- Badge 3 -->
+            <div class="group relative bg-white rounded-2xl p-5 shadow-[0_10px_30px_rgba(10,61,98,0.06)] border border-white hover:border-[#E9924A]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(233,146,74,0.12)] cursor-pointer flex flex-col items-center text-center">
+              <span class="material-symbols-outlined text-4xl text-[#386188] group-hover:text-[#E9924A] transition-colors duration-300 mb-3">verified</span>
+              <span class="font-bold text-[#0A3D62] text-[13px] leading-tight mt-1">ISO 9001:2015<br/><span class="text-[10px] text-[#52606d] group-hover:text-[#0A3D62] font-normal">(In Progress)</span></span>
+              
+              <!-- Hover Info -->
+              <div class="absolute inset-0 bg-[#0A3D62] text-white rounded-2xl p-4 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <span class="text-xs font-mono text-[#E9924A] mb-1">Quality</span>
+                <span class="text-sm font-semibold text-center">Management System</span>
+              </div>
+            </div>
+
+            <!-- Badge 4 -->
+            <div class="group relative bg-white rounded-2xl p-5 shadow-[0_10px_30px_rgba(10,61,98,0.06)] border border-white hover:border-[#E9924A]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(233,146,74,0.12)] cursor-pointer flex flex-col items-center text-center lg:translate-y-4">
+              <span class="material-symbols-outlined text-4xl text-[#386188] group-hover:text-[#E9924A] transition-colors duration-300 mb-3">storefront</span>
+              <span class="font-bold text-[#0A3D62] text-[13px] leading-tight mt-1">MSME<br/>Registered</span>
+              
+              <!-- Hover Info -->
+              <div class="absolute inset-0 bg-[#0A3D62] text-white rounded-2xl p-4 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <span class="text-xs font-mono text-[#E9924A] mb-1">Enterprise</span>
+                <span class="text-sm font-semibold text-center">Govt. Registered Entity</span>
+              </div>
+            </div>
+            
+            <!-- Badge 5 -->
+            <div class="group relative bg-white rounded-2xl p-5 shadow-[0_10px_30px_rgba(10,61,98,0.06)] border border-white hover:border-[#E9924A]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(233,146,74,0.12)] cursor-pointer flex flex-col items-center text-center col-span-2 md:col-span-1 lg:col-span-1 w-[80%] mx-auto md:w-auto mt-4 md:mt-0">
+              <span class="material-symbols-outlined text-4xl text-[#386188] group-hover:text-[#E9924A] transition-colors duration-300 mb-3">badge</span>
+              <span class="font-bold text-[#0A3D62] text-[13px] leading-tight mt-1">Labour<br/>License</span>
+              
+              <!-- Hover Info -->
+              <div class="absolute inset-0 bg-[#0A3D62] text-white rounded-2xl p-4 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <span class="text-xs font-mono text-[#E9924A] mb-1">Compliance</span>
+                <span class="text-sm font-semibold text-center">Approved Workforce</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners in Progress / Client Logos Section -->
+    <section class="py-16 md:py-24 bg-[#040c14] border-y border-white/5 overflow-hidden relative">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(162,202,247,0.05),transparent_70%)]"></div>
+      
+      <div class="text-center mb-12 relative z-10">
+        <span class="inline-block font-mono text-xs font-bold tracking-[0.2em] text-[#f2a65a] uppercase mb-4">Trusted By</span>
+        <h2 class="font-['Montserrat'] text-3xl md:text-4xl font-extrabold text-white">Partners in Progress</h2>
+      </div>
+
+      <div class="relative w-full max-w-[1600px] mx-auto overflow-hidden flex [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+        <div class="flex flex-nowrap gap-16 md:gap-24 animate-marquee whitespace-nowrap py-4">
+          <!-- First set -->
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">GETCO</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">PTC</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">ADANI</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">IOCL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">MERIL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">MAHA-TRANSCO</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">PGCL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">UGVCL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">DGVCL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">TORRENT</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">OM POWER</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">GARDEN MILL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">UNIVERSAL CABLE</span>
+          <!-- Duplicate for seamless scroll -->
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">GETCO</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">PTC</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">ADANI</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">IOCL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">MERIL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">MAHA-TRANSCO</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">PGCL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">UGVCL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">DGVCL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">TORRENT</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">OM POWER</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">GARDEN MILL</span>
+          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">UNIVERSAL CABLE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing CTA Section -->
+    <section class="relative py-20 md:py-28 overflow-hidden bg-[#0A3D62] text-white">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="site_image-1.avif" alt="Power Infrastructure Site" class="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#07131F]/90 via-[#0A3D62]/80 to-[#0A3D62]/60"></div>
+      </div>
+      
+      <!-- Optional: Animated Energy Streaks / Floating Particles -->
+      <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden hidden md:block">
+        <div class="absolute top-1/4 left-0 w-1/2 h-px bg-gradient-to-r from-transparent via-[#FFC107]/40 to-transparent -translate-x-full animate-[contactStreak_6s_linear_infinite_1s]"></div>
+        <div class="absolute top-2/3 right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-[#FFC107]/30 to-transparent translate-x-full animate-[contactStreak_5s_linear_infinite_3s]"></div>
+        <div class="absolute bottom-10 left-1/4 w-3 h-3 rounded-full bg-[#FFC107] blur-[2px] opacity-40 animate-[contactFloat_4s_ease-in-out_infinite]"></div>
+        <div class="absolute top-20 right-1/4 w-4 h-4 rounded-full bg-[#E9924A] blur-[3px] opacity-30 animate-[contactFloat_5s_ease-in-out_infinite_1s]"></div>
+      </div>
+
+      <div class="max-w-[1400px] mx-auto px-5 md:px-12 relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+        
+        <!-- Left: Text Block -->
+        <div class="md:w-3/5 lg:w-1/2">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#FFC107] animate-pulse"></span>
+            <span class="font-mono text-xs font-bold tracking-[0.15em] text-white uppercase">
+              Partner With DPPL
+            </span>
+          </div>
+          
+          <h2 class="font-['Montserrat'] text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6">
+            Let’s Build Reliable<br />
+            Power Infrastructure Together
+          </h2>
+          
+          <p class="text-[#dbe3ed] text-lg leading-relaxed font-['Open_Sans'] mb-8 max-w-lg">
+            Connect with our team for turnkey EPC solutions, transmission, substations, underground cable projects, and industrial power distribution.
+          </p>
+          
+          <div class="flex flex-wrap items-center gap-3 text-sm font-mono text-[#a2caf7] opacity-80 mt-auto">
+            <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">call</span> +91 97256 61325</span>
+            <span class="hidden sm:inline px-2 text-white/30">|</span>
+            <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">mail</span> admin@devangipower.com</span>
+          </div>
+        </div>
+        
+        <!-- Right: CTA Buttons -->
+        <div class="md:w-2/5 lg:w-1/2 flex flex-col sm:flex-row items-center md:justify-end gap-4 w-full md:w-auto mt-4 md:mt-0">
+          <a href="contact.html" class="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-[#FFC107] text-[#0A3D62] font-bold text-sm tracking-wide uppercase transition-all duration-300 shadow-[0_10px_20px_rgba(255,193,7,0.2)] hover:shadow-[0_15px_30px_rgba(255,193,7,0.4)] hover:-translate-y-1 hover:bg-white border-2 border-[#FFC107] group flex items-center justify-center gap-2">
+            Start a Project
+            <span class="material-symbols-outlined text-xl transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+          </a>
+          <a href="contact.html" class="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-transparent text-white font-bold text-sm tracking-wide uppercase transition-all duration-300 hover:bg-white/10 border-2 border-white/30 hover:border-white flex items-center justify-center gap-2">
+            Contact Our Team
+          </a>
+        </div>
+        
+      </div>
+    </section>
+  </main>
 
   <footer class="footer-energy relative overflow-hidden text-white">
     <div class="mx-auto max-w-[1400px] px-5 py-12 md:px-12 md:py-16">
@@ -166,7 +1034,10 @@
             class="inline-flex items-center rounded-2xl bg-white/[0.92] px-4 py-3 shadow-[0_20px_55px_rgba(0,0,0,0.28),0_0_0_1px_rgba(255,255,255,0.65),0_0_34px_rgba(162,202,247,0.20)] backdrop-blur-md">
             <img src="logo.png" alt="Devangi Power Private Limited" class="h-14 w-auto object-contain md:h-20" />
           </a>
-          <p class="mt-4 max-w-sm text-white/68">Powering Tomorrow's Infrastructure</p>
+          <p class="mt-4 max-w-sm text-white/68">Powered by Commitment</p>
+          <p class="mt-2 max-w-sm text-sm leading-6 text-white/52">
+            Specialists in EHV Cable Transmission Line | Substation EPC Project
+          </p>
           <div class="mt-6 h-px w-40 bg-gradient-to-r from-[#a2caf7] to-transparent"></div>
         </div>
         <div>
@@ -184,7 +1055,8 @@
           <div class="space-y-4 text-white/68">
             <p>+91 97256 61325</p>
             <p>admin@devangipower.com</p>
-            <p class="leading-7">Shop No. 91, Krishna Park Society-2, Simadagam, Surat - 395006</p>
+            <p>www.devangipower.com</p>
+            <p class="leading-7">Office No.520 &amp; 521, The Galleria Business Hub 2, Near Maharaja Chowk, Varachha, Surat, Gujarat - 395010</p>
           </div>
         </div>
         <div>
@@ -198,7 +1070,7 @@
       </div>
       <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/52 md:flex-row md:items-center md:justify-between">
         <p>(c) 2026 Devangi Power Pvt. Ltd. All rights reserved.</p>
-        <p class="font-mono text-xs uppercase tracking-[0.1em] text-white/42">Engineering Excellence in Power EPC</p>
+        <p class="font-mono text-xs uppercase tracking-[0.1em] text-white/42">Specialists in EHV Cable Transmission Line | Substation EPC Project</p>
       </div>
     </div>
   </footer>
@@ -229,6 +1101,61 @@
       mobileSolutionsBtn.classList.toggle('open');
       mobileSolutionsMenu.classList.toggle('open');
     });
+
+    // Execution Strength Sticky Scroll Observer
+    const panels = document.querySelectorAll('.execution-panel');
+    const navDots = document.querySelectorAll('.execution-nav-dot');
+    const navTexts = document.querySelectorAll('.execution-nav-text');
+
+    if (panels.length > 0 && navDots.length > 0) {
+      const observerOptions = {
+        root: null,
+        rootMargin: '-30% 0px -50% 0px',
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const index = Array.from(panels).indexOf(entry.target);
+            
+            // Update panels
+            panels.forEach((panel, i) => {
+              if (i === index) {
+                panel.classList.remove('lg:opacity-40', 'lg:scale-[0.95]');
+                panel.classList.add('lg:opacity-100', 'lg:scale-100');
+              } else {
+                panel.classList.add('lg:opacity-40', 'lg:scale-[0.95]');
+                panel.classList.remove('lg:opacity-100', 'lg:scale-100');
+              }
+            });
+
+            // Update nav
+            navDots.forEach((dot, i) => {
+              if (i === index) {
+                dot.classList.remove('border-[#0B3558]/30', 'bg-[#F5F9FC]');
+                dot.classList.add('border-[#E9924A]', 'bg-[#E9924A]');
+              } else {
+                dot.classList.add('border-[#0B3558]/30', 'bg-[#F5F9FC]');
+                dot.classList.remove('border-[#E9924A]', 'bg-[#E9924A]');
+              }
+            });
+
+            navTexts.forEach((text, i) => {
+              if (i === index) {
+                text.classList.remove('text-[#0B3558]/50');
+                text.classList.add('text-[#E9924A]');
+              } else {
+                text.classList.add('text-[#0B3558]/50');
+                text.classList.remove('text-[#E9924A]');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      panels.forEach(panel => observer.observe(panel));
+    }
   </script>
 </body>
 
