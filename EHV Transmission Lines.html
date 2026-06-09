@@ -1,0 +1,1432 @@
+﻿<!doctype html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title id="page-title">Devangi Power Private Limited | EHV Cable Transmission Line &amp; Substation EPC Project</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-fixed-variant": "#1d496f",
+            "outline-variant": "#42474e",
+            "on-tertiary": "#4a2800",
+            "on-tertiary-fixed-variant": "#673d0a",
+            surface: "#0c141b",
+            "on-surface": "#dbe3ed",
+            "primary-fixed-dim": "#a2caf7",
+            "surface-bright": "#323a42",
+            "secondary-fixed": "#e2e2e2",
+            "surface-container-highest": "#2e363d",
+            "on-error": "#690005",
+            "secondary-container": "#454747",
+            "surface-tint": "#a2caf7",
+            "tertiary-fixed-dim": "#f9ba7e",
+            "on-tertiary-container": "#d49960",
+            "inverse-surface": "#dbe3ed",
+            "secondary-fixed-dim": "#c6c6c7",
+            outline: "#8c9199",
+            "on-primary": "#003355",
+            "error-container": "#93000a",
+            "on-secondary-fixed": "#1a1c1c",
+            "on-primary-container": "#80a8d3",
+            "surface-container-lowest": "#070f16",
+            "surface-container-high": "#232b32",
+            "tertiary-fixed": "#ffdcbf",
+            "surface-dim": "#0c141b",
+            error: "#ffb4ab",
+            "surface-container": "#182028",
+            "on-secondary-container": "#b4b5b5",
+            "inverse-primary": "#386188",
+            "on-primary-fixed": "#001d34",
+            "surface-variant": "#2e363d",
+            tertiary: "#f9ba7e",
+            "on-secondary": "#2f3131",
+            "on-error-container": "#ffdad6",
+            "on-background": "#dbe3ed",
+            "tertiary-container": "#593100",
+            "on-secondary-fixed-variant": "#454747",
+            "primary-fixed": "#cfe5ff",
+            "primary-container": "#0a3d62",
+            "surface-container-low": "#141c23",
+            "on-surface-variant": "#c2c7cf",
+            "on-tertiary-fixed": "#2d1600",
+            background: "#0c141b",
+            secondary: "#c6c6c7",
+            primary: "#a2caf7",
+            "inverse-on-surface": "#293139",
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+          spacing: {
+            gutter: "24px",
+            "section-gap": "120px",
+            unit: "8px",
+            "margin-desktop": "80px",
+            "margin-mobile": "20px",
+          },
+          fontFamily: {
+            "label-caps": ["JetBrains Mono"],
+            "stat-value": ["Montserrat"],
+            "headline-lg": ["Montserrat"],
+            "headline-md": ["Montserrat"],
+            "headline-lg-mobile": ["Montserrat"],
+            "headline-xl": ["Montserrat"],
+            "body-lg": ["Open Sans"],
+            "body-md": ["Open Sans"],
+          },
+          fontSize: {
+            "label-caps": [
+              "12px",
+              {
+                lineHeight: "16px",
+                letterSpacing: "0.1em",
+                fontWeight: "500",
+              },
+            ],
+            "stat-value": ["48px", { lineHeight: "1", fontWeight: "700" }],
+            "headline-lg": [
+              "40px",
+              {
+                lineHeight: "48px",
+                letterSpacing: "-0.01em",
+                fontWeight: "700",
+              },
+            ],
+            "headline-md": [
+              "24px",
+              { lineHeight: "32px", fontWeight: "600" },
+            ],
+            "headline-lg-mobile": [
+              "32px",
+              { lineHeight: "40px", fontWeight: "700" },
+            ],
+            "headline-xl": [
+              "64px",
+              {
+                lineHeight: "72px",
+                letterSpacing: "-0.02em",
+                fontWeight: "700",
+              },
+            ],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .glass-panel {
+      background: rgba(12, 20, 27, 0.6);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glow-hover:hover {
+      box-shadow: 0 0 40px rgba(162, 202, 247, 0.3);
+      transform: translateY(-5px) rotateX(2deg) rotateY(2deg);
+    }
+
+    .energy-arc {
+      position: absolute;
+      background: linear-gradient(90deg, transparent, #f9ba7e, transparent);
+      height: 2px;
+      width: 100%;
+      opacity: 0.3;
+      animation: moveArc 3s infinite linear;
+    }
+
+    @keyframes moveArc {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .hologram-border {
+      position: relative;
+    }
+
+    .hologram-border::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-top: 2px solid #a2caf7;
+      border-left: 2px solid #a2caf7;
+    }
+
+    .hologram-border::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      border-bottom: 2px solid #a2caf7;
+      border-right: 2px solid #a2caf7;
+    }
+
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+
+    .scanning-bar {
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to bottom,
+          transparent,
+          rgba(162, 202, 247, 0.5),
+          transparent);
+      animation: scan 4s infinite ease-in-out;
+    }
+
+    @keyframes scan {
+
+      0%,
+      100% {
+        top: 0;
+      }
+
+      50% {
+        top: 100%;
+      }
+    }
+
+    body {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes aboutFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .about-blueprint {
+      background:
+        linear-gradient(90deg, rgba(10, 61, 98, 0.055) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(10, 61, 98, 0.055) 1px, transparent 1px),
+        radial-gradient(circle at 18% 28%,
+          rgba(162, 202, 247, 0.35),
+          transparent 30%),
+        #f9f9f9;
+      background-size:
+        42px 42px,
+        42px 42px,
+        auto,
+        auto;
+    }
+
+    .about-circuit-line {
+      position: absolute;
+      inset: auto 0 76px 0;
+      height: 2px;
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(10, 61, 98, 0.2),
+          rgba(249, 186, 126, 0.8),
+          rgba(10, 61, 98, 0.2),
+          transparent);
+    }
+
+    .about-circuit-line::before,
+    .about-circuit-line::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(10, 61, 98, 0.45);
+      background: #f9f9f9;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .about-circuit-line::before {
+      left: 22%;
+    }
+
+    .about-circuit-line::after {
+      right: 18%;
+    }
+
+    .about-flow-panel {
+      background:
+        linear-gradient(90deg, rgba(10, 61, 98, 0.06), transparent),
+        rgba(255, 255, 255, 0.56);
+    }
+
+    .about-flow-dot {
+      animation: aboutFlowDot 3.8s ease-in-out infinite;
+    }
+
+    .about-flow-dot:nth-child(2) {
+      animation-delay: 0.45s;
+    }
+
+    .about-flow-dot:nth-child(3) {
+      animation-delay: 0.9s;
+    }
+
+    .about-flow-dot:nth-child(4) {
+      animation-delay: 1.35s;
+    }
+
+    @keyframes aboutFlowDot {
+
+      0%,
+      100% {
+        opacity: 0.35;
+        transform: translateY(0) scale(0.9);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.08);
+      }
+    }
+
+    .formula-glow {
+      position: absolute;
+      font-family: "JetBrains Mono", monospace;
+      color: rgba(10, 61, 98, 0.28);
+      text-shadow:
+        0 0 18px rgba(162, 202, 247, 0.75),
+        0 0 42px rgba(249, 186, 126, 0.22);
+      letter-spacing: 0;
+      pointer-events: none;
+      user-select: none;
+      animation: formulaPulse 4.5s ease-in-out infinite;
+    }
+
+    .formula-glow:nth-of-type(2) {
+      animation-delay: 0.8s;
+    }
+
+    .formula-glow:nth-of-type(3) {
+      animation-delay: 1.6s;
+    }
+
+    .formula-glow:nth-of-type(4) {
+      animation-delay: 2.4s;
+    }
+
+    .formula-left-top {
+      left: max(24px, calc(50% - 900px));
+      top: 22%;
+    }
+
+    .formula-left-bottom {
+      left: max(28px, calc(50% - 880px));
+      bottom: 15%;
+    }
+
+    .formula-right-top {
+      right: max(24px, calc(50% - 900px));
+      top: 20%;
+    }
+
+    .formula-right-bottom {
+      right: max(28px, calc(50% - 880px));
+      bottom: 13%;
+    }
+
+    @keyframes formulaPulse {
+
+      0%,
+      100% {
+        opacity: 0.26;
+        transform: translateY(0);
+      }
+
+      50% {
+        opacity: 0.56;
+        transform: translateY(-4px);
+      }
+    }
+
+    .service-cta:hover .material-symbols-outlined {
+      transform: translateX(4px);
+    }
+
+    .services-console {
+      background:
+        radial-gradient(circle at 18% 16%,
+          rgba(162, 202, 247, 0.24),
+          transparent 28%),
+        radial-gradient(circle at 90% 80%,
+          rgba(128, 168, 211, 0.16),
+          transparent 30%),
+        linear-gradient(180deg, #f9f9f9, #eef5fb);
+    }
+
+    .service-row {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(18px);
+    }
+
+    .service-row::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #a2caf7;
+      transform: scaleY(0.35);
+      transform-origin: center;
+      transition: transform 260ms ease;
+    }
+
+    .service-row:hover::before {
+      transform: scaleY(1);
+    }
+
+    .service-row:hover .service-index {
+      color: #0a3d62;
+      opacity: 1;
+    }
+
+    .project-rail {
+      scrollbar-width: none;
+    }
+
+    .project-rail::-webkit-scrollbar {
+      display: none;
+    }
+
+    .project-tile::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg,
+          rgba(7, 27, 44, 0.18) 0%,
+          rgba(7, 27, 44, 0.36) 42%,
+          rgba(7, 27, 44, 0.96) 100%),
+        linear-gradient(90deg, rgba(7, 27, 44, 0.72), rgba(7, 27, 44, 0.18));
+      transition: opacity 300ms ease;
+    }
+
+    .project-tile:hover img {
+      transform: scale(1.07);
+    }
+
+    .project-tile:hover .project-meta {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .metrics-kinetic {
+      background:
+        radial-gradient(circle at 18% 22%,
+          rgba(162, 202, 247, 0.22),
+          transparent 28%),
+        radial-gradient(circle at 86% 78%,
+          rgba(128, 168, 211, 0.16),
+          transparent 30%),
+        linear-gradient(135deg, #0a3d62 0%, #0c273f 48%, #07131f 100%);
+    }
+
+    .metric-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+    }
+
+    .metric-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,
+          rgba(162, 202, 247, 0.22),
+          transparent 45%);
+      opacity: 0;
+      transition: opacity 260ms ease;
+      pointer-events: none;
+    }
+
+    .metric-card:hover::before {
+      opacity: 1;
+    }
+
+    .metric-line {
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(162, 202, 247, 0.55),
+          rgba(255, 255, 255, 0.32),
+          rgba(162, 202, 247, 0.55),
+          transparent);
+      animation: metricLine 5s linear infinite;
+      background-size: 200% 100%;
+    }
+
+    .metrics-shell {
+      width: min(1400px, calc(100% - 40px));
+    }
+
+    .metrics-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .metrics-shell {
+        width: min(1400px, calc(100% - 96px));
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .metrics-layout {
+        min-height: 700px;
+        grid-template-columns: 0.78fr 1.22fr;
+        gap: 3.5rem;
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 1279px) {
+      .metrics-kinetic {
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        padding-block: 3.5rem !important;
+      }
+
+      .metrics-layout {
+        display: block !important;
+      }
+
+      .metrics-grid {
+        margin-top: 2rem;
+      }
+
+      .metric-card {
+        min-height: 0;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      .metrics-copy {
+        max-width: 760px;
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 639px) {
+      .metrics-shell {
+        width: min(100% - 32px, 1400px);
+      }
+    }
+
+    @keyframes metricLine {
+      to {
+        background-position: 200% 0;
+      }
+    }
+
+    .certifications-field {
+      background:
+        radial-gradient(circle at 18% 20%,
+          rgba(162, 202, 247, 0.3),
+          transparent 28%),
+        radial-gradient(circle at 84% 72%,
+          rgba(249, 186, 126, 0.18),
+          transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef6ff 58%, #f9f9f9 100%);
+    }
+
+    .cert-badge {
+      animation: certDrift 7s ease-in-out infinite;
+    }
+
+    .cert-badge:nth-of-type(2) {
+      animation-delay: 0.7s;
+    }
+
+    .cert-badge:nth-of-type(3) {
+      animation-delay: 1.4s;
+    }
+
+    .cert-badge:nth-of-type(4) {
+      animation-delay: 2.1s;
+    }
+
+    .cert-badge:nth-of-type(5) {
+      animation-delay: 2.8s;
+    }
+
+    .cert-badge:hover {
+      box-shadow:
+        0 26px 70px rgba(10, 61, 98, 0.16),
+        0 0 34px rgba(162, 202, 247, 0.28);
+    }
+
+    .cert-line {
+      stroke-dasharray: 8 12;
+      animation: energyFlow 4s linear infinite;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      .cert-badge-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+
+      .cert-badge-grid .cert-badge {
+        margin: 0 !important;
+      }
+
+      .cert-badge-grid .cert-badge:nth-child(1),
+      .cert-badge-grid .cert-badge:nth-child(2),
+      .cert-badge-grid .cert-badge:nth-child(3) {
+        grid-column: span 2;
+      }
+
+      .cert-badge-grid .cert-badge:nth-child(4),
+      .cert-badge-grid .cert-badge:nth-child(5) {
+        grid-column: span 3;
+      }
+    }
+
+    @keyframes certDrift {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    .contact-energy {
+      background:
+        radial-gradient(circle at 18% 24%,
+          rgba(162, 202, 247, 0.22),
+          transparent 28%),
+        radial-gradient(circle at 78% 74%,
+          rgba(249, 186, 126, 0.12),
+          transparent 30%),
+        linear-gradient(135deg, #0a3d62 0%, #0f1f3c 100%);
+    }
+
+    .contact-streak {
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(162, 202, 247, 0.58),
+          transparent);
+      animation: contactStreak 5.5s linear infinite;
+    }
+
+    .contact-float {
+      animation: contactFloat 6s ease-in-out infinite;
+    }
+
+    .contact-float:nth-of-type(2) {
+      animation-delay: 1s;
+    }
+
+    .contact-float:nth-of-type(3) {
+      animation-delay: 2s;
+    }
+
+    .contact-input:focus {
+      box-shadow:
+        0 0 0 1px rgba(162, 202, 247, 0.52),
+        0 0 28px rgba(162, 202, 247, 0.16);
+    }
+
+    @keyframes contactStreak {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(100%);
+      }
+    }
+
+    @keyframes contactFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .footer-energy {
+      background:
+        radial-gradient(circle at 12% 0%,
+          rgba(162, 202, 247, 0.14),
+          transparent 28%),
+        linear-gradient(135deg, #07131f 0%, #0a3d62 100%);
+    }
+
+    .footer-streak {
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(162, 202, 247, 0.34),
+          transparent);
+      animation: contactStreak 7s linear infinite;
+    }
+
+    /* â”€â”€ Navigation Dropdown â”€â”€ */
+    .nav-dropdown-wrap:hover .nav-dropdown,
+    .nav-dropdown-wrap:focus-within .nav-dropdown {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateX(-50%) translateY(0) !important;
+    }
+
+    .nav-dropdown-wrap:hover .nav-chevron {
+      transform: rotate(180deg);
+    }
+
+    .nav-dropdown {
+      transform: translateX(-50%) translateY(8px);
+    }
+
+    .dropdown-item:hover {
+      background: rgba(10, 37, 64, 0.06);
+    }
+
+    .dropdown-item.dropdown-item-active {
+      background: rgba(10, 37, 64, 0.1);
+      color: #0a2540;
+      font-weight: 700;
+      box-shadow: inset 3px 0 0 #f39449;
+    }
+
+    .dropdown-item.dropdown-item-active .dropdown-dot {
+      background: #0a2540 !important;
+      box-shadow: 0 0 0 3px rgba(162, 202, 247, 0.4);
+    }
+
+    #mobile-solutions-menu a.service-link-active {
+      background: rgba(10, 37, 64, 0.08);
+      color: #0a2540 !important;
+      font-weight: 600;
+      box-shadow: inset 3px 0 0 #f39449;
+    }
+
+    .nav-dropdown-btn.service-parent-active,
+    #mobile-solutions-btn.service-parent-active {
+      color: #0a2540 !important;
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    /* Nav glass scroll effect */
+    .nav-glass.scrolled {
+      background: rgba(255, 255, 255, 0.82);
+      border-color: rgba(10, 37, 64, 0.12);
+      box-shadow: 0 8px 40px rgba(10, 37, 64, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
+
+    /* Mobile menu open */
+    #mobile-menu.open {
+      max-height: 640px;
+      opacity: 1;
+    }
+
+    /* Mobile hamburger animation */
+    #mobile-menu-btn.open .ham-line:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu-btn.open .ham-line:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    #mobile-menu-btn.open .ham-line:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Mobile solutions open */
+    #mobile-solutions-menu.open {
+      max-height: 400px;
+    }
+
+    #mobile-solutions-btn.open .mobile-chev {
+      transform: rotate(180deg);
+    }
+
+    /* Technical Specifications section */
+    .tech-specs-section {
+      border-top: 1px solid rgba(10, 37, 64, 0.06);
+    }
+
+    .tech-spec-card {
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.45s ease,
+        border-color 0.35s ease;
+    }
+
+    .tech-spec-card:hover {
+      border-color: rgba(162, 202, 247, 0.45);
+    }
+
+    .tech-spec-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(162, 202, 247, 0.06), transparent 55%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .tech-spec-card:hover::after {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary overflow-x-hidden font-body-md">
+  <!-- TopNavBar -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-3 py-2" id="main-header">
+    <div
+      class="max-w-[1400px] mx-auto flex items-center justify-between px-4 md:px-6 py-2 rounded-xl bg-white/20 backdrop-blur-2xl border border-white/30 shadow-[0_4px_20px_rgba(0,0,0,0.10),inset_0_1px_0_rgba(255,255,255,0.35)] nav-glass">
+
+      <a href="index.html"
+        class="flex items-center shrink-0 rounded-xl bg-white/90 px-3 py-1.5 shadow-[0_10px_30px_rgba(10,37,64,0.18),0_0_0_1px_rgba(255,255,255,0.65)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_38px_rgba(10,37,64,0.24),0_0_22px_rgba(162,202,247,0.38)]"
+        aria-label="Devangi Power Private Limited home">
+        <img src="logo.png" alt="Devangi Power Private Limited" class="h-9 md:h-11 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-1">
+        <!-- Home -->
+        <a href="index.html"
+          class="nav-link px-3 py-2 rounded-lg text-[#0a2540] font-semibold text-sm hover:bg-white/30 transition-all duration-200">Home</a>
+
+        <!-- About -->
+        <a href="about.html"
+          class="nav-link px-3 py-2 rounded-lg text-[#0a2540]/80 font-semibold text-sm hover:text-[#0a2540] hover:bg-white/30 transition-all duration-200">About</a>
+
+        <!-- Our Solutions Dropdown -->
+        <div class="nav-dropdown-wrap relative">
+          <button
+            class="nav-link flex items-center gap-1 px-3 py-2 rounded-lg text-[#0a2540]/80 font-semibold text-sm hover:text-[#0a2540] hover:bg-white/30 transition-all duration-200 nav-dropdown-btn">
+            Our Solutions
+            <svg class="nav-chevron w-3.5 h-3.5 mt-0.5 transition-transform duration-200" fill="none"
+              stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <div
+            class="nav-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl bg-white/90 backdrop-blur-2xl border border-white/60 shadow-[0_20px_60px_rgba(10,37,64,0.18),0_4px_16px_rgba(10,37,64,0.1)] overflow-hidden opacity-0 invisible translate-y-2 transition-all duration-250 ease-out">
+            <div class="p-2">
+              <a href="EHV Transmission Lines.html?service=ehv-transmission-lines"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span
+                  class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                EHV Transmission Lines
+              </a>
+              <a href="EHV Transmission Lines.html?service=substations-automation"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span
+                  class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                Substations &amp; Automation
+              </a>
+              <a href="EHV Transmission Lines.html?service=xlpe-underground-cable-laying"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span
+                  class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                XLPE Underground Cable Laying
+              </a>
+              <a href="EHV Transmission Lines.html?service=industrial-power-distribution"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span
+                  class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                Industrial Power Distribution
+              </a>
+              <a href="EHV Transmission Lines.html?service=epc-turnkey-execution"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span
+                  class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                EPC Turnkey Execution
+              </a>
+              <a href="EHV Transmission Lines.html?service=regulatory-liaisoning"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span
+                  class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                Regulatory Liaisoning
+              </a>
+              <a href="EHV Transmission Lines.html?service=renewables-bess"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span
+                  class="dropdown-dot w-2 h-2 rounded-full bg-[#f9ba7e] group-hover:bg-[#f9ba7e] transition-colors duration-150 shrink-0"></span>
+                Renewables &amp; BESS
+              </a>
+            </div>
+            <!-- Bottom accent -->
+            <div class="h-0.5 bg-gradient-to-r from-[#a2caf7] via-[#0a2540]/20 to-[#f9ba7e]"></div>
+          </div>
+        </div>
+
+        <!-- Our Projects Gallery -->
+        <a href="projects.html"
+          class="nav-link px-3 py-2 rounded-lg text-[#0a2540]/80 font-semibold text-sm hover:text-[#0a2540] hover:bg-white/30 transition-all duration-200">Our
+          Projects Gallery</a>
+
+        <!-- Contact -->
+        <a href="contact.html"
+          class="nav-link px-3 py-2 rounded-lg text-[#0a2540]/80 font-semibold text-sm hover:text-[#0a2540] hover:bg-white/30 transition-all duration-200">Contact</a>
+      </nav>
+
+      <!-- CTA + Mobile Hamburger -->
+      <div class="flex items-center gap-3">
+        <button
+          class="hidden md:inline-flex bg-[#0a2540] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-[#0f3460] active:scale-95 transition-all duration-300 shadow-md">
+          Get a Quote
+        </button>
+        <!-- Hamburger -->
+        <button id="mobile-menu-btn"
+          class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-white/30 transition-all duration-200"
+          aria-label="Toggle menu">
+          <span class="ham-line block w-5 h-0.5 bg-[#0a2540] rounded-full transition-all duration-300"></span>
+          <span class="ham-line block w-5 h-0.5 bg-[#0a2540] rounded-full transition-all duration-300"></span>
+          <span class="ham-line block w-5 h-0.5 bg-[#0a2540] rounded-full transition-all duration-300"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="lg:hidden max-w-[1400px] mx-auto mt-2 rounded-2xl bg-white/90 backdrop-blur-2xl border border-white/60 shadow-[0_20px_60px_rgba(10,37,64,0.18)] overflow-hidden max-h-0 opacity-0 transition-all duration-350 ease-out">
+      <div class="p-4 flex flex-col gap-1">
+        <a href="index.html"
+          class="mobile-nav-link px-4 py-3 rounded-xl text-[#0a2540] font-semibold text-sm hover:bg-[#0a2540]/8 transition-all duration-150">Home</a>
+        <a href="about.html"
+          class="mobile-nav-link px-4 py-3 rounded-xl text-[#0a2540] font-semibold text-sm hover:bg-[#0a2540]/8 transition-all duration-150">About</a>
+        <!-- Mobile Solutions -->
+        <button id="mobile-solutions-btn"
+          class="flex items-center justify-between px-4 py-3 rounded-xl text-[#0a2540] font-semibold text-sm hover:bg-[#0a2540]/8 transition-all duration-150 w-full text-left">
+          Our Solutions
+          <svg class="mobile-chev w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor"
+            stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-solutions-menu" class="max-h-0 overflow-hidden transition-all duration-300 ease-out pl-3">
+          <div class="flex flex-col gap-0.5 py-1 border-l-2 border-[#a2caf7] pl-3">
+            <a href="EHV Transmission Lines.html?service=ehv-transmission-lines"
+              class="px-3 py-2.5 text-[#0a2540]/80 text-sm font-medium hover:text-[#0a2540] hover:bg-[#0a2540]/5 rounded-lg transition-all duration-150">EHV
+              Transmission Lines</a>
+            <a href="EHV Transmission Lines.html?service=substations-automation"
+              class="px-3 py-2.5 text-[#0a2540]/80 text-sm font-medium hover:text-[#0a2540] hover:bg-[#0a2540]/5 rounded-lg transition-all duration-150">Substations
+              &amp; Automation</a>
+            <a href="EHV Transmission Lines.html?service=xlpe-underground-cable-laying"
+              class="px-3 py-2.5 text-[#0a2540]/80 text-sm font-medium hover:text-[#0a2540] hover:bg-[#0a2540]/5 rounded-lg transition-all duration-150">XLPE
+              Underground Cable Laying</a>
+            <a href="EHV Transmission Lines.html?service=industrial-power-distribution"
+              class="px-3 py-2.5 text-[#0a2540]/80 text-sm font-medium hover:text-[#0a2540] hover:bg-[#0a2540]/5 rounded-lg transition-all duration-150">Industrial
+              Power Distribution</a>
+            <a href="EHV Transmission Lines.html?service=epc-turnkey-execution"
+              class="px-3 py-2.5 text-[#0a2540]/80 text-sm font-medium hover:text-[#0a2540] hover:bg-[#0a2540]/5 rounded-lg transition-all duration-150">EPC
+              Turnkey Execution</a>
+            <a href="EHV Transmission Lines.html?service=regulatory-liaisoning"
+              class="px-3 py-2.5 text-[#0a2540]/80 text-sm font-medium hover:text-[#0a2540] hover:bg-[#0a2540]/5 rounded-lg transition-all duration-150">Regulatory
+              Liaisoning</a>
+            <a href="EHV Transmission Lines.html?service=renewables-bess"
+              class="px-3 py-2.5 text-[#0a2540]/80 text-sm font-medium hover:text-[#0a2540] hover:bg-[#0a2540]/5 rounded-lg transition-all duration-150">Renewables
+              &amp; BESS</a>
+          </div>
+        </div>
+        <a href="projects.html"
+          class="mobile-nav-link px-4 py-3 rounded-xl text-[#0a2540] font-semibold text-sm hover:bg-[#0a2540]/8 transition-all duration-150">Our
+          Projects Gallery</a>
+        <a href="contact.html"
+          class="mobile-nav-link px-4 py-3 rounded-xl text-[#0a2540] font-semibold text-sm hover:bg-[#0a2540]/8 transition-all duration-150">Contact</a>
+        <a href="contact.html"
+          class="mt-2 px-4 py-2.5 bg-[#0a2540] text-white rounded-full text-sm font-bold text-center hover:bg-[#0f3460] transition-all duration-300">Get
+          a Quote</a>
+      </div>
+    </div>
+  </header>
+    <!-- Main Content -->
+  <main class="pt-[80px] lg:pt-[104px] bg-[#070f16]">
+    
+        <!-- Section 1: Hero Banner -->
+    <section class="relative w-full h-[60vh] md:h-[70vh] flex items-center bg-[#0a2540] overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img id="hero-bg" src="site_image-1.avif" alt="EHV Transmission Tower" class="w-full h-full object-cover opacity-50" style="transform: scale(1.05);" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#07131f]/90 via-[#07131f]/70 to-transparent"></div>
+      </div>
+      
+      <div class="relative z-10 w-full px-5 md:px-[80px] lg:px-[100px]">
+        <div class="max-w-3xl">
+          <nav class="flex items-center gap-2 text-sm text-[#a2caf7] mb-6 font-body-md font-semibold tracking-wide">
+            <a href="index.html" class="hover:text-white transition-colors">Home</a>
+            <span class="text-white/40">/</span>
+            <span class="hover:text-white transition-colors cursor-pointer">Our Solutions</span>
+            <span class="text-white/40">/</span>
+            <span id="breadcrumb-current" class="text-white">EHV Transmission Lines</span>
+          </nav>
+          <h1 id="hero-heading" class="font-headline-xl text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-tight mb-6 tracking-tight">
+            EHV Transmission Lines
+          </h1>
+          <p id="hero-subheading" class="font-body-lg text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed mb-10 font-light">
+            High-voltage transmission infrastructure for reliable power evacuation
+          </p>
+          <a id="hero-cta" href="projects.html" class="inline-flex items-center gap-3 bg-[#f39449] hover:bg-[#d47831] text-white px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+            <span id="hero-cta-text">Explore Project Gallery</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Overview -->
+    <section class="py-20 md:py-32 relative overflow-hidden bg-[#f8fbfd]">
+      <div class="absolute right-0 top-0 w-1/2 h-full bg-[url('layer-1.png')] bg-cover bg-fixed opacity-[0.04] mix-blend-multiply pointer-events-none"></div>
+      
+      <div class="w-[calc(100%-40px)] md:w-[calc(100%-96px)] max-w-[1400px] mx-auto relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <!-- Text Column -->
+          <div class="relative">
+            <div class="absolute -left-8 top-10 w-[2px] h-[80%] bg-gradient-to-b from-transparent via-[#a2caf7] to-transparent opacity-60"></div>
+            <div class="pl-0 md:pl-6">
+              <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[#f39449]/40 bg-[#f39449]/10 mb-8 backdrop-blur-md shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#f39449] animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"></span>
+                <p class="font-label-caps text-[#e06a12] uppercase tracking-widest text-[13px] font-bold">
+                  System Overview
+                </p>
+              </div>
+              <h2 class="font-headline-lg text-[36px] md:text-[48px] font-bold text-[#001d34] mb-8 leading-[1.15]">
+                Executing with <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#001d34] to-[#f39449]">Technical Precision</span>
+              </h2>
+              <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-[#f39449] bg-white/70 shadow-[0_20px_50px_rgba(10,37,64,0.06)] border-t border-r border-b border-white">
+                <p id="overview-desc" class="font-body-lg text-[18px] md:text-[20px] leading-relaxed text-[#1d496f]">
+                  DPPL executes EHV transmission lines with technical precision, covering design, erection, alignment, stringing, and commissioning. Our solutions ensure <strong class="text-[#001d34] font-bold">grid reliability</strong> and efficient power evacuation across industrial and utility corridors.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Image Column -->
+          <div class="relative group perspective-1000">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-[#a2caf7]/40 via-[#f39449]/30 to-transparent rounded-[32px] blur-2xl group-hover:blur-3xl transition-all duration-700 opacity-60"></div>
+            <div class="relative rounded-[28px] overflow-hidden border border-white shadow-[0_30px_60px_rgba(10,37,64,0.15)] transform group-hover:translate-y-[-10px] transition-transform duration-700 ease-out">
+              <img id="overview-img" src="site_image-1.avif" alt="Transmission Line Site" class="w-full h-auto object-cover transform scale-105 group-hover:scale-110 transition-transform duration-1000" style="max-height: 550px;" />
+              <!-- Tech overlays -->
+              <div class="absolute top-6 right-6 z-20 flex items-center gap-2 bg-white/80 px-3 py-1.5 rounded-full backdrop-blur-md border border-white shadow-sm">
+                <span class="w-2 h-2 bg-[#f39449] rounded-full animate-pulse"></span>
+                <span class="font-label-caps text-[10px] text-[#001d34] tracking-widest uppercase font-bold">Live Site</span>
+              </div>
+              <div class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-[#0a2540]/30 to-transparent z-10 pointer-events-none"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 3: Key Benefits -->
+    <section class="py-20 md:py-32 relative overflow-hidden bg-[#0c141b] border-t border-white/5">
+      <!-- Grid pattern background -->
+      <div class="absolute inset-0 opacity-40" style="background-image: linear-gradient(rgba(162, 202, 247, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(162, 202, 247, 0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+      
+      <div class="w-[calc(100%-40px)] md:w-[calc(100%-96px)] max-w-[1400px] mx-auto relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-20 relative">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#a2caf7]/10 rounded-full blur-[80px] -z-10 pointer-events-none"></div>
+          <h2 class="font-headline-lg text-[36px] md:text-[52px] font-black text-white mb-6 tracking-tight">
+            Engineering <span class="font-light italic text-[#a2caf7]">Excellence</span>
+          </h2>
+          <p class="font-body-lg text-[#8c9199] text-[20px] max-w-2xl mx-auto">
+            Delivering unparalleled infrastructure value through robust execution and state-of-the-art methodology.
+          </p>
+        </div>
+        
+        <div id="benefits-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+      </div>
+    </section>
+
+    <!-- Section 4: Technical Features -->
+    <section class="tech-specs-section py-20 md:py-28 relative overflow-hidden bg-white">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#f8fbfd] via-white to-[#eef6fc] pointer-events-none"></div>
+      <div class="absolute top-[-120px] right-[-80px] w-[480px] h-[480px] bg-[#a2caf7]/10 rounded-full blur-[100px] pointer-events-none"></div>
+      <div class="absolute bottom-[-100px] left-[-60px] w-[380px] h-[380px] bg-[#f39449]/8 rounded-full blur-[90px] pointer-events-none"></div>
+      <div class="absolute inset-0 pointer-events-none opacity-[0.35]" style="background-image: linear-gradient(rgba(10,37,64,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(10,37,64,0.04) 1px, transparent 1px); background-size: 48px 48px;"></div>
+
+      <div class="w-[calc(100%-40px)] md:w-[calc(100%-96px)] max-w-[1400px] mx-auto relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 lg:gap-16 items-end mb-14 md:mb-16">
+          <div>
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#a2caf7]/12 border border-[#a2caf7]/25 mb-6 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-[#f39449] animate-pulse"></span>
+              <span class="font-label-caps text-[#0a2540] text-[11px] uppercase tracking-[0.14em] font-bold">Core Capabilities</span>
+            </div>
+            <h2 class="font-headline-lg text-[34px] md:text-[48px] font-bold text-[#0a2540] leading-[1.08] tracking-tight">
+              Technical<br class="hidden md:block" />
+              <span class="text-[#386188]">Specifications</span>
+            </h2>
+          </div>
+          <div class="lg:pb-2">
+            <p class="font-body-lg text-[#52606d] text-lg leading-relaxed lg:border-l-2 lg:border-[#a2caf7]/35 lg:pl-8">
+              Core capabilities delivering robust high-voltage infrastructure — engineered for precision, compliance, and long-term grid performance.
+            </p>
+            <div class="hidden lg:flex items-center gap-4 mt-8">
+              <div class="h-px flex-1 bg-gradient-to-r from-[#a2caf7]/60 to-transparent"></div>
+              <span class="font-label-caps text-[10px] text-[#386188]/55 uppercase tracking-[0.2em]">6 Spec Domains</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="features-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"></div>
+      </div>
+    </section>
+
+    <!-- Section 5: Project Gallery -->
+    <section class="py-20 md:py-28 bg-white relative">
+      <div class="w-[calc(100%-40px)] md:w-[calc(100%-96px)] max-w-[1400px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div class="max-w-2xl">
+            <h2 class="font-headline-lg text-[32px] md:text-[44px] font-bold text-[#0a2540] mb-4">
+              Execution Gallery
+            </h2>
+            <p class="font-body-lg text-[#1d496f] text-lg">
+              A glimpse into our on-ground execution of transmission lines.
+            </p>
+          </div>
+          <a href="projects.html" class="inline-flex items-center gap-2 text-[#f39449] font-bold hover:text-[#d47831] transition-colors group">
+            View All Projects
+            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+        
+        <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6"></div>
+      </div>
+    </section>
+
+    <!-- Section 6: Call-to-Action -->
+    <section class="py-16 md:py-24 relative overflow-hidden bg-[#0a2540]">
+      <!-- Energy lines background -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute -top-[100px] -right-[100px] w-[500px] h-[500px] rounded-full border-[1px] border-white/30"></div>
+        <div class="absolute -top-[50px] -right-[50px] w-[600px] h-[600px] rounded-full border-[1px] border-white/20"></div>
+        <div class="absolute top-0 right-0 w-[700px] h-[700px] rounded-full border-[1px] border-white/10"></div>
+      </div>
+      
+      <div class="w-[calc(100%-40px)] md:w-[calc(100%-96px)] max-w-[1400px] mx-auto relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+          <div class="max-w-2xl text-center lg:text-left">
+            <h2 id="cta-heading" class="font-headline-lg text-[32px] md:text-[40px] font-bold text-white mb-4 leading-tight">
+              Ready to Discuss Your <span class="text-[#f39449]">Transmission Project?</span>
+            </h2>
+            <p id="cta-desc" class="font-body-lg text-white/80 text-lg md:text-xl font-light">
+              Connect with DPPL's team to discuss turnkey EPC requirements and timeline optimization.
+            </p>
+          </div>
+          <div class="shrink-0">
+            <a id="cta-link" href="contact.html" class="inline-flex items-center gap-3 bg-[#f39449] text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-[#d47831] transition-all duration-300 shadow-[0_0_20px_rgba(243,148,73,0.3)] hover:shadow-[0_0_40px_rgba(243,148,73,0.5)] hover:-translate-y-1">
+              <span id="cta-link-text">Get a Quote</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer-energy relative overflow-hidden text-white">
+    <div class="footer-streak absolute left-0 right-0 top-0 h-px"></div>
+    <div class="relative w-[calc(100%-40px)] md:w-[calc(100%-96px)] max-w-[1400px] mx-auto py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.25fr_0.75fr_1fr_0.75fr] gap-10">
+        <div>
+          <a href="index.html"
+            class="inline-flex items-center rounded-2xl bg-white/[0.92] px-4 py-3 shadow-[0_20px_55px_rgba(0,0,0,0.28),0_0_0_1px_rgba(255,255,255,0.65),0_0_34px_rgba(162,202,247,0.20)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(0,0,0,0.34),0_0_42px_rgba(162,202,247,0.34)]"
+            aria-label="Devangi Power Private Limited home">
+            <img src="logo.png" alt="Devangi Power Private Limited" class="h-14 md:h-20 w-auto object-contain" />
+          </a>
+          <p class="font-body-md text-white/68 leading-7 max-w-sm">
+            Powered by Commitment
+          </p>
+          <p class="font-body-md text-sm text-white/52 leading-6 max-w-sm mt-2">
+            Specialists in EHV Cable Transmission Line | Substation EPC Project
+          </p>
+          <div class="mt-6 h-px w-40 bg-gradient-to-r from-[#a2caf7] to-transparent"></div>
+        </div>
+        <div>
+          <h3 class="font-label-caps uppercase text-[#a2caf7] mb-5">
+            Quick Links
+          </h3>
+          <nav class="grid gap-3 font-body-md text-white/68">
+            <a class="transition-colors duration-300 hover:text-white" href="index.html">Home</a>
+            <a class="transition-colors duration-300 hover:text-white" href="about.html">About</a>
+            <a class="transition-colors duration-300 hover:text-white" href="services.html">Services</a>
+            <a class="transition-colors duration-300 hover:text-white" href="projects.html">Projects</a>
+            <a class="transition-colors duration-300 hover:text-white" href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="font-label-caps uppercase text-[#a2caf7] mb-5">
+            Contact Info
+          </h3>
+          <div class="space-y-4 font-body-md text-white/68">
+            <p class="flex gap-3">
+              <span class="material-symbols-outlined text-[#a2caf7] text-[22px]">call</span><span>+91 97256 61325</span>
+            </p>
+            <p class="flex gap-3">
+              <span
+                class="material-symbols-outlined text-[#a2caf7] text-[22px]">mail</span><span>admin@devangipower.com</span>
+            </p>
+            <p class="flex gap-3">
+              <span
+                class="material-symbols-outlined text-[#a2caf7] text-[22px]">language</span><span>www.devangipower.com</span>
+            </p>
+            <p class="flex gap-3 leading-7">
+              <span class="material-symbols-outlined text-[#a2caf7] text-[22px]">location_on</span><span>Office No.520
+                &amp; 521, The Galleria Business Hub 2, Near Maharaja Chowk, Varachha, Surat, Gujarat - 395010</span>
+            </p>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-label-caps uppercase text-[#a2caf7] mb-5">
+            Connect
+          </h3>
+          <div class="flex gap-3">
+            <a class="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/8 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#a2caf7] hover:text-[#0a3d62]"
+              href="#" aria-label="LinkedIn">in</a>
+            <a class="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/8 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#a2caf7] hover:text-[#0a3d62]"
+              href="#" aria-label="Twitter">X</a>
+            <a class="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/8 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#a2caf7] hover:text-[#0a3d62]"
+              href="#" aria-label="Instagram">IG</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-10 border-t border-white/10 pt-6 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+        <p class="font-body-md text-sm text-white/52">
+          Â© 2026 Devangi Power Pvt. Ltd. All rights reserved.
+        </p>
+        <p class="font-label-caps uppercase text-white/42">
+          Specialists in EHV Cable Transmission Line | Substation EPC Project
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    // â”€â”€ Nav scroll shadow â”€â”€
+    const navGlass = document.querySelector('.nav-glass');
+    window.addEventListener('scroll', () => {
+      navGlass.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // â”€â”€ Mobile menu toggle â”€â”€
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuBtn.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // â”€â”€ Close mobile menu on link click â”€â”€
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuBtn.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // â”€â”€ Mobile solutions accordion â”€â”€
+    const mobileSolutionsBtn = document.getElementById('mobile-solutions-btn');
+    const mobileSolutionsMenu = document.getElementById('mobile-solutions-menu');
+    mobileSolutionsBtn.addEventListener('click', () => {
+      mobileSolutionsBtn.classList.toggle('open');
+      mobileSolutionsMenu.classList.toggle('open');
+    });
+
+    // â”€â”€ Active nav link highlight on scroll â”€â”€
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('text-[#0a2540]', 'border-b-2', 'border-[#0a2540]');
+            link.classList.add('text-[#0a2540]/80');
+          });
+          const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+          if (active) {
+            active.classList.remove('text-[#0a2540]/80');
+            active.classList.add('text-[#0a2540]');
+          }
+        }
+      });
+    }, { threshold: 0.35 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+  <script>
+    (async function loadServicePage() {
+      const DEFAULT_SERVICE = 'ehv-transmission-lines';
+      const params = new URLSearchParams(window.location.search);
+      const serviceSlug = params.get('service') || DEFAULT_SERVICE;
+
+      function highlightActiveServiceNav(slug) {
+        document.querySelectorAll('.nav-dropdown a[href*="service="]').forEach(function (link) {
+          const linkSlug = new URL(link.href, window.location.href).searchParams.get('service');
+          if (linkSlug === slug) {
+            link.classList.add('dropdown-item-active');
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+
+        document.querySelectorAll('#mobile-solutions-menu a[href*="service="]').forEach(function (link) {
+          const linkSlug = new URL(link.href, window.location.href).searchParams.get('service');
+          if (linkSlug === slug) {
+            link.classList.add('service-link-active');
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+
+        const dropdownBtn = document.querySelector('.nav-dropdown-btn');
+        const mobileSolutionsBtn = document.getElementById('mobile-solutions-btn');
+        if (dropdownBtn) dropdownBtn.classList.add('service-parent-active');
+        if (mobileSolutionsBtn) mobileSolutionsBtn.classList.add('service-parent-active');
+      }
+
+      highlightActiveServiceNav(serviceSlug);
+
+      try {
+        const response = await fetch('innerpages.json');
+        const data = await response.json();
+        const page = data.innerPages.find((p) => p.pageId === serviceSlug)
+          || data.innerPages.find((p) => p.pageId === DEFAULT_SERVICE);
+
+        if (!page) return;
+
+        document.getElementById('page-title').textContent =
+          'Devangi Power Private Limited | ' + page.pageTitle;
+        document.getElementById('breadcrumb-current').textContent = page.breadcrumb[2];
+        document.getElementById('hero-heading').textContent = page.heroSection.heading;
+        document.getElementById('hero-subheading').textContent = page.heroSection.subheading;
+        document.getElementById('hero-bg').src = page.heroSection.backgroundImage;
+        document.getElementById('hero-bg').alt = page.heroSection.heading;
+        document.getElementById('hero-cta').href = page.heroSection.ctaLink;
+        document.getElementById('hero-cta-text').textContent = page.heroSection.ctaText;
+        document.getElementById('overview-desc').textContent = page.overviewSection.description;
+        document.getElementById('overview-img').src = page.overviewSection.image;
+        document.getElementById('overview-img').alt = page.pageTitle;
+        document.getElementById('cta-heading').textContent = page.ctaSection.heading;
+        document.getElementById('cta-desc').textContent = page.ctaSection.description;
+        document.getElementById('cta-link').href = page.ctaSection.buttonLink;
+        document.getElementById('cta-link-text').textContent = page.ctaSection.buttonText;
+
+        const benefitStyles = [
+          { accent: '#f39449', hoverBorder: 'hover:border-[#f39449]/50', hoverShadow: 'hover:shadow-[0_20px_60px_rgba(243,148,73,0.15)]', gradient: 'from-[#f39449]/20', offset: '' },
+          { accent: '#a2caf7', hoverBorder: 'hover:border-[#a2caf7]/50', hoverShadow: 'hover:shadow-[0_20px_60px_rgba(162,202,247,0.15)]', gradient: 'from-[#a2caf7]/20', offset: 'lg:mt-12' },
+          { accent: '#f39449', hoverBorder: 'hover:border-[#f39449]/50', hoverShadow: 'hover:shadow-[0_20px_60px_rgba(243,148,73,0.15)]', gradient: 'from-[#f39449]/20', offset: '' },
+          { accent: '#a2caf7', hoverBorder: 'hover:border-[#a2caf7]/50', hoverShadow: 'hover:shadow-[0_20px_60px_rgba(162,202,247,0.15)]', gradient: 'from-[#a2caf7]/20', offset: 'lg:mt-12' }
+        ];
+
+        document.getElementById('benefits-grid').innerHTML = page.keyBenefitsSection.map(function (benefit, i) {
+          const style = benefitStyles[i % benefitStyles.length];
+          return '<div class="metric-card p-8 rounded-3xl border border-white/10 flex flex-col items-start group hover:-translate-y-3 transition-all duration-500 ' + style.hoverBorder + ' ' + style.hoverShadow + ' relative overflow-hidden ' + style.offset + ' bg-white/[0.02]">' +
+            '<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl ' + style.gradient + ' to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>' +
+            '<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0a2540] to-[#070f16] border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]" style="color:' + style.accent + '">' +
+            '<span class="material-symbols-outlined text-[32px]">' + benefit.icon + '</span></div>' +
+            '<h3 class="font-headline-md text-[22px] font-bold text-white mb-4 group-hover:text-[#a2caf7] transition-colors duration-300">' + benefit.title + '</h3>' +
+            '<p class="font-body-md text-[#8c9199] leading-relaxed relative z-10 group-hover:text-white/90 transition-colors duration-300">' + benefit.description + '</p>' +
+            '<div class="mt-8 pt-6 border-t border-white/10 w-full flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0" style="color:' + style.accent + '">' +
+            '<span class="text-sm font-bold tracking-wider uppercase">Discover</span><span class="material-symbols-outlined">east</span></div></div>';
+        }).join('');
+
+        document.getElementById('features-grid').innerHTML = page.technicalFeaturesSection.map(function (feature, i) {
+          const num = String(i + 1).padStart(2, '0');
+          const accents = [
+            { bar: '#f39449', iconBg: 'from-[#fff7f0] to-[#ffe8d4]', iconColor: '#d47831', numColor: 'text-[#f39449]/15' },
+            { bar: '#a2caf7', iconBg: 'from-[#f0f7fd] to-[#dceaf8]', iconColor: '#386188', numColor: 'text-[#a2caf7]/25' },
+            { bar: '#0a2540', iconBg: 'from-[#f2f5f8] to-[#e4eaef]', iconColor: '#0a2540', numColor: 'text-[#0a2540]/10' }
+          ];
+          const style = accents[i % accents.length];
+          return '<article class="tech-spec-card group relative bg-white/90 backdrop-blur-sm rounded-[20px] border border-[#0a2540]/8 p-6 md:p-7 overflow-hidden shadow-[0_8px_30px_rgba(10,37,64,0.05)] hover:shadow-[0_22px_55px_rgba(10,37,64,0.11)] hover:-translate-y-2">' +
+            '<div class="absolute top-0 left-0 right-0 h-[3px] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-t-[20px]" style="background:' + style.bar + '"></div>' +
+            '<span class="absolute top-3 right-4 font-stat-value text-[52px] md:text-[58px] leading-none font-bold ' + style.numColor + ' select-none pointer-events-none transition-transform duration-500 group-hover:scale-110">' + num + '</span>' +
+            '<div class="relative w-[52px] h-[52px] rounded-2xl bg-gradient-to-br ' + style.iconBg + ' flex items-center justify-center mb-5 border border-[#0a2540]/6 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] group-hover:scale-105 transition-transform duration-300" style="color:' + style.iconColor + '">' +
+            '<span class="material-symbols-outlined text-[26px]">' + feature.icon + '</span></div>' +
+            '<h3 class="font-headline-md font-bold text-[#0a2540] text-[17px] md:text-lg mb-2.5 pr-12 relative z-10 leading-snug">' + feature.title + '</h3>' +
+            '<p class="font-body-md text-[#52606d] leading-relaxed text-[14px] md:text-[15px] relative z-10">' + feature.description + '</p>' +
+            '</article>';
+        }).join('');
+
+        document.getElementById('gallery-grid').innerHTML = page.projectGallerySection.map(function (item, i) {
+          const isLarge = i === 0;
+          const sizeClass = isLarge ? 'md:col-span-2 md:row-span-2 min-h-[300px] md:min-h-[500px]' : 'min-h-[200px] md:min-h-[240px]';
+          const padding = isLarge ? 'p-8' : 'p-6';
+          const categorySize = isLarge ? 'text-xs mb-2' : 'text-[10px] mb-1';
+          const titleSize = isLarge ? 'text-2xl md:text-3xl mb-2' : 'text-lg';
+          const iconSize = isLarge ? 'w-16 h-16' : 'w-12 h-12 scale-90 group-hover:scale-100';
+          const iconText = isLarge ? 'text-[32px]' : 'text-[24px]';
+          return '<div class="' + (isLarge ? 'md:col-span-2 md:row-span-2 ' : '') + 'relative group overflow-hidden rounded-[16px] shadow-sm cursor-pointer ' + sizeClass + '">' +
+            '<img src="' + item.image + '" alt="' + item.title + '" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />' +
+            '<div class="absolute inset-0 bg-gradient-to-t from-[#0a2540]/90 ' + (isLarge ? 'via-[#0a2540]/30 ' : '') + 'to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>' +
+            '<div class="absolute bottom-0 left-0 w-full ' + padding + ' translate-y-2 group-hover:translate-y-0 transition-transform duration-300">' +
+            '<p class="font-label-caps text-[#f39449] uppercase tracking-widest ' + categorySize + ' font-bold">' + item.category + '</p>' +
+            '<h3 class="font-headline-md ' + titleSize + ' font-bold text-white">' + item.title + '</h3></div>' +
+            '<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ' + iconSize + ' rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110 border border-white/40">' +
+            '<span class="material-symbols-outlined text-white ' + iconText + '">open_in_full</span></div></div>';
+        }).join('');
+      } catch (err) {
+        console.error('Failed to load service page data:', err);
+      }
+    })();
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+

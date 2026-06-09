@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="dark" lang="en">
 
 <head>
@@ -26,6 +26,14 @@
 
     .nav-dropdown-wrap:hover .nav-chevron {
       transform: rotate(180deg);
+    }
+
+    .nav-dropdown {
+      transform: translateX(-50%) translateY(8px);
+    }
+
+    .dropdown-item:hover {
+      background: rgba(10, 37, 64, 0.06);
     }
 
     .nav-glass.scrolled {
@@ -254,16 +262,45 @@
             </svg>
           </button>
           <div
-            class="nav-dropdown invisible absolute left-1/2 top-full mt-2 w-72 -translate-x-1/2 translate-y-2 overflow-hidden rounded-2xl border border-white/60 bg-white/90 opacity-0 shadow-[0_20px_60px_rgba(10,37,64,0.18)] backdrop-blur-2xl transition-all duration-200">
+            class="nav-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl bg-white/90 backdrop-blur-2xl border border-white/60 shadow-[0_20px_60px_rgba(10,37,64,0.18),0_4px_16px_rgba(10,37,64,0.1)] overflow-hidden opacity-0 invisible translate-y-2 transition-all duration-250 ease-out">
             <div class="p-2">
-              <a href="services.html" class="block rounded-xl px-4 py-3 text-sm font-medium text-[#0a2540] hover:bg-[#0a2540]/8">EHV Transmission Lines</a>
-              <a href="services.html" class="block rounded-xl px-4 py-3 text-sm font-medium text-[#0a2540] hover:bg-[#0a2540]/8">Substations &amp; Automation</a>
-              <a href="services.html" class="block rounded-xl px-4 py-3 text-sm font-medium text-[#0a2540] hover:bg-[#0a2540]/8">XLPE Underground Cable Laying</a>
-              <a href="services.html" class="block rounded-xl px-4 py-3 text-sm font-medium text-[#0a2540] hover:bg-[#0a2540]/8">Industrial Power Distribution</a>
-              <a href="services.html" class="block rounded-xl px-4 py-3 text-sm font-medium text-[#0a2540] hover:bg-[#0a2540]/8">EPC Turnkey Execution</a>
-              <a href="services.html" class="block rounded-xl px-4 py-3 text-sm font-medium text-[#0a2540] hover:bg-[#0a2540]/8">Regulatory Liaisoning</a>
-              <a href="services.html" class="block rounded-xl px-4 py-3 text-sm font-medium text-[#0a2540] hover:bg-[#0a2540]/8">Renewables &amp; BESS</a>
+              <a href="EHV Transmission Lines.html?service=ehv-transmission-lines"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                EHV Transmission Lines
+              </a>
+              <a href="EHV Transmission Lines.html?service=substations-automation"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                Substations &amp; Automation
+              </a>
+              <a href="EHV Transmission Lines.html?service=xlpe-underground-cable-laying"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                XLPE Underground Cable Laying
+              </a>
+              <a href="EHV Transmission Lines.html?service=industrial-power-distribution"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                Industrial Power Distribution
+              </a>
+              <a href="EHV Transmission Lines.html?service=epc-turnkey-execution"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                EPC Turnkey Execution
+              </a>
+              <a href="EHV Transmission Lines.html?service=regulatory-liaisoning"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>
+                Regulatory Liaisoning
+              </a>
+              <a href="EHV Transmission Lines.html?service=renewables-bess"
+                class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group">
+                <span class="dropdown-dot w-2 h-2 rounded-full bg-[#f9ba7e] group-hover:bg-[#f9ba7e] transition-colors duration-150 shrink-0"></span>
+                Renewables &amp; BESS
+              </a>
             </div>
+            <div class="h-0.5 bg-gradient-to-r from-[#a2caf7] via-[#0a2540]/20 to-[#f9ba7e]"></div>
           </div>
         </div>
         <a href="projects.html"
@@ -301,13 +338,13 @@
         </button>
         <div id="mobile-solutions-menu" class="max-h-0 overflow-hidden pl-3 transition-all duration-300">
           <div class="flex flex-col border-l-2 border-[#a2caf7] py-1 pl-3">
-            <a href="services.html" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">EHV Transmission Lines</a>
-            <a href="services.html" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">Substations &amp; Automation</a>
-            <a href="services.html" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">XLPE Underground Cable Laying</a>
-            <a href="services.html" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">Industrial Power Distribution</a>
-            <a href="services.html" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">EPC Turnkey Execution</a>
-            <a href="services.html" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">Regulatory Liaisoning</a>
-            <a href="services.html" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">Renewables &amp; BESS</a>
+            <a href="EHV Transmission Lines.html?service=ehv-transmission-lines" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">EHV Transmission Lines</a>
+<a href="EHV Transmission Lines.html?service=substations-automation" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">Substations &amp; Automation</a>
+            <a href="EHV Transmission Lines.html?service=xlpe-underground-cable-laying" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">XLPE Underground Cable Laying</a>
+            <a href="EHV Transmission Lines.html?service=industrial-power-distribution" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">Industrial Power Distribution</a>
+            <a href="EHV Transmission Lines.html?service=epc-turnkey-execution" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">EPC Turnkey Execution</a>
+            <a href="EHV Transmission Lines.html?service=regulatory-liaisoning" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">Regulatory Liaisoning</a>
+            <a href="EHV Transmission Lines.html?service=renewables-bess" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">Renewables &amp; BESS</a>
           </div>
         </div>
         <a href="projects.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-[#0a2540] hover:bg-[#0a2540]/8">Our Projects Gallery</a>
@@ -708,11 +745,11 @@
           </h2>
           
           <p class="text-[#52606d] text-[17px] leading-[1.8] mb-8 font-['Open_Sans']">
-            DPPL’s strength lies in disciplined field execution. From high-voltage tower installation and underground cable works to safety-led operations, every activity is carried out with precision, responsibility and attention to project requirements.
+            DPPLâ€™s strength lies in disciplined field execution. From high-voltage tower installation and underground cable works to safety-led operations, every activity is carried out with precision, responsibility and attention to project requirements.
           </p>
           
           <p class="font-mono text-xs font-bold tracking-widest text-[#0B3558]/60 uppercase mb-12 flex items-center gap-2">
-            ENGINEERING <span class="text-[#E9924A]">•</span> SAFETY <span class="text-[#E9924A]">•</span> DELIVERY
+            ENGINEERING <span class="text-[#E9924A]">â€¢</span> SAFETY <span class="text-[#E9924A]">â€¢</span> DELIVERY
           </p>
           
           <!-- Desktop Progress Navigation -->
@@ -996,7 +1033,7 @@
           </div>
           
           <h2 class="font-['Montserrat'] text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6">
-            Let’s Build Reliable<br />
+            Letâ€™s Build Reliable<br />
             Power Infrastructure Together
           </h2>
           
@@ -1160,3 +1197,4 @@
 </body>
 
 </html>
+

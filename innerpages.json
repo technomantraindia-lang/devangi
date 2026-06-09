@@ -1,0 +1,767 @@
+﻿{
+  "innerPages": [
+    {
+      "pageId": "ehv-transmission-lines",
+      "pageTitle": "EHV Transmission Lines",
+      "breadcrumb": ["Home", "Our Solutions", "EHV Transmission Lines"],
+      "heroSection": {
+        "heading": "EHV Transmission Lines",
+        "subheading": "High-voltage transmission infrastructure for reliable power evacuation",
+        "ctaText": "Explore Project Gallery",
+        "ctaLink": "projects.html",
+        "backgroundImage": "site_image-1.avif"
+      },
+      "overviewSection": {
+        "title": "Overview",
+        "description": "DPPL executes EHV transmission lines with technical precision, covering design, erection, alignment, stringing, and commissioning. Our solutions ensure grid reliability and efficient power evacuation across industrial and utility corridors.",
+        "image": "site_image-1.avif"
+      },
+      "keyBenefitsSection": [
+        {
+          "title": "High Reliability",
+          "description": "Engineered structures built for completely uninterrupted power flow.",
+          "icon": "electric_bolt"
+        },
+        {
+          "title": "Expert Engineering",
+          "description": "Deployed by specialized teams with decades of terrain and layout planning experience.",
+          "icon": "engineering"
+        },
+        {
+          "title": "Turnkey Delivery",
+          "description": "Complete end-to-end EPC execution from conception to synchronized commissioning.",
+          "icon": "handshake"
+        },
+        {
+          "title": "Safety Compliance",
+          "description": "Total adherence to rigorous regulatory standards and international safety protocols.",
+          "icon": "verified_user"
+        }
+      ],
+      "technicalFeaturesSection": [
+        {
+          "title": "220kV+ Transmission Capability",
+          "description": "Supports high-voltage power distribution for robust networks.",
+          "icon": "electric_meter"
+        },
+        {
+          "title": "Monopole & Lattice Tower",
+          "description": "Precise erection & alignment for diverse terrains.",
+          "icon": "account_tree"
+        },
+        {
+          "title": "Route Survey & Alignment",
+          "description": "Optimized corridor planning utilizing advanced topologies.",
+          "icon": "map"
+        },
+        {
+          "title": "High-Voltage Stringing",
+          "description": "Sag calculation & phase spacing for optimal safety.",
+          "icon": "architecture"
+        },
+        {
+          "title": "Quality Inspection & Testing",
+          "description": "Ensures strict compliance & operational reliability.",
+          "icon": "fact_check"
+        },
+        {
+          "title": "Grid Integration & Commissioning",
+          "description": "Fully synchronized and ready for operational load.",
+          "icon": "power"
+        }
+      ],
+      "projectGallerySection": [
+        {
+          "image": "site_image-1.avif",
+          "category": "TRANSMISSION INFRASTRUCTURE",
+          "title": "Monopole Tower Installation"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "SITE SAFETY",
+          "title": "Toolbox Talk & Workforce Readiness"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "UNDERGROUND CABLING",
+          "title": "Road Cutting & Trench Preparation"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "SUBSTATION EXECUTION",
+          "title": "Substation Construction & Commissioning"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "XLPE CABLE EXECUTION",
+          "title": "Cable Laying in Trefoil Formation"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "EPC DELIVERY",
+          "title": "Infrastructure Built for Reliability"
+        }
+      ],
+      "ctaSection": {
+        "heading": "Ready to Discuss Your Transmission Project?",
+        "description": "Connect with DPPL's team to discuss turnkey EPC requirements and timeline optimization.",
+        "buttonText": "Get a Quote",
+        "buttonLink": "contact.html"
+      }
+    },
+    {
+      "pageId": "substations-automation",
+      "pageTitle": "Substations & Automation",
+      "breadcrumb": ["Home", "Our Solutions", "Substations & Automation"],
+      "heroSection": {
+        "heading": "Substations & Automation",
+        "subheading": "Turnkey EHV substation EPC with advanced automation and SCADA integration",
+        "ctaText": "Explore Project Gallery",
+        "ctaLink": "projects.html",
+        "backgroundImage": "site_image-1.avif"
+      },
+      "overviewSection": {
+        "title": "Overview",
+        "description": "DPPL delivers complete substation EPC solutions from 66kV to 400kV, including AIS and GIS switchyards, transformer installation, relay protection, and full automation. Our substation projects integrate SCADA, RTU, and bay-level control systems for remote monitoring and reliable grid operation across Gujarat and beyond.",
+        "image": "site_image-1.avif"
+      },
+      "keyBenefitsSection": [
+        {
+          "title": "Turnkey EPC Delivery",
+          "description": "Single-point responsibility from civil works through synchronized grid energization.",
+          "icon": "handshake"
+        },
+        {
+          "title": "Advanced Automation",
+          "description": "SCADA, relay protection, and remote monitoring for intelligent substation operation.",
+          "icon": "engineering"
+        },
+        {
+          "title": "Grid Stability",
+          "description": "Robust voltage transformation and switching infrastructure for uninterrupted power supply.",
+          "icon": "electric_bolt"
+        },
+        {
+          "title": "Utility Compliance",
+          "description": "Full adherence to GETCO, CEA, and IEC standards for safe substation commissioning.",
+          "icon": "verified_user"
+        }
+      ],
+      "technicalFeaturesSection": [
+        {
+          "title": "AIS & GIS Switchyards",
+          "description": "Design and erection of air-insulated and gas-insulated substation bays up to 400kV.",
+          "icon": "account_tree"
+        },
+        {
+          "title": "Power Transformer Installation",
+          "description": "Transportation, oil filtration, testing, and commissioning of EHV transformers.",
+          "icon": "electric_meter"
+        },
+        {
+          "title": "Relay & Protection Systems",
+          "description": "Numerical relay configuration, busbar protection, and fault detection logic.",
+          "icon": "fact_check"
+        },
+        {
+          "title": "SCADA & RTU Integration",
+          "description": "Real-time data acquisition, remote control, and alarm management systems.",
+          "icon": "architecture"
+        },
+        {
+          "title": "Civil & Structural Works",
+          "description": "Foundation design, control room construction, cable trenches, and earth matting.",
+          "icon": "map"
+        },
+        {
+          "title": "Testing & Commissioning",
+          "description": "Pre-commissioning tests, energization, and utility handover documentation.",
+          "icon": "power"
+        }
+      ],
+      "projectGallerySection": [
+        {
+          "image": "site_image-1.avif",
+          "category": "SUBSTATION EPC",
+          "title": "220kV AIS Switchyard Execution"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "AUTOMATION",
+          "title": "SCADA & Relay Panel Integration"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "TRANSFORMER",
+          "title": "EHV Power Transformer Installation"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "CIVIL WORKS",
+          "title": "Control Room & Foundation Construction"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "SWITCHGEAR",
+          "title": "Circuit Breaker & Isolator Erection"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "COMMISSIONING",
+          "title": "Grid Synchronization & Energization"
+        }
+      ],
+      "ctaSection": {
+        "heading": "Planning a New Substation Project?",
+        "description": "Speak with DPPL's substation specialists about EPC scope, automation requirements, and project timelines.",
+        "buttonText": "Get a Quote",
+        "buttonLink": "contact.html"
+      }
+    },
+    {
+      "pageId": "xlpe-underground-cable-laying",
+      "pageTitle": "XLPE Underground Cable Laying",
+      "breadcrumb": ["Home", "Our Solutions", "XLPE Underground Cable Laying"],
+      "heroSection": {
+        "heading": "XLPE Underground Cable Laying",
+        "subheading": "Precision underground EHV cable networks for urban and industrial corridors",
+        "ctaText": "Explore Project Gallery",
+        "ctaLink": "projects.html",
+        "backgroundImage": "site_image-1.avif"
+      },
+      "overviewSection": {
+        "title": "Overview",
+        "description": "DPPL specializes in XLPE underground cable laying for 11kV to 220kV networks. Our scope covers route survey, trenching, duct laying, cable pulling, jointing, termination, and testing. We execute trefoil and flat formation laying with sand bedding and warning tape as per IS and utility specifications for safe, long-life underground power distribution.",
+        "image": "site_image-1.avif"
+      },
+      "keyBenefitsSection": [
+        {
+          "title": "Minimal Transmission Loss",
+          "description": "XLPE insulation delivers low dielectric loss and superior thermal performance.",
+          "icon": "electric_bolt"
+        },
+        {
+          "title": "Urban-Ready Execution",
+          "description": "Efficient trenching and cable routing in dense industrial and municipal areas.",
+          "icon": "engineering"
+        },
+        {
+          "title": "Expert Jointing",
+          "description": "Heat-shrink and cold-shrink terminations by certified cable jointing teams.",
+          "icon": "handshake"
+        },
+        {
+          "title": "Quality Assurance",
+          "description": "Hi-pot testing, IR measurement, and VLF testing before energization.",
+          "icon": "verified_user"
+        }
+      ],
+      "technicalFeaturesSection": [
+        {
+          "title": "Route Survey & Planning",
+          "description": "Utility mapping, soil assessment, and optimized cable corridor design.",
+          "icon": "map"
+        },
+        {
+          "title": "Trenching & Duct Laying",
+          "description": "Mechanized road cutting, trench preparation, and HDPE duct installation.",
+          "icon": "architecture"
+        },
+        {
+          "title": "Cable Pulling & Laying",
+          "description": "Trefoil and flat formation laying with rollers, winches, and tension control.",
+          "icon": "account_tree"
+        },
+        {
+          "title": "Jointing & Termination",
+          "description": "Indoor and outdoor terminations with stress control and sealing kits.",
+          "icon": "electric_meter"
+        },
+        {
+          "title": "Cable Testing",
+          "description": "Insulation resistance, partial discharge, and high-voltage withstand tests.",
+          "icon": "fact_check"
+        },
+        {
+          "title": "Restoration & Handover",
+          "description": "Road reinstatement, as-built drawings, and utility clearance documentation.",
+          "icon": "power"
+        }
+      ],
+      "projectGallerySection": [
+        {
+          "image": "site_image-1.avif",
+          "category": "TRENCHING",
+          "title": "Road Cutting & Trench Preparation"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "CABLE LAYING",
+          "title": "XLPE Cable in Trefoil Formation"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "JOINTING",
+          "title": "EHV Cable Jointing & Sealing"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "DUCT WORK",
+          "title": "HDPE Duct Laying & Sand Bedding"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "TERMINATION",
+          "title": "Indoor Cable Termination Setup"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "TESTING",
+          "title": "Pre-Commissioning Cable Testing"
+        }
+      ],
+      "ctaSection": {
+        "heading": "Need Underground Cable Infrastructure?",
+        "description": "Connect with DPPL for XLPE cable route planning, laying, and commissioning support.",
+        "buttonText": "Get a Quote",
+        "buttonLink": "contact.html"
+      }
+    },
+    {
+      "pageId": "industrial-power-distribution",
+      "pageTitle": "Industrial Power Distribution",
+      "breadcrumb": ["Home", "Our Solutions", "Industrial Power Distribution"],
+      "heroSection": {
+        "heading": "Industrial Power Distribution",
+        "subheading": "HT/LT power distribution systems engineered for industrial complexes",
+        "ctaText": "Explore Project Gallery",
+        "ctaLink": "projects.html",
+        "backgroundImage": "site_image-1.avif"
+      },
+      "overviewSection": {
+        "title": "Overview",
+        "description": "DPPL designs and executes industrial power distribution networks including HT receiving stations, ring main units, LT panels, bus ducting, and internal cabling. We serve manufacturing plants, SEZs, and industrial estates with reliable HT/LT infrastructure that meets load growth, safety, and operational continuity requirements.",
+        "image": "site_image-1.avif"
+      },
+      "keyBenefitsSection": [
+        {
+          "title": "Load-Optimized Design",
+          "description": "Distribution layouts sized for current demand with provision for future expansion.",
+          "icon": "engineering"
+        },
+        {
+          "title": "Uninterrupted Supply",
+          "description": "Redundant feeders and switchgear for critical industrial process continuity.",
+          "icon": "electric_bolt"
+        },
+        {
+          "title": "Safety Standards",
+          "description": "Compliance with IE rules, factory act requirements, and electrical safety norms.",
+          "icon": "verified_user"
+        },
+        {
+          "title": "Integrated Delivery",
+          "description": "End-to-end supply, erection, testing, and commissioning of distribution assets.",
+          "icon": "handshake"
+        }
+      ],
+      "technicalFeaturesSection": [
+        {
+          "title": "HT Receiving Stations",
+          "description": "33kV/11kV HT panels, VCB, CT/PT, and metering for industrial intake points.",
+          "icon": "electric_meter"
+        },
+        {
+          "title": "LT Panel & Bus Duct",
+          "description": "PCC, MCC, APFC panels, and bus duct routing for shop-floor distribution.",
+          "icon": "account_tree"
+        },
+        {
+          "title": "Ring Main Units",
+          "description": "Compact RMUs for reliable HT ring network operation in industrial zones.",
+          "icon": "architecture"
+        },
+        {
+          "title": "Internal Cabling",
+          "description": "HT/LT cable routing, tray work, and termination within plant boundaries.",
+          "icon": "map"
+        },
+        {
+          "title": "Power Factor Correction",
+          "description": "APFC panel design and installation for optimal power quality and tariff savings.",
+          "icon": "fact_check"
+        },
+        {
+          "title": "Testing & Handover",
+          "description": "Primary injection, relay testing, and load trial before operational handover.",
+          "icon": "power"
+        }
+      ],
+      "projectGallerySection": [
+        {
+          "image": "site_image-1.avif",
+          "category": "HT STATION",
+          "title": "Industrial HT Receiving Substation"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "PANEL WORK",
+          "title": "LT Panel & Bus Duct Installation"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "DISTRIBUTION",
+          "title": "Internal HT/LT Cable Routing"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "RMU",
+          "title": "Ring Main Unit Erection"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "POWER QUALITY",
+          "title": "APFC Panel Commissioning"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "INDUSTRIAL EPC",
+          "title": "Plant Power Infrastructure Handover"
+        }
+      ],
+      "ctaSection": {
+        "heading": "Powering Your Industrial Facility?",
+        "description": "Discuss HT/LT distribution requirements with DPPL's industrial power specialists.",
+        "buttonText": "Get a Quote",
+        "buttonLink": "contact.html"
+      }
+    },
+    {
+      "pageId": "epc-turnkey-execution",
+      "pageTitle": "EPC Turnkey Execution",
+      "breadcrumb": ["Home", "Our Solutions", "EPC Turnkey Execution"],
+      "heroSection": {
+        "heading": "EPC Turnkey Execution",
+        "subheading": "End-to-end engineering, procurement, and construction for power infrastructure",
+        "ctaText": "Explore Project Gallery",
+        "ctaLink": "projects.html",
+        "backgroundImage": "site_image-1.avif"
+      },
+      "overviewSection": {
+        "title": "Overview",
+        "description": "DPPL provides complete EPC turnkey execution for power transmission and distribution projects. As a GETCO/DGVCL approved vendor, we manage engineering design, material procurement, construction, quality control, and commissioning under a single contract — delivering projects on schedule with full accountability from concept to grid synchronization.",
+        "image": "site_image-1.avif"
+      },
+      "keyBenefitsSection": [
+        {
+          "title": "Single-Point Accountability",
+          "description": "One EPC contractor responsible for design, supply, execution, and commissioning.",
+          "icon": "handshake"
+        },
+        {
+          "title": "Approved Vendor Status",
+          "description": "Recognized EPC capability with GETCO, DGVCL, and government utility frameworks.",
+          "icon": "verified_user"
+        },
+        {
+          "title": "Schedule Certainty",
+          "description": "Integrated project planning with milestone tracking and resource optimization.",
+          "icon": "engineering"
+        },
+        {
+          "title": "Cost Control",
+          "description": "Consolidated procurement and execution for predictable project economics.",
+          "icon": "electric_bolt"
+        }
+      ],
+      "technicalFeaturesSection": [
+        {
+          "title": "Engineering & Design",
+          "description": "SLD preparation, BOQ, structural design, and detailed project reporting.",
+          "icon": "architecture"
+        },
+        {
+          "title": "Procurement Management",
+          "description": "Vendor evaluation, material sourcing, inspection, and logistics coordination.",
+          "icon": "account_tree"
+        },
+        {
+          "title": "Construction Management",
+          "description": "Site mobilization, workforce deployment, and progress monitoring.",
+          "icon": "map"
+        },
+        {
+          "title": "Quality Assurance",
+          "description": "Stage-wise inspection, test protocols, and documentation as per utility norms.",
+          "icon": "fact_check"
+        },
+        {
+          "title": "HSE Management",
+          "description": "Safety planning, toolbox talks, PPE compliance, and incident prevention.",
+          "icon": "verified_user"
+        },
+        {
+          "title": "Commissioning & Handover",
+          "description": "Testing, energization, as-built submission, and defect liability support.",
+          "icon": "power"
+        }
+      ],
+      "projectGallerySection": [
+        {
+          "image": "site_image-1.avif",
+          "category": "EPC DELIVERY",
+          "title": "Turnkey Transmission Line Project"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "PROJECT MANAGEMENT",
+          "title": "Integrated Site Execution Planning"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "PROCUREMENT",
+          "title": "Material Supply & Quality Inspection"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "CONSTRUCTION",
+          "title": "Multi-Discipline Field Execution"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "HSE",
+          "title": "Safety-First Worksite Operations"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "HANDOVER",
+          "title": "Commissioning & Utility Clearance"
+        }
+      ],
+      "ctaSection": {
+        "heading": "Looking for a Turnkey EPC Partner?",
+        "description": "Partner with DPPL for end-to-end power infrastructure delivery with full project accountability.",
+        "buttonText": "Get a Quote",
+        "buttonLink": "contact.html"
+      }
+    },
+    {
+      "pageId": "regulatory-liaisoning",
+      "pageTitle": "Regulatory Liaisoning",
+      "breadcrumb": ["Home", "Our Solutions", "Regulatory Liaisoning"],
+      "heroSection": {
+        "heading": "Regulatory Liaisoning",
+        "subheading": "Government approvals and utility compliance for seamless project execution",
+        "ctaText": "Explore Project Gallery",
+        "ctaLink": "projects.html",
+        "backgroundImage": "site_image-1.avif"
+      },
+      "overviewSection": {
+        "title": "Overview",
+        "description": "DPPL manages regulatory liaisoning and utility coordination for power infrastructure projects across Gujarat. We handle approvals from GETCO, DGVCL, PGVCL, MGVCL, and relevant government departments — including load sanction, wayleave permissions, safety clearances, and energization approvals to keep projects moving without regulatory delays.",
+        "image": "site_image-1.avif"
+      },
+      "keyBenefitsSection": [
+        {
+          "title": "Faster Clearances",
+          "description": "Established relationships with DISCOMs and state utility bodies for expedited approvals.",
+          "icon": "electric_bolt"
+        },
+        {
+          "title": "Documentation Expertise",
+          "description": "Complete preparation of technical submissions, drawings, and compliance reports.",
+          "icon": "engineering"
+        },
+        {
+          "title": "Multi-Utility Coverage",
+          "description": "Liaisoning across GETCO, DGVCL, PGVCL, and MGVCL jurisdictions.",
+          "icon": "handshake"
+        },
+        {
+          "title": "Compliance Assurance",
+          "description": "Adherence to CEA regulations, IE rules, and state electricity board requirements.",
+          "icon": "verified_user"
+        }
+      ],
+      "technicalFeaturesSection": [
+        {
+          "title": "Load Sanction & Connectivity",
+          "description": "Application processing for new load connections and grid connectivity approvals.",
+          "icon": "electric_meter"
+        },
+        {
+          "title": "Wayleave & ROW Permissions",
+          "description": "Right-of-way approvals for transmission corridors and cable routes.",
+          "icon": "map"
+        },
+        {
+          "title": "Safety Clearances",
+          "description": "Electrical inspector approvals and safety certification documentation.",
+          "icon": "fact_check"
+        },
+        {
+          "title": "Utility Coordination",
+          "description": "Joint site surveys, material inspection, and stage-wise utility sign-offs.",
+          "icon": "architecture"
+        },
+        {
+          "title": "Government Liaisoning",
+          "description": "Coordination with GIDC, municipal bodies, and forest/land authorities.",
+          "icon": "account_tree"
+        },
+        {
+          "title": "Energization Approvals",
+          "description": "Final testing clearance and grid energization permission from DISCOM.",
+          "icon": "power"
+        }
+      ],
+      "projectGallerySection": [
+        {
+          "image": "site_image-1.avif",
+          "category": "APPROVALS",
+          "title": "Utility Load Sanction Processing"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "COMPLIANCE",
+          "title": "Technical Documentation Submission"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "COORDINATION",
+          "title": "Joint Site Survey with DISCOM"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "WAYLEAVE",
+          "title": "Right-of-Way Permission Clearance"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "INSPECTION",
+          "title": "Electrical Safety Inspection"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "ENERGIZATION",
+          "title": "Final Grid Connection Approval"
+        }
+      ],
+      "ctaSection": {
+        "heading": "Need Regulatory Support for Your Project?",
+        "description": "Let DPPL handle utility approvals and compliance so your project stays on track.",
+        "buttonText": "Get a Quote",
+        "buttonLink": "contact.html"
+      }
+    },
+    {
+      "pageId": "renewables-bess",
+      "pageTitle": "Renewables & BESS",
+      "breadcrumb": ["Home", "Our Solutions", "Renewables & BESS"],
+      "heroSection": {
+        "heading": "Renewables & BESS",
+        "subheading": "Solar EPC and battery energy storage for sustainable power infrastructure",
+        "ctaText": "Explore Project Gallery",
+        "ctaLink": "projects.html",
+        "backgroundImage": "site_image-1.avif"
+      },
+      "overviewSection": {
+        "title": "Overview",
+        "description": "DPPL extends its EPC expertise to renewable energy with solar power plant execution and Battery Energy Storage System (BESS) integration. We deliver grid-connected solar installations, pooling substations for wind and solar farms, and BESS solutions that enhance grid stability, enable peak shaving, and support India's clean energy transition.",
+        "image": "site_image-1.avif"
+      },
+      "keyBenefitsSection": [
+        {
+          "title": "Clean Energy Integration",
+          "description": "Grid-connected solar and BESS solutions aligned with India's renewable targets.",
+          "icon": "electric_bolt"
+        },
+        {
+          "title": "Grid Stability",
+          "description": "BESS systems for frequency regulation, peak load management, and backup power.",
+          "icon": "engineering"
+        },
+        {
+          "title": "Turnkey Solar EPC",
+          "description": "Complete solar plant execution from site preparation to grid synchronization.",
+          "icon": "handshake"
+        },
+        {
+          "title": "Future-Ready Infrastructure",
+          "description": "Scalable designs supporting hybrid renewable and storage deployments.",
+          "icon": "verified_user"
+        }
+      ],
+      "technicalFeaturesSection": [
+        {
+          "title": "Solar EPC Execution",
+          "description": "Ground-mount and rooftop solar installation with inverter and monitoring systems.",
+          "icon": "solar_power"
+        },
+        {
+          "title": "BESS Integration",
+          "description": "Lithium-ion battery storage with PCS, EMS, and grid interconnection.",
+          "icon": "battery_charging_full"
+        },
+        {
+          "title": "Pooling Substations",
+          "description": "Dedicated substations for wind and solar farm grid connectivity.",
+          "icon": "account_tree"
+        },
+        {
+          "title": "Power Evacuation",
+          "description": "Transmission lines and cable networks for renewable power delivery.",
+          "icon": "map"
+        },
+        {
+          "title": "SCADA & Monitoring",
+          "description": "Real-time generation tracking, performance analytics, and remote diagnostics.",
+          "icon": "fact_check"
+        },
+        {
+          "title": "Commissioning & O&M Support",
+          "description": "Grid synchronization, performance testing, and operational handover.",
+          "icon": "power"
+        }
+      ],
+      "projectGallerySection": [
+        {
+          "image": "site_image-1.avif",
+          "category": "SOLAR EPC",
+          "title": "Utility-Scale Solar Plant Execution"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "BESS",
+          "title": "Battery Energy Storage System Setup"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "GRID CONNECTIVITY",
+          "title": "Renewable Power Evacuation Line"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "SUBSTATION",
+          "title": "Solar Pooling Substation Construction"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "MONITORING",
+          "title": "SCADA & Generation Monitoring"
+        },
+        {
+          "image": "site_image-1.avif",
+          "category": "SUSTAINABLE EPC",
+          "title": "Clean Energy Infrastructure Delivery"
+        }
+      ],
+      "ctaSection": {
+        "heading": "Ready to Go Renewable?",
+        "description": "Explore solar EPC and BESS solutions with DPPL for sustainable power infrastructure.",
+        "buttonText": "Get a Quote",
+        "buttonLink": "contact.html"
+      }
+    }
+  ]
+}
