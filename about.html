@@ -100,11 +100,10 @@
     .journey-year {
       -webkit-text-stroke: 1px rgba(10, 61, 98, 0.18);
       color: transparent;
-      animation: journeyRise 900ms ease-out both;
     }
 
     .journey-copy {
-      animation: journeyFade 800ms ease-out 120ms both;
+      position: relative;
     }
 
     .journey-tag::before {
@@ -201,25 +200,76 @@
       }
     }
 
-    @keyframes scrollMarquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    .trusted-clients-section {
+      background:
+        radial-gradient(circle at 8% 12%, rgba(162, 202, 247, 0.32), transparent 24%),
+        radial-gradient(circle at 94% 88%, rgba(242, 166, 90, 0.18), transparent 22%),
+        #f4f8fc;
     }
-    .animate-marquee {
-      animation: scrollMarquee 40s linear infinite;
+
+    .client-wall {
+      box-shadow: 0 28px 70px rgba(10, 61, 98, 0.12);
     }
-    .client-logo-text {
-      font-family: 'JetBrains Mono', monospace;
-      -webkit-text-stroke: 1px rgba(162, 202, 247, 0.3);
-      color: transparent;
-      transition: all 0.3s ease;
+
+    .client-tile {
+      position: relative;
+      min-height: 174px;
+      overflow: hidden;
+      border: 1px solid #e2ebf3;
+      background: #fff;
+      transition: transform 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
     }
-    .client-logo-text:hover {
-      color: #a2caf7;
-      -webkit-text-stroke: 1px #a2caf7;
-      text-shadow: 0 0 20px rgba(162, 202, 247, 0.6);
+
+    .client-tile::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #e9924a, #f2a65a);
+      transition: width 300ms ease;
     }
-    
+
+    .client-tile:hover {
+      z-index: 1;
+      transform: translateY(-4px);
+      border-color: rgba(233, 146, 74, 0.42);
+      box-shadow: 0 16px 34px rgba(10, 61, 98, 0.12);
+    }
+
+    .client-tile:hover::after {
+      width: 100%;
+    }
+
+    .client-logo-frame {
+      width: 100%;
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .client-logo-frame img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 150px;
+      max-height: 78px;
+      object-fit: contain;
+      transition: transform 280ms ease;
+    }
+
+    .client-tile:hover .client-logo-frame img {
+      transform: scale(1.05);
+    }
+
+    .client-more-tile {
+      background:
+        radial-gradient(circle at 88% 18%, rgba(255, 255, 255, 0.18), transparent 24%),
+        linear-gradient(120deg, #e9924a 0%, #f2a65a 100%);
+    }
+
     .value-strip:hover .value-icon-box {
       box-shadow: 0 0 25px rgba(249, 186, 126, 0.4);
       background: rgba(249, 186, 126, 0.15);
@@ -232,6 +282,46 @@
     @keyframes powerFlow {
       0% { background-position: 100% 0; }
       100% { background-position: -100% 0; }
+    }
+
+    /* About page directional scroll reveals. */
+    html.about-reveal-ready .about-reveal {
+      opacity: 0;
+      transition:
+        opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--about-reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+
+    html.about-reveal-ready .about-reveal-left {
+      transform: translate3d(-92px, 0, 0);
+    }
+
+    html.about-reveal-ready .about-reveal-right {
+      transform: translate3d(92px, 0, 0);
+    }
+
+    html.about-reveal-ready .about-reveal-up {
+      transform: translate3d(0, 72px, 0);
+    }
+
+    html.about-reveal-ready .about-reveal-down {
+      transform: translate3d(0, -72px, 0);
+    }
+
+    html.about-reveal-ready .about-reveal.is-revealed {
+      opacity: 1;
+      transform: none;
+      will-change: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html.about-reveal-ready .about-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
     }
 
   </style>
@@ -253,14 +343,14 @@
         <a href="about.html"
           class="px-3 py-2 text-sm font-semibold text-[#0a2540] transition-all duration-200 hover:bg-white/30">About</a>
         <div class="nav-dropdown-wrap relative">
-          <button
+          <a href="services.html"
             class="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-[#0a2540]/80 transition-all duration-200 hover:bg-white/30 hover:text-[#0a2540]">
             Our Solutions
             <svg class="nav-chevron h-3.5 w-3.5 transition-transform duration-200" fill="none" stroke="currentColor"
               stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
-          </button>
+          </a>
           <div
             class="nav-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl bg-white/90 backdrop-blur-2xl border border-white/60 shadow-[0_20px_60px_rgba(10,37,64,0.18),0_4px_16px_rgba(10,37,64,0.1)] overflow-hidden opacity-0 invisible translate-y-2 transition-all duration-250 ease-out">
             <div class="p-2">
@@ -338,6 +428,7 @@
         </button>
         <div id="mobile-solutions-menu" class="max-h-0 overflow-hidden pl-3 transition-all duration-300">
           <div class="flex flex-col border-l-2 border-[#a2caf7] py-1 pl-3">
+            <a href="services.html" class="rounded-lg px-3 py-2.5 text-sm font-bold text-[#0a2540] hover:bg-[#0a2540]/5">All Services Overview</a>
             <a href="EHV Transmission Lines.html?service=ehv-transmission-lines" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">EHV Transmission Lines</a>
 <a href="EHV Transmission Lines.html?service=substations-automation" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">Substations &amp; Automation</a>
             <a href="EHV Transmission Lines.html?service=xlpe-underground-cable-laying" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">XLPE Underground Cable Laying</a>
@@ -962,45 +1053,118 @@
       </div>
     </section>
 
-    <!-- Partners in Progress / Client Logos Section -->
-    <section class="py-16 md:py-24 bg-[#040c14] border-y border-white/5 overflow-hidden relative">
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(162,202,247,0.05),transparent_70%)]"></div>
-      
-      <div class="text-center mb-12 relative z-10">
-        <span class="inline-block font-mono text-xs font-bold tracking-[0.2em] text-[#f2a65a] uppercase mb-4">Trusted By</span>
-        <h2 class="font-['Montserrat'] text-3xl md:text-4xl font-extrabold text-white">Partners in Progress</h2>
-      </div>
+    <!-- Trusted Clients Section -->
+    <section class="trusted-clients-section py-16 md:py-24 overflow-hidden relative">
+      <div class="absolute left-8 top-8 text-[10rem] md:text-[16rem] font-black leading-none text-[#0a3d62]/[0.025] select-none">12</div>
 
-      <div class="relative w-full max-w-[1600px] mx-auto overflow-hidden flex [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-        <div class="flex flex-nowrap gap-16 md:gap-24 animate-marquee whitespace-nowrap py-4">
-          <!-- First set -->
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">GETCO</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">PTC</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">ADANI</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">IOCL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">MERIL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">MAHA-TRANSCO</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">PGCL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">UGVCL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">DGVCL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">TORRENT</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">OM POWER</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">GARDEN MILL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">UNIVERSAL CABLE</span>
-          <!-- Duplicate for seamless scroll -->
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">GETCO</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">PTC</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">ADANI</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">IOCL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">MERIL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">MAHA-TRANSCO</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">PGCL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">UGVCL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">DGVCL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">TORRENT</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">OM POWER</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">GARDEN MILL</span>
-          <span class="client-logo-text text-3xl md:text-5xl font-black tracking-tighter uppercase select-none cursor-default">UNIVERSAL CABLE</span>
+      <div class="max-w-[1400px] mx-auto px-5 md:px-12 relative z-10">
+        <div class="client-wall grid lg:grid-cols-[340px_1fr] rounded-[28px] overflow-hidden border border-[#dce8f2] bg-white">
+          <div class="relative overflow-hidden bg-[#0a3d62] px-7 py-10 md:p-10 lg:p-12 text-white">
+            <div class="absolute -right-20 -top-20 w-56 h-56 rounded-full border border-white/10"></div>
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full border border-white/10"></div>
+            <div class="relative z-10 h-full flex flex-col justify-between gap-12">
+              <div>
+                <span class="inline-flex items-center gap-3 font-mono text-xs font-bold tracking-[0.2em] text-[#f2a65a] uppercase mb-5">
+                  <span class="w-8 h-px bg-[#f2a65a]"></span>
+                  Trusted By
+                </span>
+                <h2 class="font-['Montserrat'] text-3xl md:text-4xl font-extrabold leading-tight">
+                  Powering progress together.
+                </h2>
+                <p class="text-[#c8d9e7] leading-7 mt-5">
+                  Long-standing relationships with utilities, energy leaders and industrial organizations.
+                </p>
+              </div>
+              <div class="flex items-end gap-3">
+                <strong class="font-['Montserrat'] text-6xl font-extrabold text-[#f2a65a] leading-none">12</strong>
+                <span class="text-xs font-mono uppercase tracking-[0.16em] text-[#c8d9e7] pb-1">Trusted<br />clients</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-px bg-[#dce8f2]">
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img src="clients%20logo/GETCO%20logo%20png.png" alt="GETCO logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-sm font-extrabold text-[#0a3d62]">GETCO</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img src="clients%20logo/PTC%20India%20logo%20png.png" alt="PTC India logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-sm font-extrabold text-[#0a3d62]">PTC INDIA</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img src="clients%20logo/Adani%20Energy%20Solutions%20logo%20png.jpg" alt="Adani Energy Solutions logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-xs font-bold leading-snug text-[#0a3d62]">ADANI ENERGY SOLUTIONS LTD.</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img src="clients%20logo/IndianOil%20logo%20png.png" alt="IndianOil logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-sm font-extrabold text-[#0a3d62]">IOCL</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img src="clients%20logo/Meril%20Life%20Sciences%20logo.jpg" alt="Meril Life Sciences logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-xs font-bold leading-snug text-[#0a3d62]">MERIL LIFE SCIENCES LTD.</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img class="!max-w-[180px]" src="clients%20logo/MSETCL%20Mahatransco%20logo%20png.png" alt="MSETCL Mahatransco logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-[11px] font-bold leading-snug text-[#0a3d62]">MAHARASHTRA STATE ELECTRICITY TRANSMISSION CO. LTD.</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img src="clients%20logo/POWERGRID%20logo%20png.png" alt="POWERGRID logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-sm font-extrabold text-[#0a3d62]">PGCL</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img src="clients%20logo/UGVCL%20logo%20png.png" alt="UGVCL logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-sm font-extrabold text-[#0a3d62]">UGVCL</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img src="clients%20logo/DGVCL%20logo%20png.png" alt="DGVCL logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-sm font-extrabold text-[#0a3d62]">DGVCL</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img class="!max-w-[180px]" src="clients%20logo/Torrent%20Power%20logo%20png.png" alt="Torrent Power logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-sm font-bold leading-snug text-[#0a3d62]">TORRENT POWER</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img src="clients%20logo/Om%20Power%20Transmission%20logo%20png.jpg" alt="Om Power Transmission logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-sm font-bold leading-snug text-[#0a3d62]">OM POWER</h3>
+            </article>
+            <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+              <div class="client-logo-frame">
+                <img src="clients%20logo/Universal%20Cables%20Unistar%20logo%20png.jpg" alt="Universal Cables Unistar logo" loading="lazy" />
+              </div>
+              <h3 class="font-['Montserrat'] text-xs font-bold leading-snug text-[#0a3d62]">UNIVERSAL CABLE</h3>
+            </article>
+            <article class="client-more-tile min-h-[118px] p-5 md:px-7 flex items-center gap-6 xl:col-span-2 text-[#0a3d62]">
+              <div class="flex items-center gap-4 md:gap-6">
+                <strong class="font-['Montserrat'] text-4xl md:text-5xl font-extrabold leading-none">12+</strong>
+                <div>
+                  <h3 class="font-['Montserrat'] text-base md:text-lg font-extrabold">And more</h3>
+                  <p class="text-xs md:text-sm font-semibold text-[#0a3d62]/75 mt-1">Partnerships that continue to grow.</p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -1193,8 +1357,142 @@
 
       panels.forEach(panel => observer.observe(panel));
     }
+
+    function initializeAboutReveals() {
+      const sections = document.querySelectorAll('main > section');
+      if (sections.length < 8) return;
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const registeredElements = new Set();
+
+      function registerElements(elements, direction = 'up', stagger = 0, baseDelay = 0) {
+        Array.from(elements).forEach((element, index) => {
+          if (!element || registeredElements.has(element)) return;
+
+          registeredElements.add(element);
+          element.classList.add('about-reveal', `about-reveal-${direction}`);
+          element.style.setProperty('--about-reveal-delay', `${baseDelay + index * stagger}ms`);
+        });
+      }
+
+      function register(selector, direction = 'up', stagger = 0, baseDelay = 0, root = document) {
+        registerElements(root.querySelectorAll(selector), direction, stagger, baseDelay);
+      }
+
+      function registerAlternating(elements, firstDirection = 'left', secondDirection = 'right', stagger = 80) {
+        Array.from(elements).forEach((element, index) => {
+          registerElements(
+            [element],
+            index % 2 === 0 ? firstDirection : secondDirection,
+            0,
+            index * stagger,
+          );
+        });
+      }
+
+      const [
+        heroSection,
+        journeySection,
+        directorSection,
+        purposeSection,
+        executionSection,
+        complianceSection,
+        clientsSection,
+        ctaSection,
+      ] = sections;
+
+      register('.lg\\:grid-cols-\\[0\\.9fr_1\\.1fr\\] > div:first-child > div > *', 'left', 100, 80, heroSection);
+      register('.lg\\:grid-cols-\\[0\\.9fr_1\\.1fr\\] > div:last-child', 'right', 0, 180, heroSection);
+
+      register('aside', 'left', 0, 40, journeySection);
+      register('.journey-copy > *', 'right', 100, 80, journeySection);
+      registerAlternating(journeySection.querySelectorAll('.mt-8.grid.grid-cols-4 > div'), 'left', 'right', 90);
+      registerAlternating(journeySection.querySelectorAll('.lg\\:hidden > div'), 'left', 'right', 90);
+
+      register('.text-center > *', 'down', 100, 20, directorSection);
+      const directorColumns = directorSection.querySelectorAll('.lg\\:grid-cols-12 > div');
+      registerElements([directorColumns[0]], 'left', 0, 100);
+      registerElements([directorColumns[1]], 'right', 0, 180);
+      register('.grid.grid-cols-1.sm\\:grid-cols-3 > div', 'up', 90, 220, directorSection);
+
+      register('.text-center > *', 'down', 100, 20, purposeSection);
+      registerAlternating(
+        purposeSection.querySelectorAll('.lg\\:grid-cols-3 > div.relative.z-10, .lg\\:grid-cols-3 > div.relative.z-20'),
+        'left',
+        'right',
+        120,
+      );
+      registerAlternating(purposeSection.querySelectorAll('.value-strip'), 'left', 'right', 80);
+
+      register('.lg\\:w-\\[34\\%\\] > *', 'left', 95, 20, executionSection);
+      registerAlternating(executionSection.querySelectorAll('.execution-panel'), 'right', 'left', 90);
+
+      register('.lg\\:w-\\[35\\%\\] > *', 'left', 100, 20, complianceSection);
+      registerAlternating(complianceSection.querySelectorAll('.lg\\:w-\\[65\\%\\] > div'), 'up', 'down', 85);
+
+      register('.client-wall > div:first-child .relative.z-10 > *', 'left', 110, 30, clientsSection);
+      const clientTiles = clientsSection.querySelectorAll('.client-tile');
+      const logoDirections = ['left', 'up', 'right', 'down'];
+      Array.from(clientTiles).forEach((tile, index) => {
+        registerElements([tile], logoDirections[index % logoDirections.length], 0, index * 65);
+      });
+      register('.client-more-tile', 'right', 0, 180, clientsSection);
+
+      register('.md\\:w-3\\/5 > *', 'left', 100, 20, ctaSection);
+      register('.md\\:w-2\\/5', 'right', 0, 180, ctaSection);
+
+      registerAlternating(
+        document.querySelectorAll('footer .lg\\:grid-cols-\\[1\\.25fr_0\\.75fr_1fr_0\\.75fr\\] > div'),
+        'up',
+        'down',
+        100,
+      );
+      register('footer .border-t', 'up', 0, 140);
+
+      const revealItems = document.querySelectorAll('.about-reveal');
+      document.documentElement.classList.add('about-reveal-ready');
+
+      function clearRevealClasses(element) {
+        element.classList.remove(
+          'about-reveal',
+          'about-reveal-left',
+          'about-reveal-right',
+          'about-reveal-up',
+          'about-reveal-down',
+          'is-revealed',
+        );
+        element.style.removeProperty('--about-reveal-delay');
+      }
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach(clearRevealClasses);
+        return;
+      }
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const element = entry.target;
+          const delay = Number.parseInt(element.style.getPropertyValue('--about-reveal-delay'), 10) || 0;
+
+          element.classList.add('is-revealed');
+          revealObserver.unobserve(element);
+
+          window.setTimeout(() => {
+            clearRevealClasses(element);
+          }, delay + 1000);
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -8% 0px',
+      });
+
+      revealItems.forEach((element) => revealObserver.observe(element));
+    }
+
+    initializeAboutReveals();
   </script>
 </body>
 
 </html>
-

@@ -644,6 +644,76 @@
       }
     }
 
+    .trusted-clients-section {
+      background:
+        radial-gradient(circle at 8% 12%, rgba(162, 202, 247, 0.32), transparent 24%),
+        radial-gradient(circle at 94% 88%, rgba(242, 166, 90, 0.18), transparent 22%),
+        #f4f8fc;
+    }
+
+    .client-wall {
+      box-shadow: 0 28px 70px rgba(10, 61, 98, 0.12);
+    }
+
+    .client-tile {
+      position: relative;
+      min-height: 174px;
+      overflow: hidden;
+      border: 1px solid #e2ebf3;
+      background: #fff;
+      transition: transform 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+    }
+
+    .client-tile::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #e9924a, #f2a65a);
+      transition: width 300ms ease;
+    }
+
+    .client-tile:hover {
+      z-index: 1;
+      transform: translateY(-4px);
+      border-color: rgba(233, 146, 74, 0.42);
+      box-shadow: 0 16px 34px rgba(10, 61, 98, 0.12);
+    }
+
+    .client-tile:hover::after {
+      width: 100%;
+    }
+
+    .client-logo-frame {
+      width: 100%;
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .client-logo-frame img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 150px;
+      max-height: 78px;
+      object-fit: contain;
+      transition: transform 280ms ease;
+    }
+
+    .client-tile:hover .client-logo-frame img {
+      transform: scale(1.05);
+    }
+
+    .client-more-tile {
+      background:
+        radial-gradient(circle at 88% 18%, rgba(255, 255, 255, 0.18), transparent 24%),
+        linear-gradient(120deg, #e9924a 0%, #f2a65a 100%);
+    }
+
     .contact-energy {
       background:
         radial-gradient(circle at 18% 24%,
@@ -774,6 +844,46 @@
     #mobile-solutions-btn.open .mobile-chev {
       transform: rotate(180deg);
     }
+
+    /* Homepage scroll reveals. Elements remain visible when JavaScript is unavailable. */
+    html.reveal-ready .reveal-item {
+      opacity: 0;
+      transition:
+        opacity 780ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+
+    html.reveal-ready .reveal-up {
+      transform: translate3d(0, 72px, 0);
+    }
+
+    html.reveal-ready .reveal-left {
+      transform: translate3d(-92px, 0, 0);
+    }
+
+    html.reveal-ready .reveal-right {
+      transform: translate3d(92px, 0, 0);
+    }
+
+    html.reveal-ready .reveal-down {
+      transform: translate3d(0, -72px, 0);
+    }
+
+    html.reveal-ready .reveal-item.is-revealed {
+      opacity: 1;
+      transform: none;
+      will-change: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html.reveal-ready .reveal-item {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
 
@@ -801,14 +911,14 @@
 
         <!-- Our Solutions Dropdown -->
         <div class="nav-dropdown-wrap relative">
-          <button
+          <a href="services.html"
             class="nav-link flex items-center gap-1 px-3 py-2 rounded-lg text-[#0a2540]/80 font-semibold text-sm hover:text-[#0a2540] hover:bg-white/30 transition-all duration-200 nav-dropdown-btn">
             Our Solutions
             <svg class="nav-chevron w-3.5 h-3.5 mt-0.5 transition-transform duration-200" fill="none"
               stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
-          </button>
+          </a>
           <!-- Dropdown Menu -->
           <div
             class="nav-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl bg-white/90 backdrop-blur-2xl border border-white/60 shadow-[0_20px_60px_rgba(10,37,64,0.18),0_4px_16px_rgba(10,37,64,0.1)] overflow-hidden opacity-0 invisible translate-y-2 transition-all duration-250 ease-out">
@@ -907,6 +1017,9 @@
         </button>
         <div id="mobile-solutions-menu" class="max-h-0 overflow-hidden transition-all duration-300 ease-out pl-3">
           <div class="flex flex-col gap-0.5 py-1 border-l-2 border-[#a2caf7] pl-3">
+            <a href="services.html"
+              class="px-3 py-2.5 text-[#0a2540] text-sm font-bold hover:bg-[#0a2540]/5 rounded-lg transition-all duration-150">All
+              Services Overview</a>
             <a href="EHV Transmission Lines.html?service=ehv-transmission-lines"
               class="px-3 py-2.5 text-[#0a2540]/80 text-sm font-medium hover:text-[#0a2540] hover:bg-[#0a2540]/5 rounded-lg transition-all duration-150">EHV
               Transmission Lines</a>
@@ -1088,7 +1201,7 @@
                   Power Flow
                 </p>
                 <h3 class="font-headline-md text-xl text-[#0a3d62]">
-                  Design â†’ Approval â†’ Execution â†’ Commissioning
+                  Design &rarr; Approval &rarr; Execution &rarr; Commissioning
                 </h3>
               </div>
               <div class="hidden md:flex items-center gap-3">
@@ -1471,6 +1584,121 @@
       </div>
     </div>
   </section>
+  <!-- Trusted Clients Section -->
+  <section class="trusted-clients-section py-16 md:py-24 overflow-hidden relative">
+    <div class="absolute left-8 top-8 text-[10rem] md:text-[16rem] font-black leading-none text-[#0a3d62]/[0.025] select-none">12</div>
+
+    <div class="max-w-[1400px] mx-auto px-5 md:px-12 relative z-10">
+      <div class="client-wall grid lg:grid-cols-[340px_1fr] rounded-[28px] overflow-hidden border border-[#dce8f2] bg-white">
+        <div class="relative overflow-hidden bg-[#0a3d62] px-7 py-10 md:p-10 lg:p-12 text-white">
+          <div class="absolute -right-20 -top-20 w-56 h-56 rounded-full border border-white/10"></div>
+          <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full border border-white/10"></div>
+          <div class="relative z-10 h-full flex flex-col justify-between gap-12">
+            <div>
+              <span class="inline-flex items-center gap-3 font-label-caps font-bold tracking-[0.2em] text-[#f2a65a] uppercase mb-5">
+                <span class="w-8 h-px bg-[#f2a65a]"></span>
+                Trusted By
+              </span>
+              <h2 class="font-headline-xl text-3xl md:text-4xl font-extrabold leading-tight">
+                Powering progress together.
+              </h2>
+              <p class="font-body-md text-[#c8d9e7] leading-7 mt-5">
+                Long-standing relationships with utilities, energy leaders and industrial organizations.
+              </p>
+            </div>
+            <div class="flex items-end gap-3">
+              <strong class="font-stat-value text-6xl font-extrabold text-[#f2a65a] leading-none">12</strong>
+              <span class="font-label-caps uppercase tracking-[0.16em] text-[#c8d9e7] pb-1">Trusted<br />clients</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-px bg-[#dce8f2]">
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img src="clients%20logo/GETCO%20logo%20png.png" alt="GETCO logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-sm font-extrabold text-[#0a3d62]">GETCO</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img src="clients%20logo/PTC%20India%20logo%20png.png" alt="PTC India logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-sm font-extrabold text-[#0a3d62]">PTC INDIA</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img src="clients%20logo/Adani%20Energy%20Solutions%20logo%20png.jpg" alt="Adani Energy Solutions logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-xs font-bold leading-snug text-[#0a3d62]">ADANI ENERGY SOLUTIONS LTD.</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img src="clients%20logo/IndianOil%20logo%20png.png" alt="IndianOil logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-sm font-extrabold text-[#0a3d62]">IOCL</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img src="clients%20logo/Meril%20Life%20Sciences%20logo.jpg" alt="Meril Life Sciences logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-xs font-bold leading-snug text-[#0a3d62]">MERIL LIFE SCIENCES LTD.</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img class="!max-w-[180px]" src="clients%20logo/MSETCL%20Mahatransco%20logo%20png.png" alt="MSETCL Mahatransco logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-[11px] font-bold leading-snug text-[#0a3d62]">MAHARASHTRA STATE ELECTRICITY TRANSMISSION CO. LTD.</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img src="clients%20logo/POWERGRID%20logo%20png.png" alt="POWERGRID logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-sm font-extrabold text-[#0a3d62]">PGCL</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img src="clients%20logo/UGVCL%20logo%20png.png" alt="UGVCL logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-sm font-extrabold text-[#0a3d62]">UGVCL</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img src="clients%20logo/DGVCL%20logo%20png.png" alt="DGVCL logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-sm font-extrabold text-[#0a3d62]">DGVCL</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img class="!max-w-[180px]" src="clients%20logo/Torrent%20Power%20logo%20png.png" alt="Torrent Power logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-sm font-bold leading-snug text-[#0a3d62]">TORRENT POWER</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img src="clients%20logo/Om%20Power%20Transmission%20logo%20png.jpg" alt="Om Power Transmission logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-sm font-bold leading-snug text-[#0a3d62]">OM POWER</h3>
+          </article>
+          <article class="client-tile p-5 flex flex-col items-center justify-center gap-3 text-center">
+            <div class="client-logo-frame">
+              <img src="clients%20logo/Universal%20Cables%20Unistar%20logo%20png.jpg" alt="Universal Cables Unistar logo" loading="lazy" />
+            </div>
+            <h3 class="font-headline-md text-xs font-bold leading-snug text-[#0a3d62]">UNIVERSAL CABLE</h3>
+          </article>
+          <article class="client-more-tile min-h-[118px] p-5 md:px-7 flex items-center gap-6 xl:col-span-2 text-[#0a3d62]">
+            <div class="flex items-center gap-4 md:gap-6">
+              <strong class="font-stat-value text-4xl md:text-5xl font-extrabold leading-none">12+</strong>
+              <div>
+                <h3 class="font-headline-md text-base md:text-lg font-extrabold">And more</h3>
+                <p class="font-body-md text-xs md:text-sm font-semibold text-[#0a3d62]/75 mt-1">Partnerships that continue to grow.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Certifications Section -->
   <section id="certifications" class="certifications-field relative text-[#0a3d62] py-16 md:py-24 overflow-hidden">
     <svg class="absolute inset-0 h-full w-full pointer-events-none opacity-50 hidden md:block" viewBox="0 0 1400 620"
@@ -1836,4 +2064,3 @@
 </body>
 
 </html>
-

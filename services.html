@@ -26,6 +26,63 @@
     #mobile-solutions-menu.open { max-height: 400px; }
     #mobile-solutions-btn.open .mobile-chev { transform: rotate(180deg); }
     .footer-energy { background: radial-gradient(circle at 12% 0%, rgba(162,202,247,0.14), transparent 28%), linear-gradient(135deg, #07131f 0%, #0a3d62 100%); }
+    .services-hero {
+      background:
+        radial-gradient(circle at 15% 22%, rgba(162,202,247,0.26), transparent 30%),
+        radial-gradient(circle at 86% 72%, rgba(249,186,126,0.16), transparent 28%),
+        linear-gradient(135deg, #07131f 0%, #0a3d62 100%);
+    }
+    .services-grid-section {
+      background:
+        linear-gradient(90deg, rgba(10,61,98,0.04) 1px, transparent 1px),
+        linear-gradient(rgba(10,61,98,0.04) 1px, transparent 1px),
+        #f4f8fc;
+      background-size: 40px 40px;
+    }
+    .service-card {
+      transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+    }
+    .service-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 3px;
+      background: linear-gradient(90deg, #e9924a, #f2a65a);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 300ms ease;
+    }
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(233,146,74,0.38);
+      box-shadow: 0 24px 60px rgba(10,61,98,0.13);
+    }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-card:hover .service-icon { background: #0a3d62; color: #fff; }
+    .service-icon { transition: background 300ms ease, color 300ms ease; }
+    .service-process {
+      background:
+        radial-gradient(circle at 80% 18%, rgba(162,202,247,0.12), transparent 28%),
+        linear-gradient(135deg, #07131f, #0a3d62);
+    }
+    html.services-reveal-ready .services-reveal {
+      opacity: 0;
+      transition: opacity 760ms cubic-bezier(0.22,1,0.36,1), transform 900ms cubic-bezier(0.22,1,0.36,1);
+      transition-delay: var(--services-reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+    html.services-reveal-ready .services-reveal-left { transform: translate3d(-92px,0,0); }
+    html.services-reveal-ready .services-reveal-right { transform: translate3d(92px,0,0); }
+    html.services-reveal-ready .services-reveal-up { transform: translate3d(0,72px,0); }
+    html.services-reveal-ready .services-reveal-down { transform: translate3d(0,-72px,0); }
+    html.services-reveal-ready .services-reveal.is-revealed { opacity: 1; transform: none; will-change: auto; }
+    @media (prefers-reduced-motion: reduce) {
+      html.services-reveal-ready .services-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
 
@@ -39,7 +96,7 @@
         <a href="index.html" class="px-3 py-2 text-sm font-semibold text-[#0a2540]/80 hover:bg-white/30 hover:text-[#0a2540]">Home</a>
         <a href="about.html" class="px-3 py-2 text-sm font-semibold text-[#0a2540]/80 hover:bg-white/30 hover:text-[#0a2540]">About</a>
         <div class="nav-dropdown-wrap relative">
-          <button class="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-[#0a2540] hover:bg-white/30">Our Solutions <svg class="nav-chevron h-3.5 w-3.5 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></button>
+          <a href="services.html" class="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-[#0a2540] hover:bg-white/30">Our Solutions <svg class="nav-chevron h-3.5 w-3.5 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></a>
           <div class="nav-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl bg-white/90 backdrop-blur-2xl border border-white/60 shadow-[0_20px_60px_rgba(10,37,64,0.18),0_4px_16px_rgba(10,37,64,0.1)] overflow-hidden opacity-0 invisible translate-y-2 transition-all duration-250 ease-out">
             <div class="p-2">
               <a href="EHV Transmission Lines.html?service=ehv-transmission-lines" class="dropdown-item flex items-center gap-3 px-4 py-3 rounded-xl text-[#0a2540] text-sm font-medium hover:bg-[#0a2540]/8 transition-all duration-150 group"><span class="dropdown-dot w-2 h-2 rounded-full bg-[#a2caf7] group-hover:bg-[#0a2540] transition-colors duration-150 shrink-0"></span>EHV Transmission Lines</a>
@@ -68,6 +125,7 @@
         <button id="mobile-solutions-btn" class="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold text-[#0a2540] hover:bg-[#0a2540]/8">Our Solutions <svg class="mobile-chev h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></button>
         <div id="mobile-solutions-menu" class="max-h-0 overflow-hidden pl-3 transition-all duration-300">
           <div class="flex flex-col border-l-2 border-[#a2caf7] py-1 pl-3">
+            <a href="services.html" class="rounded-lg px-3 py-2.5 text-sm font-bold text-[#0a2540] hover:bg-[#0a2540]/5">All Services Overview</a>
             <a href="EHV Transmission Lines.html?service=ehv-transmission-lines" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">EHV Transmission Lines</a>
 <a href="EHV Transmission Lines.html?service=substations-automation" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">Substations &amp; Automation</a>
             <a href="EHV Transmission Lines.html?service=xlpe-underground-cable-laying" class="rounded-lg px-3 py-2.5 text-sm font-medium text-[#0a2540]/80 hover:bg-[#0a2540]/5">XLPE Underground Cable Laying</a>
@@ -83,7 +141,180 @@
       </div>
     </div>
   </header>
-  <main class="min-h-screen bg-[#07131f] pt-28"></main>
+  <main>
+    <section class="services-hero relative min-h-[700px] overflow-hidden pt-28 text-white">
+      <div class="absolute inset-0 opacity-20">
+        <img src="site_image-1.avif" alt="" class="h-full w-full object-cover mix-blend-luminosity" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#07131f]/95 via-[#0a3d62]/84 to-[#0a3d62]/45"></div>
+      <div class="absolute -right-24 top-24 h-96 w-96 rounded-full border border-white/10"></div>
+      <div class="absolute -right-4 top-44 h-64 w-64 rounded-full border border-white/10"></div>
+      <div class="relative z-10 mx-auto grid min-h-[572px] max-w-[1400px] grid-cols-1 items-center gap-12 px-5 py-16 md:px-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div class="services-hero-copy max-w-3xl">
+          <span class="inline-flex items-center gap-3 font-mono text-xs font-bold uppercase tracking-[0.22em] text-[#f2a65a]">
+            <span class="h-px w-9 bg-[#f2a65a]"></span>
+            Our Solutions
+          </span>
+          <h1 class="mt-6 font-['Montserrat'] text-[42px] font-extrabold leading-[1.06] tracking-tight sm:text-[56px] lg:text-[68px]">
+            End-to-End Power<br />Infrastructure Expertise
+          </h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-white/76 md:text-xl">
+            Integrated engineering, procurement, construction and commissioning solutions for utility, industrial and renewable power projects.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="#services-overview" class="rounded-full bg-[#f2a65a] px-7 py-3.5 font-bold text-[#0a3d62] transition-all duration-300 hover:-translate-y-1 hover:bg-white">Explore Services</a>
+            <a href="contact.html" class="rounded-full border border-white/30 bg-white/5 px-7 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0a3d62]">Discuss a Project</a>
+          </div>
+        </div>
+        <div class="services-hero-stats grid grid-cols-2 gap-4 lg:justify-self-end lg:max-w-[500px]">
+          <div class="rounded-2xl border border-white/14 bg-white/10 p-6 backdrop-blur-md">
+            <strong class="block font-['Montserrat'] text-4xl font-extrabold text-[#a2caf7]">7</strong>
+            <span class="mt-2 block text-sm font-semibold text-white/72">Integrated service verticals</span>
+          </div>
+          <div class="rounded-2xl border border-white/14 bg-white/10 p-6 backdrop-blur-md">
+            <strong class="block font-['Montserrat'] text-4xl font-extrabold text-[#f2a65a]">220kV+</strong>
+            <span class="mt-2 block text-sm font-semibold text-white/72">Transmission capability</span>
+          </div>
+          <div class="col-span-2 rounded-2xl border border-white/14 bg-[#07131f]/40 p-6 backdrop-blur-md">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-4xl text-[#a2caf7]">hub</span>
+              <div>
+                <strong class="font-['Montserrat'] text-xl font-bold">Single-point EPC responsibility</strong>
+                <p class="mt-1 text-sm text-white/65">Design, approvals, execution, testing and commissioning.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services-overview" class="services-grid-section relative overflow-hidden py-20 text-[#0a3d62] md:py-28">
+      <div class="mx-auto max-w-[1400px] px-5 md:px-12">
+        <div class="services-heading grid items-end gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#386188]">Capabilities</p>
+            <h2 class="mt-4 font-['Montserrat'] text-4xl font-extrabold leading-tight md:text-5xl">Solutions engineered for reliable delivery.</h2>
+          </div>
+          <p class="max-w-2xl text-lg leading-8 text-[#52606d] lg:justify-self-end">
+            From high-voltage networks to approvals and renewable integration, every scope is supported by disciplined planning, field execution and safety-led project control.
+          </p>
+        </div>
+
+        <div class="services-card-grid mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <a href="EHV Transmission Lines.html?service=ehv-transmission-lines" class="service-card relative overflow-hidden rounded-2xl border border-[#dce8f2] bg-white p-7">
+            <span class="font-mono text-xs font-bold text-[#386188]/55">01</span>
+            <span class="service-icon mt-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#edf5fb] text-3xl text-[#386188]"><span class="material-symbols-outlined">electrical_services</span></span>
+            <h3 class="mt-6 font-['Montserrat'] text-2xl font-bold">EHV Transmission Lines</h3>
+            <p class="mt-4 leading-7 text-[#52606d]">Design, erection, alignment, stringing and commissioning of transmission infrastructure up to 220kV and beyond.</p>
+            <span class="mt-7 inline-flex items-center gap-2 font-bold text-[#0a3d62]">Explore service <span class="material-symbols-outlined text-lg">arrow_forward</span></span>
+          </a>
+          <a href="EHV Transmission Lines.html?service=substations-automation" class="service-card relative overflow-hidden rounded-2xl border border-[#dce8f2] bg-white p-7">
+            <span class="font-mono text-xs font-bold text-[#386188]/55">02</span>
+            <span class="service-icon mt-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#edf5fb] text-3xl text-[#386188]"><span class="material-symbols-outlined">settings_input_component</span></span>
+            <h3 class="mt-6 font-['Montserrat'] text-2xl font-bold">Substations &amp; Automation</h3>
+            <p class="mt-4 leading-7 text-[#52606d]">Turnkey AIS and GIS substations, transformer installation, protection systems, SCADA and grid synchronization.</p>
+            <span class="mt-7 inline-flex items-center gap-2 font-bold text-[#0a3d62]">Explore service <span class="material-symbols-outlined text-lg">arrow_forward</span></span>
+          </a>
+          <a href="EHV Transmission Lines.html?service=xlpe-underground-cable-laying" class="service-card relative overflow-hidden rounded-2xl border border-[#dce8f2] bg-white p-7">
+            <span class="font-mono text-xs font-bold text-[#386188]/55">03</span>
+            <span class="service-icon mt-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#edf5fb] text-3xl text-[#386188]"><span class="material-symbols-outlined">cable</span></span>
+            <h3 class="mt-6 font-['Montserrat'] text-2xl font-bold">XLPE Underground Cable Laying</h3>
+            <p class="mt-4 leading-7 text-[#52606d]">Route survey, trenching, duct installation, cable pulling, jointing, termination and testing for 11kV to 220kV networks.</p>
+            <span class="mt-7 inline-flex items-center gap-2 font-bold text-[#0a3d62]">Explore service <span class="material-symbols-outlined text-lg">arrow_forward</span></span>
+          </a>
+          <a href="EHV Transmission Lines.html?service=industrial-power-distribution" class="service-card relative overflow-hidden rounded-2xl border border-[#dce8f2] bg-white p-7">
+            <span class="font-mono text-xs font-bold text-[#386188]/55">04</span>
+            <span class="service-icon mt-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#fff4eb] text-3xl text-[#e9924a]"><span class="material-symbols-outlined">factory</span></span>
+            <h3 class="mt-6 font-['Montserrat'] text-2xl font-bold">Industrial Power Distribution</h3>
+            <p class="mt-4 leading-7 text-[#52606d]">HT and LT distribution systems, switchgear, transformers, cabling and plant-level power infrastructure.</p>
+            <span class="mt-7 inline-flex items-center gap-2 font-bold text-[#0a3d62]">Explore service <span class="material-symbols-outlined text-lg">arrow_forward</span></span>
+          </a>
+          <a href="EHV Transmission Lines.html?service=epc-turnkey-execution" class="service-card relative overflow-hidden rounded-2xl border border-[#dce8f2] bg-white p-7">
+            <span class="font-mono text-xs font-bold text-[#386188]/55">05</span>
+            <span class="service-icon mt-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#fff4eb] text-3xl text-[#e9924a]"><span class="material-symbols-outlined">route</span></span>
+            <h3 class="mt-6 font-['Montserrat'] text-2xl font-bold">EPC Turnkey Execution</h3>
+            <p class="mt-4 leading-7 text-[#52606d]">Single-point project management covering engineering, procurement, civil works, erection and final handover.</p>
+            <span class="mt-7 inline-flex items-center gap-2 font-bold text-[#0a3d62]">Explore service <span class="material-symbols-outlined text-lg">arrow_forward</span></span>
+          </a>
+          <a href="EHV Transmission Lines.html?service=regulatory-liaisoning" class="service-card relative overflow-hidden rounded-2xl border border-[#dce8f2] bg-white p-7">
+            <span class="font-mono text-xs font-bold text-[#386188]/55">06</span>
+            <span class="service-icon mt-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#fff4eb] text-3xl text-[#e9924a]"><span class="material-symbols-outlined">approval_delegation</span></span>
+            <h3 class="mt-6 font-['Montserrat'] text-2xl font-bold">Regulatory Liaisoning</h3>
+            <p class="mt-4 leading-7 text-[#52606d]">Support for CEIG, GETCO and DISCOM approvals, statutory documentation, inspections and utility coordination.</p>
+            <span class="mt-7 inline-flex items-center gap-2 font-bold text-[#0a3d62]">Explore service <span class="material-symbols-outlined text-lg">arrow_forward</span></span>
+          </a>
+          <a href="EHV Transmission Lines.html?service=renewables-bess" class="service-card relative overflow-hidden rounded-2xl border border-[#a2caf7]/60 bg-[#0a3d62] p-7 text-white md:col-span-2 xl:col-span-3">
+            <div class="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
+              <div>
+                <span class="font-mono text-xs font-bold text-[#a2caf7]">07 / FUTURE ENERGY</span>
+                <div class="mt-7 flex items-start gap-5">
+                  <span class="service-icon flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-3xl text-[#f2a65a]"><span class="material-symbols-outlined">solar_power</span></span>
+                  <div>
+                    <h3 class="font-['Montserrat'] text-2xl font-bold md:text-3xl">Renewables &amp; BESS</h3>
+                    <p class="mt-3 max-w-3xl leading-7 text-white/72">Grid-connected solar EPC, pooling substations and battery energy storage integration for resilient, sustainable power systems.</p>
+                  </div>
+                </div>
+              </div>
+              <span class="inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/20 text-white transition-colors duration-300 hover:bg-white hover:text-[#0a3d62]"><span class="material-symbols-outlined">arrow_forward</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-process relative overflow-hidden py-20 text-white md:py-28">
+      <div class="mx-auto max-w-[1400px] px-5 md:px-12">
+        <div class="process-heading grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <p class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#f2a65a]">Our EPC Workflow</p>
+            <h2 class="mt-4 font-['Montserrat'] text-4xl font-extrabold md:text-5xl">One accountable delivery path.</h2>
+          </div>
+          <p class="max-w-2xl text-lg leading-8 text-white/68 lg:justify-self-end">A disciplined project model keeps technical scope, approvals, site activity and commissioning aligned from start to finish.</p>
+        </div>
+        <div class="process-grid mt-14 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-5">
+          <div class="bg-[#07131f]/74 p-6"><span class="font-mono text-xs text-[#f2a65a]">01</span><span class="material-symbols-outlined mt-8 block text-4xl text-[#a2caf7]">architecture</span><h3 class="mt-4 font-['Montserrat'] text-xl font-bold">Engineering</h3><p class="mt-3 text-sm leading-6 text-white/58">Survey, design, drawings and technical planning.</p></div>
+          <div class="bg-[#07131f]/74 p-6"><span class="font-mono text-xs text-[#f2a65a]">02</span><span class="material-symbols-outlined mt-8 block text-4xl text-[#a2caf7]">fact_check</span><h3 class="mt-4 font-['Montserrat'] text-xl font-bold">Approvals</h3><p class="mt-3 text-sm leading-6 text-white/58">Utility coordination and regulatory clearances.</p></div>
+          <div class="bg-[#07131f]/74 p-6"><span class="font-mono text-xs text-[#f2a65a]">03</span><span class="material-symbols-outlined mt-8 block text-4xl text-[#a2caf7]">inventory_2</span><h3 class="mt-4 font-['Montserrat'] text-xl font-bold">Procurement</h3><p class="mt-3 text-sm leading-6 text-white/58">Vendor control, materials and logistics management.</p></div>
+          <div class="bg-[#07131f]/74 p-6"><span class="font-mono text-xs text-[#f2a65a]">04</span><span class="material-symbols-outlined mt-8 block text-4xl text-[#a2caf7]">engineering</span><h3 class="mt-4 font-['Montserrat'] text-xl font-bold">Execution</h3><p class="mt-3 text-sm leading-6 text-white/58">Safety-led construction, installation and supervision.</p></div>
+          <div class="bg-[#07131f]/74 p-6 sm:col-span-2 lg:col-span-1"><span class="font-mono text-xs text-[#f2a65a]">05</span><span class="material-symbols-outlined mt-8 block text-4xl text-[#a2caf7]">power</span><h3 class="mt-4 font-['Montserrat'] text-xl font-bold">Commissioning</h3><p class="mt-3 text-sm leading-6 text-white/58">Testing, energization, documentation and handover.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#eef5fb] py-20 text-[#0a3d62] md:py-28">
+      <div class="mx-auto grid max-w-[1400px] items-center gap-12 px-5 md:px-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="capability-image relative">
+          <img src="site_image-1.avif" alt="Power infrastructure execution" class="h-[420px] w-full rounded-3xl object-cover shadow-[0_28px_80px_rgba(10,61,98,0.18)] md:h-[540px]" />
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-t from-[#07131f]/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/30 bg-white/90 p-5 backdrop-blur-md">
+            <strong class="font-['Montserrat'] text-2xl font-extrabold">Field execution backed by engineering control.</strong>
+          </div>
+        </div>
+        <div class="capability-copy">
+          <p class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#386188]">Why DPPL</p>
+          <h2 class="mt-4 font-['Montserrat'] text-4xl font-extrabold leading-tight md:text-5xl">Built for demanding project environments.</h2>
+          <div class="mt-9 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl bg-white p-5 shadow-[0_12px_35px_rgba(10,61,98,0.06)]"><span class="material-symbols-outlined text-3xl text-[#e9924a]">health_and_safety</span><h3 class="mt-4 font-['Montserrat'] text-lg font-bold">Safety-First</h3><p class="mt-2 text-sm leading-6 text-[#52606d]">Structured site practices and workforce protection.</p></div>
+            <div class="rounded-2xl bg-white p-5 shadow-[0_12px_35px_rgba(10,61,98,0.06)]"><span class="material-symbols-outlined text-3xl text-[#386188]">groups</span><h3 class="mt-4 font-['Montserrat'] text-lg font-bold">Skilled Teams</h3><p class="mt-2 text-sm leading-6 text-[#52606d]">Experienced engineering and field execution resources.</p></div>
+            <div class="rounded-2xl bg-white p-5 shadow-[0_12px_35px_rgba(10,61,98,0.06)]"><span class="material-symbols-outlined text-3xl text-[#386188]">verified</span><h3 class="mt-4 font-['Montserrat'] text-lg font-bold">Compliance</h3><p class="mt-2 text-sm leading-6 text-[#52606d]">Utility standards, testing and statutory documentation.</p></div>
+            <div class="rounded-2xl bg-white p-5 shadow-[0_12px_35px_rgba(10,61,98,0.06)]"><span class="material-symbols-outlined text-3xl text-[#e9924a]">schedule</span><h3 class="mt-4 font-['Montserrat'] text-lg font-bold">Delivery Focus</h3><p class="mt-2 text-sm leading-6 text-[#52606d]">Coordinated project controls for dependable timelines.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-[#0a3d62] py-20 text-white">
+      <div class="absolute inset-0 opacity-20"><img src="layer-2 final 2.png" alt="" class="h-full w-full object-cover" /></div>
+      <div class="absolute inset-0 bg-[#0a3d62]/80"></div>
+      <div class="services-cta relative z-10 mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-8 px-5 md:px-12 lg:flex-row lg:items-center">
+        <div>
+          <p class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#f2a65a]">Start a Conversation</p>
+          <h2 class="mt-4 max-w-3xl font-['Montserrat'] text-3xl font-extrabold leading-tight md:text-5xl">Need a dependable EPC partner for your next power project?</h2>
+        </div>
+        <a href="contact.html" class="shrink-0 rounded-full bg-[#f2a65a] px-8 py-4 font-bold text-[#0a3d62] transition-all duration-300 hover:-translate-y-1 hover:bg-white">Contact Our Team</a>
+      </div>
+    </section>
+  </main>
   <footer class="footer-energy relative overflow-hidden text-white">
     <div class="mx-auto max-w-[1400px] px-5 py-12 md:px-12 md:py-16">
       <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.25fr_0.75fr_1fr_0.75fr]">
@@ -100,8 +331,94 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn'); const mobileMenu = document.getElementById('mobile-menu'); mobileMenuBtn.addEventListener('click', () => { mobileMenuBtn.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
     mobileMenu.querySelectorAll('a').forEach((link) => { link.addEventListener('click', () => { mobileMenuBtn.classList.remove('open'); mobileMenu.classList.remove('open'); }); });
     const mobileSolutionsBtn = document.getElementById('mobile-solutions-btn'); const mobileSolutionsMenu = document.getElementById('mobile-solutions-menu'); mobileSolutionsBtn.addEventListener('click', () => { mobileSolutionsBtn.classList.toggle('open'); mobileSolutionsMenu.classList.toggle('open'); });
+
+    function initializeServicesReveals() {
+      const registeredElements = new Set();
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function registerElements(elements, direction = 'up', stagger = 0, baseDelay = 0) {
+        Array.from(elements).forEach((element, index) => {
+          if (!element || registeredElements.has(element)) return;
+
+          registeredElements.add(element);
+          element.classList.add('services-reveal', `services-reveal-${direction}`);
+          element.style.setProperty('--services-reveal-delay', `${baseDelay + index * stagger}ms`);
+        });
+      }
+
+      function register(selector, direction = 'up', stagger = 0, baseDelay = 0) {
+        registerElements(document.querySelectorAll(selector), direction, stagger, baseDelay);
+      }
+
+      function registerAlternating(elements, firstDirection = 'left', secondDirection = 'right', stagger = 80) {
+        Array.from(elements).forEach((element, index) => {
+          registerElements([element], index % 2 === 0 ? firstDirection : secondDirection, 0, index * stagger);
+        });
+      }
+
+      register('.services-hero-copy > *', 'left', 105, 60);
+      register('.services-hero-stats > *', 'right', 100, 140);
+      register('.services-heading > div > *, .services-heading > p', 'up', 100, 20);
+      registerAlternating(document.querySelectorAll('.services-card-grid > .service-card'), 'left', 'right', 80);
+      register('.process-heading > div > *, .process-heading > p', 'down', 100, 20);
+      registerAlternating(document.querySelectorAll('.process-grid > div'), 'up', 'down', 90);
+      register('.capability-image', 'left', 0, 60);
+      register('.capability-copy > p, .capability-copy > h2', 'right', 110, 80);
+      registerAlternating(document.querySelectorAll('.capability-copy .grid > div'), 'left', 'right', 90);
+      register('.services-cta > div', 'left', 0, 40);
+      register('.services-cta > a', 'right', 0, 180);
+      registerAlternating(
+        document.querySelectorAll('footer .lg\\:grid-cols-\\[1\\.25fr_0\\.75fr_1fr_0\\.75fr\\] > div'),
+        'up',
+        'down',
+        100,
+      );
+      register('footer .border-t', 'up', 0, 140);
+
+      const revealItems = document.querySelectorAll('.services-reveal');
+      document.documentElement.classList.add('services-reveal-ready');
+
+      function clearRevealClasses(element) {
+        element.classList.remove(
+          'services-reveal',
+          'services-reveal-left',
+          'services-reveal-right',
+          'services-reveal-up',
+          'services-reveal-down',
+          'is-revealed',
+        );
+        element.style.removeProperty('--services-reveal-delay');
+      }
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach(clearRevealClasses);
+        return;
+      }
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const element = entry.target;
+          const delay = Number.parseInt(element.style.getPropertyValue('--services-reveal-delay'), 10) || 0;
+
+          element.classList.add('is-revealed');
+          revealObserver.unobserve(element);
+
+          window.setTimeout(() => {
+            clearRevealClasses(element);
+          }, delay + 1000);
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -8% 0px',
+      });
+
+      revealItems.forEach((element) => revealObserver.observe(element));
+    }
+
+    initializeServicesReveals();
   </script>
 </body>
 
 </html>
-
