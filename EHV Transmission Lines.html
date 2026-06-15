@@ -828,6 +828,29 @@
     .tech-spec-card:hover::after {
       opacity: 1;
     }
+
+    html.detail-reveal-ready .detail-reveal {
+      opacity: 0;
+      transition:
+        opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--detail-reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+
+    html.detail-reveal-ready .detail-reveal-left { transform: translate3d(-92px, 0, 0); }
+    html.detail-reveal-ready .detail-reveal-right { transform: translate3d(92px, 0, 0); }
+    html.detail-reveal-ready .detail-reveal-up { transform: translate3d(0, 72px, 0); }
+    html.detail-reveal-ready .detail-reveal-down { transform: translate3d(0, -72px, 0); }
+    html.detail-reveal-ready .detail-reveal.is-revealed { opacity: 1; transform: none; will-change: auto; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html.detail-reveal-ready .detail-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
 
@@ -1419,15 +1442,64 @@
             '<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ' + iconSize + ' rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110 border border-white/40">' +
             '<span class="material-symbols-outlined text-white ' + iconText + '">open_in_full</span></div></div>';
         }).join('');
+
+        initializeDetailReveals();
       } catch (err) {
         console.error('Failed to load service page data:', err);
       }
     })();
+
+    function initializeDetailReveals() {
+      const registered = new Set();
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const add = (elements, direction = 'up', stagger = 0, baseDelay = 0) => Array.from(elements).forEach((element, index) => {
+        if (!element || registered.has(element)) return;
+        registered.add(element);
+        element.classList.add('detail-reveal', `detail-reveal-${direction}`);
+        element.style.setProperty('--detail-reveal-delay', `${baseDelay + index * stagger}ms`);
+      });
+      const alternate = (elements, first = 'left', second = 'right', stagger = 80) =>
+        Array.from(elements).forEach((element, index) => add([element], index % 2 === 0 ? first : second, 0, index * stagger));
+
+      add(document.querySelectorAll('main > section:first-child .max-w-3xl > *'), 'left', 100, 50);
+      const overviewColumns = document.querySelectorAll('main > section:nth-of-type(2) .lg\\:grid-cols-2 > div');
+      add([overviewColumns[0]], 'left', 0, 80);
+      add([overviewColumns[1]], 'right', 0, 160);
+      add(document.querySelectorAll('main > section:nth-of-type(3) .text-center > *'), 'down', 100, 20);
+      alternate(document.querySelectorAll('#benefits-grid > *'), 'left', 'right', 90);
+      const featureHeadingColumns = document.querySelectorAll('.tech-specs-section > div > .grid > div');
+      add([featureHeadingColumns[0]], 'left', 0, 40);
+      add([featureHeadingColumns[1]], 'right', 0, 140);
+      alternate(document.querySelectorAll('#features-grid > *'), 'up', 'down', 85);
+      add(document.querySelectorAll('main > section:nth-of-type(5) .md\\:items-end > div > *'), 'left', 100, 30);
+      add(document.querySelectorAll('main > section:nth-of-type(5) .md\\:items-end > a'), 'right', 0, 140);
+      alternate(document.querySelectorAll('#gallery-grid > *'), 'left', 'right', 85);
+      add(document.querySelectorAll('main > section:nth-of-type(6) .max-w-2xl > *'), 'left', 100, 30);
+      add(document.querySelectorAll('main > section:nth-of-type(6) .shrink-0'), 'right', 0, 160);
+      alternate(document.querySelectorAll('footer .lg\\:grid-cols-\\[1\\.25fr_0\\.75fr_1fr_0\\.75fr\\] > div'), 'up', 'down', 100);
+      add(document.querySelectorAll('footer .border-t'), 'up', 0, 140);
+
+      const items = document.querySelectorAll('.detail-reveal');
+      document.documentElement.classList.add('detail-reveal-ready');
+      const clear = (element) => {
+        element.classList.remove('detail-reveal', 'detail-reveal-left', 'detail-reveal-right', 'detail-reveal-up', 'detail-reveal-down', 'is-revealed');
+        element.style.removeProperty('--detail-reveal-delay');
+      };
+      if (reduceMotion || !('IntersectionObserver' in window)) { items.forEach(clear); return; }
+      const revealObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const element = entry.target;
+        const delay = Number.parseInt(element.style.getPropertyValue('--detail-reveal-delay'), 10) || 0;
+        element.classList.add('is-revealed');
+        revealObserver.unobserve(element);
+        window.setTimeout(() => clear(element), delay + 1000);
+      }), { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      items.forEach((element) => revealObserver.observe(element));
+    }
   </script>
 </body>
 
 </html>
-
 
 
 
