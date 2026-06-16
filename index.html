@@ -781,6 +781,66 @@
         linear-gradient(135deg, #07131f 0%, #0a3d62 100%);
     }
 
+    .footer-energy nav { padding-left: 8px; }
+    .footer-energy nav a {
+      display: inline-block;
+      position: relative;
+      transition: color 0.28s ease, transform 0.28s ease;
+    }
+    .footer-energy nav a::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      width: 0;
+      height: 2px;
+      background: #a2caf7;
+      transition: width 0.28s ease;
+      transform: translateY(-50%);
+    }
+    .footer-energy nav a:hover {
+      color: #fff;
+      transform: translateX(8px);
+    }
+    .footer-energy nav a:hover::before { width: 6px; }
+    .footer-energy .grid > div:first-child > a {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .footer-energy .grid > div:first-child > a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.34), 0 0 42px rgba(162, 202, 247, 0.34);
+    }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a {
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a:hover {
+      transform: translateY(-4px) scale(1.08);
+      background-color: #a2caf7 !important;
+      color: #0a3d62 !important;
+      border-color: #a2caf7 !important;
+      box-shadow: 0 12px 28px rgba(162, 202, 247, 0.35);
+    }
+    .footer-energy h3 {
+      transition: color 0.3s ease, letter-spacing 0.3s ease;
+    }
+    .footer-energy h3:hover {
+      color: #fff;
+      letter-spacing: 0.14em;
+    }
+    .footer-energy .space-y-4 > p {
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+    .footer-energy .space-y-4 > p:hover {
+      color: rgba(255, 255, 255, 0.92);
+      transform: translateX(4px);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .footer-energy nav a:hover,
+      .footer-energy .grid > div:first-child > a:hover,
+      .footer-energy .grid > div:first-child .flex.gap-3 > a:hover,
+      .footer-energy .space-y-4 > p:hover { transform: none; }
+    }
+
     .footer-streak {
       background: linear-gradient(90deg,
           transparent,
@@ -1124,7 +1184,7 @@
             <div
               class="mt-10 relative overflow-hidden border border-[#0a3d62]/15 bg-[#0a3d62] shadow-[0_24px_70px_rgba(10,61,98,0.12)] max-w-[520px]">
               <img alt="DPPL transmission tower infrastructure" class="h-[300px] lg:h-[360px] w-full object-cover"
-                src="site_image-1.avif" />
+                src="projects/project-1.png" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0a3d62]/88 via-[#0a3d62]/18 to-transparent"></div>
               <div class="absolute left-6 right-6 bottom-6">
                 <span class="material-symbols-outlined text-[#f9ba7e] text-[38px] mb-3">electrical_services</span>
@@ -1243,7 +1303,7 @@
           </a>
           <div
             class="mt-12 relative hidden xl:block max-w-[520px] border border-[#0a3d62]/14 bg-white/70 p-5 shadow-[0_24px_70px_rgba(10,61,98,0.10)]">
-            <img alt="DPPL services infrastructure" class="h-[260px] w-full object-cover" src="site_image-1.avif" />
+            <img alt="DPPL underground cable and trenching capability" class="h-[260px] w-full object-cover" src="projects/project-9.png" />
             <div class="mt-5 flex items-center justify-between gap-6">
               <div>
                 <span class="block font-stat-value text-[42px] text-[#0a3d62]">220</span>
@@ -1513,7 +1573,7 @@
   <!-- Metrics Section -->
   <section id="metrics" class="metrics-kinetic relative h-auto 2xl:h-[700px] py-14 2xl:py-0 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-20" style="
-          background-image: url(&quot;site_image-1.avif&quot;);
+          background-image: url(&quot;projects/project-2.png&quot;);
           background-size: cover;
           background-position: center;
         "></div>
@@ -1897,7 +1957,7 @@
         <div
           class="relative min-h-[560px] rounded-2xl border border-white/12 bg-white/[0.07] p-6 md:p-8 shadow-[0_28px_90px_rgba(0,0,0,0.22)] backdrop-blur-xl overflow-hidden">
           <div class="absolute inset-0 opacity-22" style="
-                background-image: url(&quot;site_image-1.avif&quot;);
+                background-image: url(&quot;projects/project-10.png&quot;);
                 background-size: cover;
                 background-position: center;
               "></div>

@@ -26,6 +26,20 @@
     #mobile-solutions-menu.open { max-height: 400px; }
     #mobile-solutions-btn.open .mobile-chev { transform: rotate(180deg); }
     .footer-energy { background: radial-gradient(circle at 12% 0%, rgba(162,202,247,0.14), transparent 28%), linear-gradient(135deg, #07131f 0%, #0a3d62 100%); }
+    .footer-energy nav { padding-left: 8px; }
+    .footer-energy nav a { display: inline-block; position: relative; transition: color 0.28s ease, transform 0.28s ease; }
+    .footer-energy nav a::before { content: ''; position: absolute; left: -12px; top: 50%; width: 0; height: 2px; background: #a2caf7; transition: width 0.28s ease; transform: translateY(-50%); }
+    .footer-energy nav a:hover { color: #fff; transform: translateX(8px); }
+    .footer-energy nav a:hover::before { width: 6px; }
+    .footer-energy .grid > div:first-child > a { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .footer-energy .grid > div:first-child > a:hover { transform: translateY(-3px); box-shadow: 0 26px 70px rgba(0,0,0,0.34), 0 0 42px rgba(162,202,247,0.34); }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a:hover { transform: translateY(-4px) scale(1.08); background-color: #a2caf7 !important; color: #0a3d62 !important; border-color: #a2caf7 !important; box-shadow: 0 12px 28px rgba(162,202,247,0.35); }
+    .footer-energy h3 { transition: color 0.3s ease, letter-spacing 0.3s ease; }
+    .footer-energy h3:hover { color: #fff; letter-spacing: 0.14em; }
+    .footer-energy .space-y-4 > p { transition: color 0.25s ease, transform 0.25s ease; }
+    .footer-energy .space-y-4 > p:hover { color: rgba(255,255,255,0.92); transform: translateX(4px); }
+    @media (prefers-reduced-motion: reduce) { .footer-energy nav a:hover, .footer-energy .grid > div:first-child > a:hover, .footer-energy .grid > div:first-child .flex.gap-3 > a:hover, .footer-energy .space-y-4 > p:hover { transform: none; } }
     @keyframes contactStreak { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
     @keyframes contactFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
     html.contact-reveal-ready .contact-reveal { opacity: 0; transition: opacity 760ms cubic-bezier(0.22,1,0.36,1), transform 900ms cubic-bezier(0.22,1,0.36,1); transition-delay: var(--contact-reveal-delay, 0ms); will-change: opacity, transform; }
@@ -99,7 +113,7 @@
     <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden">
       <!-- Background Image with Overlay -->
       <div class="absolute inset-0 z-0">
-        <img src="site_image-1.avif" alt="Industrial Power Site" class="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity" />
+        <img src="projects/project-2.png" alt="Industrial Power Site" class="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity" />
         <div class="absolute inset-0 bg-gradient-to-b from-[#0A3D62]/90 via-[#0A3D62]/70 to-[#07131f]"></div>
       </div>
       
@@ -302,7 +316,7 @@
             
             <!-- Soft image overlay -->
             <div class="absolute inset-x-0 bottom-0 h-2/3 pointer-events-none">
-              <img src="site_image-1.avif" alt="Tower Background" class="w-full h-full object-cover object-bottom opacity-15 mix-blend-screen" />
+              <img src="projects/project-8.png" alt="Tower Background" class="w-full h-full object-cover object-bottom opacity-15 mix-blend-screen" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#092E4C] via-[#092E4C]/80 to-transparent"></div>
             </div>
 

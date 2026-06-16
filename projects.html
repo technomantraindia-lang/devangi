@@ -24,6 +24,20 @@
     #mobile-solutions-menu.open { max-height: 400px; }
     #mobile-solutions-btn.open .mobile-chev { transform: rotate(180deg); }
     .footer-energy { background: radial-gradient(circle at 12% 0%, rgba(162,202,247,0.14), transparent 28%), linear-gradient(135deg, #07131f 0%, #0a3d62 100%); }
+    .footer-energy nav { padding-left: 8px; }
+    .footer-energy nav a { display: inline-block; position: relative; transition: color 0.28s ease, transform 0.28s ease; }
+    .footer-energy nav a::before { content: ''; position: absolute; left: -12px; top: 50%; width: 0; height: 2px; background: #a2caf7; transition: width 0.28s ease; transform: translateY(-50%); }
+    .footer-energy nav a:hover { color: #fff; transform: translateX(8px); }
+    .footer-energy nav a:hover::before { width: 6px; }
+    .footer-energy .grid > div:first-child > a { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .footer-energy .grid > div:first-child > a:hover { transform: translateY(-3px); box-shadow: 0 26px 70px rgba(0,0,0,0.34), 0 0 42px rgba(162,202,247,0.34); }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a:hover { transform: translateY(-4px) scale(1.08); background-color: #a2caf7 !important; color: #0a3d62 !important; border-color: #a2caf7 !important; box-shadow: 0 12px 28px rgba(162,202,247,0.35); }
+    .footer-energy h3 { transition: color 0.3s ease, letter-spacing 0.3s ease; }
+    .footer-energy h3:hover { color: #fff; letter-spacing: 0.14em; }
+    .footer-energy .space-y-4 > p { transition: color 0.25s ease, transform 0.25s ease; }
+    .footer-energy .space-y-4 > p:hover { color: rgba(255,255,255,0.92); transform: translateX(4px); }
+    @media (prefers-reduced-motion: reduce) { .footer-energy nav a:hover, .footer-energy .grid > div:first-child > a:hover, .footer-energy .grid > div:first-child .flex.gap-3 > a:hover, .footer-energy .space-y-4 > p:hover { transform: none; } }
     .hide-scrollbar::-webkit-scrollbar { display: none; }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; cursor: grab; }
     .hide-scrollbar:active { cursor: grabbing; }
@@ -461,7 +475,7 @@
 
       <!-- Image Area -->
       <div class="lg:w-3/5 h-[300px] lg:h-auto lg:min-h-[600px] relative">
-        <img id="modal-img" src="site_image-1.avif" alt="Project Image" class="w-full h-full object-cover" />
+        <img id="modal-img" src="projects/project-1.png" alt="Project Image" class="w-full h-full object-cover" />
       </div>
 
       <!-- Info Area -->

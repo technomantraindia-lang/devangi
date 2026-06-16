@@ -26,6 +26,20 @@
     #mobile-solutions-menu.open { max-height: 400px; }
     #mobile-solutions-btn.open .mobile-chev { transform: rotate(180deg); }
     .footer-energy { background: radial-gradient(circle at 12% 0%, rgba(162,202,247,0.14), transparent 28%), linear-gradient(135deg, #07131f 0%, #0a3d62 100%); }
+    .footer-energy nav { padding-left: 8px; }
+    .footer-energy nav a { display: inline-block; position: relative; transition: color 0.28s ease, transform 0.28s ease; }
+    .footer-energy nav a::before { content: ''; position: absolute; left: -12px; top: 50%; width: 0; height: 2px; background: #a2caf7; transition: width 0.28s ease; transform: translateY(-50%); }
+    .footer-energy nav a:hover { color: #fff; transform: translateX(8px); }
+    .footer-energy nav a:hover::before { width: 6px; }
+    .footer-energy .grid > div:first-child > a { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .footer-energy .grid > div:first-child > a:hover { transform: translateY(-3px); box-shadow: 0 26px 70px rgba(0,0,0,0.34), 0 0 42px rgba(162,202,247,0.34); }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a:hover { transform: translateY(-4px) scale(1.08); background-color: #a2caf7 !important; color: #0a3d62 !important; border-color: #a2caf7 !important; box-shadow: 0 12px 28px rgba(162,202,247,0.35); }
+    .footer-energy h3 { transition: color 0.3s ease, letter-spacing 0.3s ease; }
+    .footer-energy h3:hover { color: #fff; letter-spacing: 0.14em; }
+    .footer-energy .space-y-4 > p { transition: color 0.25s ease, transform 0.25s ease; }
+    .footer-energy .space-y-4 > p:hover { color: rgba(255,255,255,0.92); transform: translateX(4px); }
+    @media (prefers-reduced-motion: reduce) { .footer-energy nav a:hover, .footer-energy .grid > div:first-child > a:hover, .footer-energy .grid > div:first-child .flex.gap-3 > a:hover, .footer-energy .space-y-4 > p:hover { transform: none; } }
     .services-hero {
       background:
         radial-gradient(circle at 15% 22%, rgba(162,202,247,0.26), transparent 30%),
@@ -144,7 +158,7 @@
   <main>
     <section class="services-hero relative min-h-[700px] overflow-hidden pt-28 text-white">
       <div class="absolute inset-0 opacity-20">
-        <img src="site_image-1.avif" alt="" class="h-full w-full object-cover mix-blend-luminosity" />
+        <img src="projects/project-1.png" alt="" class="h-full w-full object-cover mix-blend-luminosity" />
       </div>
       <div class="absolute inset-0 bg-gradient-to-r from-[#07131f]/95 via-[#0a3d62]/84 to-[#0a3d62]/45"></div>
       <div class="absolute -right-24 top-24 h-96 w-96 rounded-full border border-white/10"></div>
@@ -284,7 +298,7 @@
     <section class="bg-[#eef5fb] py-20 text-[#0a3d62] md:py-28">
       <div class="mx-auto grid max-w-[1400px] items-center gap-12 px-5 md:px-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div class="capability-image relative">
-          <img src="site_image-1.avif" alt="Power infrastructure execution" class="h-[420px] w-full rounded-3xl object-cover shadow-[0_28px_80px_rgba(10,61,98,0.18)] md:h-[540px]" />
+          <img src="projects/project-10.png" alt="Power infrastructure execution" class="h-[420px] w-full rounded-3xl object-cover shadow-[0_28px_80px_rgba(10,61,98,0.18)] md:h-[540px]" />
           <div class="absolute inset-0 rounded-3xl bg-gradient-to-t from-[#07131f]/70 via-transparent to-transparent"></div>
           <div class="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/30 bg-white/90 p-5 backdrop-blur-md">
             <strong class="font-['Montserrat'] text-2xl font-extrabold">Field execution backed by engineering control.</strong>

@@ -711,6 +711,66 @@
         linear-gradient(135deg, #07131f 0%, #0a3d62 100%);
     }
 
+    .footer-energy nav { padding-left: 8px; }
+    .footer-energy nav a {
+      display: inline-block;
+      position: relative;
+      transition: color 0.28s ease, transform 0.28s ease;
+    }
+    .footer-energy nav a::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      width: 0;
+      height: 2px;
+      background: #a2caf7;
+      transition: width 0.28s ease;
+      transform: translateY(-50%);
+    }
+    .footer-energy nav a:hover {
+      color: #fff;
+      transform: translateX(8px);
+    }
+    .footer-energy nav a:hover::before { width: 6px; }
+    .footer-energy .grid > div:first-child > a {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .footer-energy .grid > div:first-child > a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.34), 0 0 42px rgba(162, 202, 247, 0.34);
+    }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a {
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a:hover {
+      transform: translateY(-4px) scale(1.08);
+      background-color: #a2caf7 !important;
+      color: #0a3d62 !important;
+      border-color: #a2caf7 !important;
+      box-shadow: 0 12px 28px rgba(162, 202, 247, 0.35);
+    }
+    .footer-energy h3 {
+      transition: color 0.3s ease, letter-spacing 0.3s ease;
+    }
+    .footer-energy h3:hover {
+      color: #fff;
+      letter-spacing: 0.14em;
+    }
+    .footer-energy .space-y-4 > p {
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+    .footer-energy .space-y-4 > p:hover {
+      color: rgba(255, 255, 255, 0.92);
+      transform: translateX(4px);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .footer-energy nav a:hover,
+      .footer-energy .grid > div:first-child > a:hover,
+      .footer-energy .grid > div:first-child .flex.gap-3 > a:hover,
+      .footer-energy .space-y-4 > p:hover { transform: none; }
+    }
+
     .footer-streak {
       background: linear-gradient(90deg,
           transparent,
@@ -1288,7 +1348,7 @@
         <!-- Section 1: Hero Banner -->
     <section class="relative w-full h-[60vh] md:h-[70vh] flex items-center bg-[#0a2540] overflow-hidden">
       <div class="absolute inset-0 z-0">
-        <img id="hero-bg" src="site_image-1.avif" alt="EHV Transmission Tower" class="w-full h-full object-cover opacity-50" style="transform: scale(1.05);" />
+        <img id="hero-bg" src="projects/project-1.png" alt="EHV Transmission Tower" class="w-full h-full object-cover opacity-50" style="transform: scale(1.05);" />
         <div class="absolute inset-0 bg-gradient-to-r from-[#07131f]/90 via-[#07131f]/70 to-transparent"></div>
       </div>
       
@@ -1346,7 +1406,7 @@
           <div class="relative group perspective-1000">
             <div class="absolute -inset-4 bg-gradient-to-tr from-[#a2caf7]/40 via-[#f39449]/30 to-transparent rounded-[32px] blur-2xl group-hover:blur-3xl transition-all duration-700 opacity-60"></div>
             <div class="relative rounded-[28px] overflow-hidden border border-white shadow-[0_30px_60px_rgba(10,37,64,0.15)] transform group-hover:translate-y-[-10px] transition-transform duration-700 ease-out">
-              <img id="overview-img" src="site_image-1.avif" alt="Transmission Line Site" class="w-full h-auto object-cover transform scale-105 group-hover:scale-110 transition-transform duration-1000" style="max-height: 550px;" />
+              <img id="overview-img" src="projects/project-2.png" alt="Transmission Line Site" class="w-full h-auto object-cover transform scale-105 group-hover:scale-110 transition-transform duration-1000" style="max-height: 550px;" />
               <!-- Tech overlays -->
               <div class="absolute top-6 right-6 z-20 flex items-center gap-2 bg-white/80 px-3 py-1.5 rounded-full backdrop-blur-md border border-white shadow-sm">
                 <span class="w-2 h-2 bg-[#f39449] rounded-full animate-pulse"></span>

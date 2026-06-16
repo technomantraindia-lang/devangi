@@ -9,12 +9,12 @@
         "subheading": "High-voltage transmission infrastructure for reliable power evacuation",
         "ctaText": "Explore Project Gallery",
         "ctaLink": "projects.html",
-        "backgroundImage": "site_image-1.avif"
+        "backgroundImage": "projects/project-1.png"
       },
       "overviewSection": {
         "title": "Overview",
         "description": "DPPL executes EHV transmission lines with technical precision, covering design, erection, alignment, stringing, and commissioning. Our solutions ensure grid reliability and efficient power evacuation across industrial and utility corridors.",
-        "image": "site_image-1.avif"
+        "image": "projects/project-2.png"
       },
       "keyBenefitsSection": [
         {
@@ -72,32 +72,32 @@
       ],
       "projectGallerySection": [
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-1.png",
           "category": "TRANSMISSION INFRASTRUCTURE",
           "title": "Monopole Tower Installation"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-2.png",
           "category": "SITE SAFETY",
           "title": "Toolbox Talk & Workforce Readiness"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-7.png",
           "category": "UNDERGROUND CABLING",
           "title": "Road Cutting & Trench Preparation"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-8.png",
           "category": "SUBSTATION EXECUTION",
           "title": "Substation Construction & Commissioning"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-5.png",
           "category": "XLPE CABLE EXECUTION",
           "title": "Cable Laying in Trefoil Formation"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-3.png",
           "category": "EPC DELIVERY",
           "title": "Infrastructure Built for Reliability"
         }
@@ -118,12 +118,12 @@
         "subheading": "Turnkey EHV substation EPC with advanced automation and SCADA integration",
         "ctaText": "Explore Project Gallery",
         "ctaLink": "projects.html",
-        "backgroundImage": "site_image-1.avif"
+        "backgroundImage": "projects/project-10.png"
       },
       "overviewSection": {
         "title": "Overview",
         "description": "DPPL delivers complete substation EPC solutions from 66kV to 400kV, including AIS and GIS switchyards, transformer installation, relay protection, and full automation. Our substation projects integrate SCADA, RTU, and bay-level control systems for remote monitoring and reliable grid operation across Gujarat and beyond.",
-        "image": "site_image-1.avif"
+        "image": "projects/project-10.png"
       },
       "keyBenefitsSection": [
         {
@@ -181,32 +181,32 @@
       ],
       "projectGallerySection": [
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-10.png",
           "category": "SUBSTATION EPC",
           "title": "220kV AIS Switchyard Execution"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-8.png",
           "category": "AUTOMATION",
           "title": "SCADA & Relay Panel Integration"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-2.png",
           "category": "TRANSFORMER",
           "title": "EHV Power Transformer Installation"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-1.png",
           "category": "CIVIL WORKS",
           "title": "Control Room & Foundation Construction"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-7.png",
           "category": "SWITCHGEAR",
           "title": "Circuit Breaker & Isolator Erection"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-4.png",
           "category": "COMMISSIONING",
           "title": "Grid Synchronization & Energization"
         }
@@ -227,12 +227,12 @@
         "subheading": "Precision underground EHV cable networks for urban and industrial corridors",
         "ctaText": "Explore Project Gallery",
         "ctaLink": "projects.html",
-        "backgroundImage": "site_image-1.avif"
+        "backgroundImage": "projects/project-4.png"
       },
       "overviewSection": {
         "title": "Overview",
         "description": "DPPL specializes in XLPE underground cable laying for 11kV to 220kV networks. Our scope covers route survey, trenching, duct laying, cable pulling, jointing, termination, and testing. We execute trefoil and flat formation laying with sand bedding and warning tape as per IS and utility specifications for safe, long-life underground power distribution.",
-        "image": "site_image-1.avif"
+        "image": "projects/project-4.png"
       },
       "keyBenefitsSection": [
         {
@@ -290,32 +290,32 @@
       ],
       "projectGallerySection": [
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-6.png",
           "category": "TRENCHING",
           "title": "Road Cutting & Trench Preparation"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-4.png",
           "category": "CABLE LAYING",
           "title": "XLPE Cable in Trefoil Formation"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-9.png",
           "category": "JOINTING",
           "title": "EHV Cable Jointing & Sealing"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-6.png",
           "category": "DUCT WORK",
           "title": "HDPE Duct Laying & Sand Bedding"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-9.png",
           "category": "TERMINATION",
           "title": "Indoor Cable Termination Setup"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-4.png",
           "category": "TESTING",
           "title": "Pre-Commissioning Cable Testing"
         }
@@ -336,12 +336,12 @@
         "subheading": "HT/LT power distribution systems engineered for industrial complexes",
         "ctaText": "Explore Project Gallery",
         "ctaLink": "projects.html",
-        "backgroundImage": "site_image-1.avif"
+        "backgroundImage": "projects/project-10.png"
       },
       "overviewSection": {
         "title": "Overview",
         "description": "DPPL designs and executes industrial power distribution networks including HT receiving stations, ring main units, LT panels, bus ducting, and internal cabling. We serve manufacturing plants, SEZs, and industrial estates with reliable HT/LT infrastructure that meets load growth, safety, and operational continuity requirements.",
-        "image": "site_image-1.avif"
+        "image": "projects/project-2.png"
       },
       "keyBenefitsSection": [
         {
@@ -399,32 +399,32 @@
       ],
       "projectGallerySection": [
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-10.png",
           "category": "HT STATION",
           "title": "Industrial HT Receiving Substation"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-2.png",
           "category": "PANEL WORK",
           "title": "LT Panel & Bus Duct Installation"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-8.png",
           "category": "DISTRIBUTION",
           "title": "Internal HT/LT Cable Routing"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-5.png",
           "category": "RMU",
           "title": "Ring Main Unit Erection"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-7.png",
           "category": "POWER QUALITY",
           "title": "APFC Panel Commissioning"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-1.png",
           "category": "INDUSTRIAL EPC",
           "title": "Plant Power Infrastructure Handover"
         }
@@ -445,12 +445,12 @@
         "subheading": "End-to-end engineering, procurement, and construction for power infrastructure",
         "ctaText": "Explore Project Gallery",
         "ctaLink": "projects.html",
-        "backgroundImage": "site_image-1.avif"
+        "backgroundImage": "projects/project-1.png"
       },
       "overviewSection": {
         "title": "Overview",
         "description": "DPPL provides complete EPC turnkey execution for power transmission and distribution projects. As a GETCO/DGVCL approved vendor, we manage engineering design, material procurement, construction, quality control, and commissioning under a single contract — delivering projects on schedule with full accountability from concept to grid synchronization.",
-        "image": "site_image-1.avif"
+        "image": "projects/project-5.png"
       },
       "keyBenefitsSection": [
         {
@@ -508,32 +508,32 @@
       ],
       "projectGallerySection": [
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-1.png",
           "category": "EPC DELIVERY",
           "title": "Turnkey Transmission Line Project"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-3.png",
           "category": "PROJECT MANAGEMENT",
           "title": "Integrated Site Execution Planning"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-5.png",
           "category": "PROCUREMENT",
           "title": "Material Supply & Quality Inspection"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-7.png",
           "category": "CONSTRUCTION",
           "title": "Multi-Discipline Field Execution"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-6.png",
           "category": "HSE",
           "title": "Safety-First Worksite Operations"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-10.png",
           "category": "HANDOVER",
           "title": "Commissioning & Utility Clearance"
         }
@@ -554,12 +554,12 @@
         "subheading": "Government approvals and utility compliance for seamless project execution",
         "ctaText": "Explore Project Gallery",
         "ctaLink": "projects.html",
-        "backgroundImage": "site_image-1.avif"
+        "backgroundImage": "projects/project-8.png"
       },
       "overviewSection": {
         "title": "Overview",
         "description": "DPPL manages regulatory liaisoning and utility coordination for power infrastructure projects across Gujarat. We handle approvals from GETCO, DGVCL, PGVCL, MGVCL, and relevant government departments — including load sanction, wayleave permissions, safety clearances, and energization approvals to keep projects moving without regulatory delays.",
-        "image": "site_image-1.avif"
+        "image": "projects/project-2.png"
       },
       "keyBenefitsSection": [
         {
@@ -617,32 +617,32 @@
       ],
       "projectGallerySection": [
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-8.png",
           "category": "APPROVALS",
           "title": "Utility Load Sanction Processing"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-1.png",
           "category": "COMPLIANCE",
           "title": "Technical Documentation Submission"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-2.png",
           "category": "COORDINATION",
           "title": "Joint Site Survey with DISCOM"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-9.png",
           "category": "WAYLEAVE",
           "title": "Right-of-Way Permission Clearance"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-6.png",
           "category": "INSPECTION",
           "title": "Electrical Safety Inspection"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-3.png",
           "category": "ENERGIZATION",
           "title": "Final Grid Connection Approval"
         }
@@ -663,12 +663,12 @@
         "subheading": "Solar EPC and battery energy storage for sustainable power infrastructure",
         "ctaText": "Explore Project Gallery",
         "ctaLink": "projects.html",
-        "backgroundImage": "site_image-1.avif"
+        "backgroundImage": "projects/project-5.png"
       },
       "overviewSection": {
         "title": "Overview",
         "description": "DPPL extends its EPC expertise to renewable energy with solar power plant execution and Battery Energy Storage System (BESS) integration. We deliver grid-connected solar installations, pooling substations for wind and solar farms, and BESS solutions that enhance grid stability, enable peak shaving, and support India's clean energy transition.",
-        "image": "site_image-1.avif"
+        "image": "projects/project-7.png"
       },
       "keyBenefitsSection": [
         {
@@ -726,32 +726,32 @@
       ],
       "projectGallerySection": [
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-5.png",
           "category": "SOLAR EPC",
           "title": "Utility-Scale Solar Plant Execution"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-7.png",
           "category": "BESS",
           "title": "Battery Energy Storage System Setup"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-2.png",
           "category": "GRID CONNECTIVITY",
           "title": "Renewable Power Evacuation Line"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-10.png",
           "category": "SUBSTATION",
           "title": "Solar Pooling Substation Construction"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-1.png",
           "category": "MONITORING",
           "title": "SCADA & Generation Monitoring"
         },
         {
-          "image": "site_image-1.avif",
+          "image": "projects/project-4.png",
           "category": "SUSTAINABLE EPC",
           "title": "Clean Energy Infrastructure Delivery"
         }

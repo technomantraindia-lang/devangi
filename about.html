@@ -74,6 +74,66 @@
         linear-gradient(135deg, #07131f 0%, #0a3d62 100%);
     }
 
+    .footer-energy nav { padding-left: 8px; }
+    .footer-energy nav a {
+      display: inline-block;
+      position: relative;
+      transition: color 0.28s ease, transform 0.28s ease;
+    }
+    .footer-energy nav a::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      width: 0;
+      height: 2px;
+      background: #a2caf7;
+      transition: width 0.28s ease;
+      transform: translateY(-50%);
+    }
+    .footer-energy nav a:hover {
+      color: #fff;
+      transform: translateX(8px);
+    }
+    .footer-energy nav a:hover::before { width: 6px; }
+    .footer-energy .grid > div:first-child > a {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .footer-energy .grid > div:first-child > a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.34), 0 0 42px rgba(162, 202, 247, 0.34);
+    }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a {
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    }
+    .footer-energy .grid > div:first-child .flex.gap-3 > a:hover {
+      transform: translateY(-4px) scale(1.08);
+      background-color: #a2caf7 !important;
+      color: #0a3d62 !important;
+      border-color: #a2caf7 !important;
+      box-shadow: 0 12px 28px rgba(162, 202, 247, 0.35);
+    }
+    .footer-energy h3 {
+      transition: color 0.3s ease, letter-spacing 0.3s ease;
+    }
+    .footer-energy h3:hover {
+      color: #fff;
+      letter-spacing: 0.14em;
+    }
+    .footer-energy .space-y-4 > p {
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+    .footer-energy .space-y-4 > p:hover {
+      color: rgba(255, 255, 255, 0.92);
+      transform: translateX(4px);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .footer-energy nav a:hover,
+      .footer-energy .grid > div:first-child > a:hover,
+      .footer-energy .grid > div:first-child .flex.gap-3 > a:hover,
+      .footer-energy .space-y-4 > p:hover { transform: none; }
+    }
+
     .about-inner-hero {
       background:
         radial-gradient(circle at 18% 22%, rgba(162, 202, 247, 0.26), transparent 30%),
@@ -487,7 +547,7 @@
             Engineering - Procurement - Construction
           </div>
           <div class="relative ml-auto max-w-[620px]">
-            <img src="site_image-1.avif" alt="Power infrastructure execution site"
+            <img src="projects/project-1.png" alt="Power infrastructure execution site"
               class="about-hero-image h-[360px] w-full rounded-2xl border border-white object-cover object-center shadow-[0_34px_90px_rgba(10,61,98,0.22)] sm:h-[460px] lg:h-[540px]" />
             <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#0a3d62]/14 via-transparent to-[#07131f]/26"></div>
             <div class="absolute -bottom-8 left-5 right-5 rounded-2xl border border-white bg-white/95 p-5 shadow-[0_24px_70px_rgba(10,61,98,0.22)] backdrop-blur-xl sm:left-8 sm:right-auto sm:w-[330px]">
@@ -656,7 +716,7 @@
                   <div class="absolute inset-0 bg-[#07131f] rounded-none"></div>
                 </div>
                 
-                <img src="site_image-1.avif" alt="Mr. Nilesh Patel" class="absolute inset-[1px] w-[calc(100%-2px)] h-[calc(100%-2px)] rounded-none object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="projects/project-8.png" alt="Mr. Nilesh Patel" class="absolute inset-[1px] w-[calc(100%-2px)] h-[calc(100%-2px)] rounded-none object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div class="absolute inset-[1px] bg-gradient-to-t from-[#07131f] via-[#07131f]/20 to-transparent rounded-none pointer-events-none"></div>
                 
                 <!-- Overlay Card -->
@@ -880,7 +940,7 @@
           <!-- Panel 01 -->
           <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(11,53,88,0.06)] execution-panel transition-all duration-700 lg:min-h-[580px] flex flex-col transform origin-top">
             <div class="relative h-[260px] md:h-[340px] w-full overflow-hidden bg-[#0a2540]">
-              <img src="layer-1.png" alt="220kV Monopole Tower Installation" class="w-full h-full object-cover object-center opacity-90 transition-transform duration-700 hover:scale-105" />
+              <img src="projects/project-2.png" alt="220kV Monopole Tower Installation" class="w-full h-full object-cover object-center opacity-90 transition-transform duration-700 hover:scale-105" />
               <div class="absolute top-5 right-5 bg-[#0B3558]/80 backdrop-blur-md border border-white/20 text-white font-mono text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">
                 EHV TRANSMISSION INFRASTRUCTURE
               </div>
@@ -901,7 +961,7 @@
           <!-- Panel 02 -->
           <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(11,53,88,0.06)] execution-panel transition-all duration-700 lg:min-h-[580px] flex flex-col lg:opacity-40 lg:scale-[0.95] transform origin-top">
             <div class="relative h-[260px] md:h-[340px] w-full overflow-hidden bg-[#0a2540]">
-              <img src="layer-2 final 2.png" alt="Precision Road Cutting & Trenching" class="w-full h-full object-cover object-center opacity-90 transition-transform duration-700 hover:scale-105" />
+              <img src="projects/project-9.png" alt="Precision Road Cutting & Trenching" class="w-full h-full object-cover object-center opacity-90 transition-transform duration-700 hover:scale-105" />
               <div class="absolute top-5 right-5 bg-[#0B3558]/80 backdrop-blur-md border border-white/20 text-white font-mono text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">
                 UNDERGROUND CABLE PROJECTS
               </div>
@@ -922,7 +982,7 @@
           <!-- Panel 03 -->
           <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(11,53,88,0.06)] execution-panel transition-all duration-700 lg:min-h-[580px] flex flex-col lg:opacity-40 lg:scale-[0.95] transform origin-top">
             <div class="relative h-[260px] md:h-[340px] w-full overflow-hidden bg-[#0a2540]">
-              <img src="site_image-1.avif" alt="Cable Laying in Trefoil Formation" class="w-full h-full object-cover object-center opacity-90 transition-transform duration-700 hover:scale-105" />
+              <img src="projects/project-4.png" alt="Cable Laying in Trefoil Formation" class="w-full h-full object-cover object-center opacity-90 transition-transform duration-700 hover:scale-105" />
               <div class="absolute top-5 right-5 bg-[#0B3558]/80 backdrop-blur-md border border-white/20 text-white font-mono text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">
                 XLPE CABLE EXECUTION
               </div>
@@ -943,7 +1003,7 @@
           <!-- Panel 04 -->
           <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(11,53,88,0.06)] execution-panel transition-all duration-700 lg:min-h-[580px] flex flex-col lg:opacity-40 lg:scale-[0.95] transform origin-top">
             <div class="relative h-[260px] md:h-[340px] w-full overflow-hidden bg-[#0a2540]">
-              <img src="layer-1.png" alt="Safety Before Execution" class="w-full h-full object-cover object-center opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
+              <img src="images/safety.png" alt="Safety Before Execution" class="w-full h-full object-cover object-center opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0B3558]/60 to-transparent"></div>
               <div class="absolute top-5 right-5 bg-[#0B3558]/80 backdrop-blur-md border border-white/20 text-white font-mono text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">
                 SAFETY-FIRST WORK CULTURE
@@ -1173,7 +1233,7 @@
     <section class="relative py-20 md:py-28 overflow-hidden bg-[#0A3D62] text-white">
       <!-- Background Image with Overlay -->
       <div class="absolute inset-0 z-0">
-        <img src="site_image-1.avif" alt="Power Infrastructure Site" class="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity" />
+        <img src="projects/project-3.png" alt="Power Infrastructure Site" class="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity" />
         <div class="absolute inset-0 bg-gradient-to-r from-[#07131F]/90 via-[#0A3D62]/80 to-[#0A3D62]/60"></div>
       </div>
       
