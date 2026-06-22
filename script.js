@@ -180,7 +180,7 @@ function initializeHomeReveals() {
   register('#contact .lg\\:grid-cols-\\[1\\.05fr_0\\.95fr\\] > div:last-child', 'right', 0, 160);
 
   register('footer .lg\\:grid-cols-\\[1\\.25fr_0\\.75fr_1fr_0\\.75fr\\] > div', 'up', 110);
-  register('footer .border-t', 'right', 0, 120);
+
 
   const revealItems = document.querySelectorAll('.reveal-item');
   document.documentElement.classList.add('reveal-ready');

@@ -118,12 +118,23 @@
         "subheading": "Turnkey EHV substation EPC with advanced automation and SCADA integration",
         "ctaText": "Explore Project Gallery",
         "ctaLink": "projects.html",
-        "backgroundImage": "projects/project-10.png"
+        "backgroundImage": "images/substation/substation-site.jpeg"
       },
       "overviewSection": {
         "title": "Overview",
         "description": "DPPL delivers complete substation EPC solutions from 66kV to 400kV, including AIS and GIS switchyards, transformer installation, relay protection, and full automation. Our substation projects integrate SCADA, RTU, and bay-level control systems for remote monitoring and reliable grid operation across Gujarat and beyond.",
-        "image": "projects/project-10.png"
+        "images": [
+          {
+            "src": "images/substation/substation-site.jpeg",
+            "alt": "EHV Substation Site",
+            "label": "Substation"
+          },
+          {
+            "src": "images/substation/substation-control-room.jpeg",
+            "alt": "Substation Control Room",
+            "label": "Control Room"
+          }
+        ]
       },
       "keyBenefitsSection": [
         {
@@ -290,36 +301,61 @@
       ],
       "projectGallerySection": [
         {
-          "image": "projects/project-6.png",
-          "category": "TRENCHING",
-          "title": "Road Cutting & Trench Preparation"
-        },
-        {
-          "image": "projects/project-4.png",
-          "category": "CABLE LAYING",
-          "title": "XLPE Cable in Trefoil Formation"
-        },
-        {
-          "image": "projects/project-9.png",
-          "category": "JOINTING",
-          "title": "EHV Cable Jointing & Sealing"
+          "image": "images/xlpe/xlpe-1-safety-line-marking.png",
+          "category": "STEP 01 · SAFETY & QUALITY",
+          "title": "Safety Precaution before excavation line Marking with Quality of Work."
         },
         {
           "image": "projects/project-6.png",
-          "category": "DUCT WORK",
-          "title": "HDPE Duct Laying & Sand Bedding"
+          "category": "STEP 02 · EXCAVATION",
+          "title": "Open Excavation With all Safety and Instrument"
         },
         {
-          "image": "projects/project-9.png",
-          "category": "TERMINATION",
-          "title": "Indoor Cable Termination Setup"
+          "image": "images/xlpe/xlpe-step-3-cable-laying.jpeg",
+          "category": "STEP 03 · CABLE LAYING",
+          "title": "XLPE Cable Laying with Concrete Slab Protection"
         },
         {
-          "image": "projects/project-4.png",
-          "category": "TESTING",
-          "title": "Pre-Commissioning Cable Testing"
+          "image": "images/xlpe/xlpe-step-4-trench-duct-bank.png",
+          "category": "STEP 04 · PROTECTION",
+          "title": "GETCO 66kV Cable Protection with Concrete Cover Slabs"
         }
       ],
+      "gallerySection": {
+        "heading": "Execution Gallery",
+        "description": "Four key stages of EHV underground XLPE cable project execution — from safety marking to protected route completion."
+      },
+      "howWeWorkSection": {
+        "eyebrow": "Execution Process",
+        "heading": "How We Work",
+        "description": "Our XLPE underground cable workflow follows a safety-first, stage-gated process — from line marking and barricading through excavation, cable laying, and protected route completion.",
+        "steps": [
+          {
+            "title": "Safety Precaution before excavation line Marking with Quality of Work.",
+            "description": "Route marking, barricading, toolbox talks, and PPE compliance before any excavation begins.",
+            "icon": "health_and_safety",
+            "image": "images/xlpe/xlpe-1-safety-line-marking.png"
+          },
+          {
+            "title": "Open Excavation With all Safety and Instrument",
+            "description": "Controlled open excavation executed with danger-zone barricading, safety instrumentation, PPE compliance, and disciplined trench preparation.",
+            "icon": "architecture",
+            "image": "projects/project-6.png"
+          },
+          {
+            "title": "XLPE Cable Laying with Concrete Slab Protection",
+            "description": "Three-phase XLPE cable laying in trefoil formation with concrete slab side protection, secure bundling, and quality-controlled placement inside the prepared trench.",
+            "icon": "cable",
+            "image": "images/xlpe/xlpe-step-3-cable-laying.jpeg"
+          },
+          {
+            "title": "GETCO 66kV Cable Protection with Concrete Cover Slabs",
+            "description": "Laid XLPE cable protected with GETCO-marked concrete cover slabs inside the trench before backfilling, ensuring safe underground route completion.",
+            "icon": "architecture",
+            "image": "images/xlpe/xlpe-step-4-trench-duct-bank.png"
+          }
+        ]
+      },
       "ctaSection": {
         "heading": "Need Underground Cable Infrastructure?",
         "description": "Connect with DPPL for XLPE cable route planning, laying, and commissioning support.",
@@ -549,17 +585,16 @@
       "pageId": "regulatory-liaisoning",
       "pageTitle": "Regulatory Liaisoning",
       "breadcrumb": ["Home", "Our Solutions", "Regulatory Liaisoning"],
+      "hideImages": true,
       "heroSection": {
         "heading": "Regulatory Liaisoning",
         "subheading": "Government approvals and utility compliance for seamless project execution",
-        "ctaText": "Explore Project Gallery",
-        "ctaLink": "projects.html",
-        "backgroundImage": "projects/project-8.png"
+        "ctaText": "Get a Quote",
+        "ctaLink": "contact.html"
       },
       "overviewSection": {
         "title": "Overview",
-        "description": "DPPL manages regulatory liaisoning and utility coordination for power infrastructure projects across Gujarat. We handle approvals from GETCO, DGVCL, PGVCL, MGVCL, and relevant government departments — including load sanction, wayleave permissions, safety clearances, and energization approvals to keep projects moving without regulatory delays.",
-        "image": "projects/project-2.png"
+        "description": "DPPL manages regulatory liaisoning and utility coordination for power infrastructure projects across Gujarat. We handle approvals from GETCO, DGVCL, PGVCL, MGVCL, and relevant government departments — including load sanction, wayleave permissions, safety clearances, and energization approvals to keep projects moving without regulatory delays."
       },
       "keyBenefitsSection": [
         {
@@ -615,38 +650,7 @@
           "icon": "power"
         }
       ],
-      "projectGallerySection": [
-        {
-          "image": "projects/project-8.png",
-          "category": "APPROVALS",
-          "title": "Utility Load Sanction Processing"
-        },
-        {
-          "image": "projects/project-1.png",
-          "category": "COMPLIANCE",
-          "title": "Technical Documentation Submission"
-        },
-        {
-          "image": "projects/project-2.png",
-          "category": "COORDINATION",
-          "title": "Joint Site Survey with DISCOM"
-        },
-        {
-          "image": "projects/project-9.png",
-          "category": "WAYLEAVE",
-          "title": "Right-of-Way Permission Clearance"
-        },
-        {
-          "image": "projects/project-6.png",
-          "category": "INSPECTION",
-          "title": "Electrical Safety Inspection"
-        },
-        {
-          "image": "projects/project-3.png",
-          "category": "ENERGIZATION",
-          "title": "Final Grid Connection Approval"
-        }
-      ],
+      "projectGallerySection": [],
       "ctaSection": {
         "heading": "Need Regulatory Support for Your Project?",
         "description": "Let DPPL handle utility approvals and compliance so your project stays on track.",
