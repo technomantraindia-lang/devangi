@@ -1522,7 +1522,7 @@
     </section>
 
     <!-- Section 6: Project Gallery -->
-    <section id="gallery-section" class="py-20 md:py-28 bg-white relative">
+    <section id="gallery-section" class="hidden py-20 md:py-28 bg-white relative">
       <div class="w-[calc(100%-40px)] md:w-[calc(100%-96px)] max-w-[1400px] mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div class="max-w-2xl">
@@ -1859,7 +1859,8 @@
 
         const gallerySection = document.getElementById('gallery-section');
         const galleryGrid = document.getElementById('gallery-grid');
-        if (hideImages || !page.projectGallerySection || page.projectGallerySection.length === 0) {
+        const hasGalleryItems = page.projectGallerySection && page.projectGallerySection.length > 0;
+        if (!hasGalleryItems) {
           if (gallerySection) gallerySection.classList.add('hidden');
           if (galleryGrid) galleryGrid.innerHTML = '';
         } else {
@@ -1929,9 +1930,11 @@
       alternate(document.querySelectorAll('#features-grid > *'), 'up', 'down', 85);
       add(document.querySelectorAll('#how-we-work-section .text-center > *'), 'down', 100, 20);
       alternate(document.querySelectorAll('#how-we-work-steps > *'), 'left', 'right', 90);
-      add(document.querySelectorAll('#gallery-section .md\\:items-end > div > *'), 'left', 100, 30);
-      add(document.querySelectorAll('#gallery-section .md\\:items-end > a'), 'right', 0, 140);
-      alternate(document.querySelectorAll('#gallery-grid > *'), 'left', 'right', 85);
+      if (!document.getElementById('gallery-section')?.classList.contains('hidden')) {
+        add(document.querySelectorAll('#gallery-section .md\\:items-end > div > *'), 'left', 100, 30);
+        add(document.querySelectorAll('#gallery-section .md\\:items-end > a'), 'right', 0, 140);
+        alternate(document.querySelectorAll('#gallery-grid > *'), 'left', 'right', 85);
+      }
       add(document.querySelectorAll('#cta-section .max-w-2xl > *'), 'left', 100, 30);
       add(document.querySelectorAll('#cta-section .shrink-0'), 'right', 0, 160);
       alternate(document.querySelectorAll('footer .lg\\:grid-cols-\\[1\\.25fr_0\\.75fr_1fr_1fr\\] > div'), 'up', 'down', 100);

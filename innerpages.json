@@ -73,33 +73,33 @@
       "projectGallerySection": [
         {
           "image": "projects/project-1.png",
-          "category": "TRANSMISSION INFRASTRUCTURE",
-          "title": "Monopole Tower Installation"
+          "category": "TRANSMISSION LINES",
+          "title": "Transmission Line"
         },
         {
           "image": "projects/project-2.png",
-          "category": "SITE SAFETY",
-          "title": "Toolbox Talk & Workforce Readiness"
-        },
-        {
-          "image": "projects/project-7.png",
-          "category": "UNDERGROUND CABLING",
-          "title": "Road Cutting & Trench Preparation"
-        },
-        {
-          "image": "projects/project-8.png",
-          "category": "SUBSTATION EXECUTION",
-          "title": "Substation Construction & Commissioning"
-        },
-        {
-          "image": "projects/project-5.png",
-          "category": "XLPE CABLE EXECUTION",
-          "title": "Cable Laying in Trefoil Formation"
+          "category": "TRANSMISSION LINES",
+          "title": "220kV Line – Garden Mill Pvt. Ltd."
         },
         {
           "image": "projects/project-3.png",
-          "category": "EPC DELIVERY",
-          "title": "Infrastructure Built for Reliability"
+          "category": "TRANSMISSION & EPC",
+          "title": "River Crossing Bridge – Design & Construction"
+        },
+        {
+          "image": "projects/project-5.png",
+          "category": "TURNKEY EPC",
+          "title": "Smart City Monopole Power Infrastructure"
+        },
+        {
+          "image": "projects/project-7.png",
+          "category": "TURNKEY EPC",
+          "title": "Lattice to Monopole Replacement"
+        },
+        {
+          "image": "projects/project-8.png",
+          "category": "TRANSMISSION LINES",
+          "title": "66kV Line – GMRCL"
         }
       ],
       "ctaSection": {
@@ -193,33 +193,8 @@
       "projectGallerySection": [
         {
           "image": "projects/project-10.png",
-          "category": "SUBSTATION EPC",
-          "title": "220kV AIS Switchyard Execution"
-        },
-        {
-          "image": "projects/project-8.png",
-          "category": "AUTOMATION",
-          "title": "SCADA & Relay Panel Integration"
-        },
-        {
-          "image": "projects/project-2.png",
-          "category": "TRANSFORMER",
-          "title": "EHV Power Transformer Installation"
-        },
-        {
-          "image": "projects/project-1.png",
-          "category": "CIVIL WORKS",
-          "title": "Control Room & Foundation Construction"
-        },
-        {
-          "image": "projects/project-7.png",
-          "category": "SWITCHGEAR",
-          "title": "Circuit Breaker & Isolator Erection"
-        },
-        {
-          "image": "projects/project-4.png",
-          "category": "COMMISSIONING",
-          "title": "Grid Synchronization & Energization"
+          "category": "SUBSTATIONS & EPC",
+          "title": "Substation Equipment Installation"
         }
       ],
       "ctaSection": {
@@ -301,29 +276,19 @@
       ],
       "projectGallerySection": [
         {
-          "image": "images/xlpe/xlpe-1-safety-line-marking.png",
-          "category": "STEP 01 · SAFETY & QUALITY",
-          "title": "Safety Precaution before excavation line Marking with Quality of Work."
+          "image": "projects/project-4.png",
+          "category": "UNDERGROUND CABLING",
+          "title": "EHV Underground Cable Works"
         },
         {
-          "image": "projects/project-6.png",
-          "category": "STEP 02 · EXCAVATION",
-          "title": "Open Excavation With all Safety and Instrument"
-        },
-        {
-          "image": "images/xlpe/xlpe-step-3-cable-laying.jpeg",
-          "category": "STEP 03 · CABLE LAYING",
-          "title": "XLPE Cable Laying with Concrete Slab Protection"
-        },
-        {
-          "image": "images/xlpe/xlpe-step-4-trench-duct-bank.png",
-          "category": "STEP 04 · PROTECTION",
-          "title": "GETCO 66kV Cable Protection with Concrete Cover Slabs"
+          "image": "projects/project-9.png",
+          "category": "UNDERGROUND CABLING",
+          "title": "OH to UG Cable Trenchwork"
         }
       ],
       "gallerySection": {
         "heading": "Execution Gallery",
-        "description": "Four key stages of EHV underground XLPE cable project execution — from safety marking to protected route completion."
+        "description": "Completed underground cable projects from our project portfolio."
       },
       "howWeWorkSection": {
         "eyebrow": "Execution Process",
@@ -435,34 +400,24 @@
       ],
       "projectGallerySection": [
         {
-          "image": "projects/project-10.png",
-          "category": "HT STATION",
-          "title": "Industrial HT Receiving Substation"
+          "image": "projects/project-2.png",
+          "category": "TRANSMISSION LINES",
+          "title": "220kV Line – Garden Mill Pvt. Ltd."
         },
         {
-          "image": "projects/project-2.png",
-          "category": "PANEL WORK",
-          "title": "LT Panel & Bus Duct Installation"
+          "image": "projects/project-10.png",
+          "category": "SUBSTATIONS & EPC",
+          "title": "Substation Equipment Installation"
         },
         {
           "image": "projects/project-8.png",
-          "category": "DISTRIBUTION",
-          "title": "Internal HT/LT Cable Routing"
-        },
-        {
-          "image": "projects/project-5.png",
-          "category": "RMU",
-          "title": "Ring Main Unit Erection"
-        },
-        {
-          "image": "projects/project-7.png",
-          "category": "POWER QUALITY",
-          "title": "APFC Panel Commissioning"
+          "category": "TRANSMISSION LINES",
+          "title": "66kV Line – GMRCL"
         },
         {
           "image": "projects/project-1.png",
-          "category": "INDUSTRIAL EPC",
-          "title": "Plant Power Infrastructure Handover"
+          "category": "TRANSMISSION LINES",
+          "title": "Transmission Line"
         }
       ],
       "ctaSection": {
@@ -544,34 +499,49 @@
       ],
       "projectGallerySection": [
         {
-          "image": "projects/project-1.png",
-          "category": "EPC DELIVERY",
-          "title": "Turnkey Transmission Line Project"
+          "image": "projects/project-4.png",
+          "category": "UNDERGROUND CABLING",
+          "title": "EHV Underground Cable Works"
+        },
+        {
+          "image": "projects/project-2.png",
+          "category": "TRANSMISSION LINES",
+          "title": "220kV Line – Garden Mill Pvt. Ltd."
         },
         {
           "image": "projects/project-3.png",
-          "category": "PROJECT MANAGEMENT",
-          "title": "Integrated Site Execution Planning"
+          "category": "TRANSMISSION & EPC",
+          "title": "River Crossing Bridge – Design & Construction"
+        },
+        {
+          "image": "projects/project-1.png",
+          "category": "TRANSMISSION LINES",
+          "title": "Transmission Line"
         },
         {
           "image": "projects/project-5.png",
-          "category": "PROCUREMENT",
-          "title": "Material Supply & Quality Inspection"
+          "category": "TURNKEY EPC",
+          "title": "Smart City Monopole Power Infrastructure"
         },
         {
           "image": "projects/project-7.png",
-          "category": "CONSTRUCTION",
-          "title": "Multi-Discipline Field Execution"
+          "category": "TURNKEY EPC",
+          "title": "Lattice to Monopole Replacement"
         },
         {
-          "image": "projects/project-6.png",
-          "category": "HSE",
-          "title": "Safety-First Worksite Operations"
+          "image": "projects/project-8.png",
+          "category": "TRANSMISSION LINES",
+          "title": "66kV Line – GMRCL"
+        },
+        {
+          "image": "projects/project-9.png",
+          "category": "UNDERGROUND CABLING",
+          "title": "OH to UG Cable Trenchwork"
         },
         {
           "image": "projects/project-10.png",
-          "category": "HANDOVER",
-          "title": "Commissioning & Utility Clearance"
+          "category": "SUBSTATIONS & EPC",
+          "title": "Substation Equipment Installation"
         }
       ],
       "ctaSection": {
@@ -667,12 +637,12 @@
         "subheading": "Solar EPC and battery energy storage for sustainable power infrastructure",
         "ctaText": "Explore Project Gallery",
         "ctaLink": "projects.html",
-        "backgroundImage": "projects/project-5.png"
+        "backgroundImage": "images/renewables/renewables-bess-hero.jpeg"
       },
       "overviewSection": {
         "title": "Overview",
         "description": "DPPL extends its EPC expertise to renewable energy with solar power plant execution and Battery Energy Storage System (BESS) integration. We deliver grid-connected solar installations, pooling substations for wind and solar farms, and BESS solutions that enhance grid stability, enable peak shaving, and support India's clean energy transition.",
-        "image": "projects/project-7.png"
+        "image": "images/renewables/renewables-overview.jpeg"
       },
       "keyBenefitsSection": [
         {
@@ -728,38 +698,7 @@
           "icon": "power"
         }
       ],
-      "projectGallerySection": [
-        {
-          "image": "projects/project-5.png",
-          "category": "SOLAR EPC",
-          "title": "Utility-Scale Solar Plant Execution"
-        },
-        {
-          "image": "projects/project-7.png",
-          "category": "BESS",
-          "title": "Battery Energy Storage System Setup"
-        },
-        {
-          "image": "projects/project-2.png",
-          "category": "GRID CONNECTIVITY",
-          "title": "Renewable Power Evacuation Line"
-        },
-        {
-          "image": "projects/project-10.png",
-          "category": "SUBSTATION",
-          "title": "Solar Pooling Substation Construction"
-        },
-        {
-          "image": "projects/project-1.png",
-          "category": "MONITORING",
-          "title": "SCADA & Generation Monitoring"
-        },
-        {
-          "image": "projects/project-4.png",
-          "category": "SUSTAINABLE EPC",
-          "title": "Clean Energy Infrastructure Delivery"
-        }
-      ],
+      "projectGallerySection": [],
       "ctaSection": {
         "heading": "Ready to Go Renewable?",
         "description": "Explore solar EPC and BESS solutions with DPPL for sustainable power infrastructure.",
