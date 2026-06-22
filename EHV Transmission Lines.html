@@ -1867,7 +1867,7 @@
           if (gallerySection) gallerySection.classList.remove('hidden');
         galleryGrid.innerHTML = page.projectGallerySection.map(function (item, i) {
           const galleryCount = page.projectGallerySection.length;
-          const useEqualGrid = galleryCount === 4;
+          const useEqualGrid = galleryCount === 4 || galleryCount === 5;
           const isLarge = !useEqualGrid && i === 0;
           const sizeClass = useEqualGrid
             ? 'min-h-[280px] md:min-h-[360px]'
@@ -1887,7 +1887,7 @@
             '<span class="material-symbols-outlined text-white ' + iconText + '">open_in_full</span></div></div>';
         }).join('');
 
-        if (page.projectGallerySection.length === 4) {
+        if (page.projectGallerySection.length === 4 || page.projectGallerySection.length === 5) {
           galleryGrid.className = 'grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8';
         } else {
           galleryGrid.className = 'grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6';
