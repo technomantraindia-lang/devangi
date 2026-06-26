@@ -110,109 +110,48 @@
   <main class="min-h-screen bg-[#F9FAFC] pt-24 text-[#52606d] pb-24">
     
     <!-- 1. Hero / Gallery Banner: Infrastructure in Motion -->
-    <section class="relative w-full min-h-[75vh] lg:min-h-[82vh] flex flex-col lg:flex-row items-center overflow-hidden bg-[#082943] pt-28 lg:pt-32 pb-20 px-5 md:px-12 z-10">
-      
-      <!-- Background details -->
+    <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-white">
+      <!-- Background Image with Overlay -->
       <div class="absolute inset-0 z-0">
-        <!-- Secondary Background Layer gradient -->
-        <div class="absolute inset-0 bg-gradient-to-br from-[#082943] via-[#103B58] to-[#082943] opacity-80"></div>
-        <!-- Grid pattern -->
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwem0zOSAzOUgxdjFoMzh6bS0zOC0xSDBWMWgxeiIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjAzKSIvPjwvc3ZnPg==')] opacity-50"></div>
-        <!-- Coordinates and Line-art -->
-        <div class="absolute top-1/4 left-4 md:left-10 text-[10px] font-mono text-[rgba(155,195,224,0.3)] tracking-widest rotate-90 origin-left">N 21° 10' 32" / E 72° 49' 48"</div>
-        <div class="absolute bottom-1/4 right-4 md:right-10 text-[10px] font-mono text-[rgba(155,195,224,0.3)] tracking-widest -rotate-90 origin-right">DPPL / EXECUTION GRID</div>
-        <!-- Large Transparent Word -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] md:text-[15vw] font-['Montserrat'] font-black text-white/[0.02] tracking-tighter pointer-events-none whitespace-nowrap">PROJECTS</div>
-        <!-- Thin cable line art -->
-        <div class="absolute left-0 top-1/3 w-full h-px bg-[rgba(155,195,224,0.12)] mix-blend-screen"></div>
-        <div class="absolute left-1/3 top-0 w-px h-full bg-[rgba(155,195,224,0.12)] mix-blend-screen"></div>
+        <img src="projects/project-2.png" alt="Hero Background" class="w-full h-full object-cover object-center opacity-15 mix-blend-luminosity" />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#F4F8FC]/95 via-[#E6F0F9]/80 to-[#FFFFFF]"></div>
+      </div>
+      
+      <!-- Faint Technical Graphics / Blueprint Lines -->
+      <div class="absolute inset-0 opacity-[0.3] bg-[linear-gradient(rgba(11,53,88,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(11,53,88,0.08)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none"></div>
+      
+      <!-- Animated Energy Lines -->
+      <style>@keyframes heroStreak { from { transform: translateX(-100%); } to { transform: translateX(100%); } }</style>
+      <div class="absolute inset-0 z-0 pointer-events-none hidden md:block">
+        <div class="absolute top-[30%] left-0 w-[40%] h-px bg-gradient-to-r from-transparent via-[#E9924A]/60 to-transparent -translate-x-full animate-[heroStreak_7s_linear_infinite_1s]"></div>
+        <div class="absolute top-[60%] right-0 w-[60%] h-px bg-gradient-to-l from-transparent via-[#0A3D62]/30 to-transparent translate-x-full animate-[heroStreak_6s_linear_infinite_3s]"></div>
       </div>
 
-      <div class="relative z-10 w-full max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-8 mt-6">
+      <div class="max-w-[1400px] mx-auto px-5 md:px-12 relative z-10 w-full text-center flex flex-col items-center justify-center">
         
-        <!-- Left Content Area (38%-42%) -->
-        <div class="w-full lg:w-5/12 flex flex-col justify-center text-left">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-8 h-0.5 bg-[#EE9146]"></div>
-            <span class="text-[#EE9146] font-mono text-xs font-bold uppercase tracking-[0.2em]">Project Gallery</span>
+        <div class="max-w-3xl flex flex-col items-center">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0B3558]/10 bg-white/60 backdrop-blur-md mb-6 shadow-sm mx-auto">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#E9924A] animate-pulse"></span>
+            <span class="font-mono text-xs font-bold tracking-[0.15em] text-[#0B3558] uppercase">Project Gallery</span>
           </div>
           
-          <h1 class="font-['Montserrat'] text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#F4F8FC] mb-6 leading-[1.15] max-w-lg">
+          <h1 class="font-['Montserrat'] text-4xl md:text-5xl lg:text-[64px] font-extrabold text-[#0B3558] leading-[1.1] mb-6 tracking-tight text-center mx-auto">
             Power Infrastructure,<br>Executed with Precision.
           </h1>
           
-          <p class="text-[rgba(244,248,252,0.72)] font-['Open_Sans'] text-base lg:text-lg mb-10 max-w-md leading-relaxed">
+          <p class="text-[#52606d] text-lg md:text-xl leading-relaxed font-['Open_Sans'] max-w-2xl mx-auto font-medium mb-10 text-center">
             Explore DPPL's execution capability across transmission lines, substations, underground cabling and integrated EPC power infrastructure solutions.
           </p>
-          
-          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <a href="#project-grid" class="inline-flex items-center justify-center gap-2 bg-[#EE9146] text-[#082943] font-bold text-sm uppercase tracking-wider px-7 py-3.5 rounded-full hover:bg-white hover:text-[#082943] transition-all shadow-[0_10px_20px_rgba(238,145,70,0.2)] hover:-translate-y-1">
-              Explore Projects <span class="material-symbols-outlined text-lg">arrow_downward</span>
-            </a>
-          </div>
-          
-          <div class="mt-12 lg:mt-16 text-[9px] md:text-[10px] font-mono text-[rgba(244,248,252,0.4)] uppercase tracking-[0.2em] max-w-sm leading-relaxed hidden sm:block">
-            TRANSMISSION &nbsp;/&nbsp; SUBSTATIONS &nbsp;/&nbsp; UNDERGROUND CABLING &nbsp;/&nbsp; EPC
-          </div>
+
+          <a href="#project-portfolio" class="inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-[#0B3558]/20 hover:border-[#E9924A] hover:bg-white transition-colors duration-300 group backdrop-blur-sm animate-bounce cursor-pointer shadow-sm mx-auto">
+            <span class="material-symbols-outlined text-[#0B3558]/70 group-hover:text-[#E9924A] text-3xl">arrow_downward</span>
+          </a>
         </div>
         
-        <!-- Right Side: Layered Project Image Gallery -->
-        <div class="w-full lg:w-7/12 relative min-h-[400px] lg:min-h-[600px] flex items-center justify-center lg:justify-end mt-8 lg:mt-0">
-          
-          <!-- Vertical Project Counter -->
-          <div class="absolute left-0 lg:-left-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 z-30 hidden lg:flex">
-            <span class="text-[10px] font-mono text-[rgba(244,248,252,0.5)] uppercase tracking-widest -rotate-90 mb-12 whitespace-nowrap">Featured Work</span>
-            <span id="hero-counter-current" class="text-[#EE9146] font-bold font-mono text-sm transition-all duration-300">01</span>
-            <span class="w-px h-8 bg-[rgba(244,248,252,0.2)]"></span>
-            <span class="text-[rgba(244,248,252,0.5)] font-mono text-sm">9</span>
-          </div>
-
-          <!-- The Image Composition -->
-          <div class="relative w-full max-w-[650px] aspect-square md:aspect-auto md:h-[550px]" id="hero-gallery">
-            
-            <!-- Secondary Image 2: 220kV Line (Back/Left) -->
-            <div class="hero-card absolute top-1/4 left-0 w-[55%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 z-10 transform -translate-x-4 -rotate-3 transition-all duration-1000 ease-in-out hidden md:block cursor-pointer">
-              <img src="projects/project-2.png" alt="220kV Line – Garden Mill Pvt. Ltd." class="hero-img w-full h-full object-cover filter grayscale opacity-70 transition-all duration-1000 ease-in-out" />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#082943]/90 to-transparent"></div>
-              <div class="absolute bottom-4 left-4">
-                <div class="flex items-center gap-2 mb-1">
-                  <span class="w-4 h-px bg-[#EE9146]"></span>
-                  <span class="text-[9px] font-mono text-[#EE9146] uppercase tracking-wider font-bold">220kV Line</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Secondary Image 1: River Crossing Bridge (Bottom/Right) -->
-            <div class="hero-card absolute bottom-0 right-4 w-[50%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 z-20 transform translate-y-4 rotate-2 transition-all duration-1000 ease-in-out hidden md:block cursor-pointer">
-              <img src="projects/project-3.png" alt="River Crossing Bridge" class="hero-img w-full h-full object-cover filter sepia-[.3] contrast-125 opacity-80 transition-all duration-1000 ease-in-out" />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#082943]/90 to-transparent"></div>
-              <div class="absolute bottom-4 left-4">
-                <div class="flex items-center gap-2 mb-1">
-                  <span class="w-4 h-px bg-[#EE9146]"></span>
-                  <span class="text-[9px] font-mono text-[#EE9146] uppercase tracking-wider font-bold">River Crossing</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Main Featured Image (Front/Center-Right on Desktop, Full on Mobile) -->
-            <div class="hero-card absolute inset-0 md:inset-auto md:top-4 md:right-8 md:w-[70%] md:aspect-[3/4] rounded-3xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-[rgba(255,255,255,0.14)] z-30 transform transition-all duration-1000 ease-in-out cursor-pointer">
-              <img src="projects/project-4.png" alt="EHV Underground Cable Works" class="hero-img w-full h-full object-cover transition-all duration-1000 ease-in-out" />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#082943] via-transparent to-transparent opacity-90"></div>
-              <div class="absolute bottom-6 left-6 right-6">
-                <div class="flex flex-col gap-2">
-                  <div class="flex items-center gap-2">
-                    <span class="w-6 h-0.5 bg-[#EE9146]"></span>
-                    <span class="text-[#EE9146] font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">Completed Project</span>
-                  </div>
-                  <h3 class="text-white font-['Montserrat'] font-bold text-lg md:text-2xl leading-tight">EHV UNDERGROUND CABLE WORKS</h3>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
       </div>
       
+      <!-- Gradient Fade to next section -->
+      <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#F9FAFC] to-transparent z-10 pointer-events-none"></div>
     </section>
 
 
@@ -319,8 +258,8 @@
             </div>
 
             <!-- Small Card 1 -->
-            <div class="project-card featured-small-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="transmission" onclick="openModal('220kV Line – Garden Mill Pvt. Ltd.', 'Garden Mill Pvt. Ltd.', 'Completed', 'Successfully commissioned a 220kV transmission line for Garden Mill Pvt. Ltd., covering tower erection, conductor stringing, testing, energization, and handover — delivering reliable industrial power infrastructure in full compliance with technical and safety standards.', ['Transmission', 'EPC'], 'projects/project-2.png')">
-              <img src="projects/project-2.png" alt="220kV Line – Garden Mill Pvt. Ltd." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="project-card featured-small-card h-[300px] rounded-[18px] overflow-hidden relative group cursor-pointer shadow-md transition-all duration-500 transform opacity-100 scale-100" data-category="transmission" onclick="openModal('220kV Line – Garden Silk Mill Pvt.Ltd.', 'Garden Silk Mill Pvt.Ltd.', 'Completed', 'Successfully commissioned a 220kV transmission line for Garden Silk Mill Pvt.Ltd., covering tower erection, conductor stringing, testing, energization, and handover — delivering reliable industrial power infrastructure in full compliance with technical and safety standards.', ['Transmission', 'EPC'], 'projects/project-2.png')">
+              <img src="projects/project-2.png" alt="220kV Line – Garden Silk Mill Pvt.Ltd." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0A304E]/90 via-[#0A304E]/30 to-transparent"></div>
               
               <!-- Hover Circular Arrow -->
@@ -330,7 +269,7 @@
 
               <div class="absolute bottom-0 left-0 w-full p-6 z-10">
                 <span class="text-[9px] font-mono font-bold uppercase tracking-widest text-white bg-[#0A304E]/50 backdrop-blur-md border border-white/20 px-2.5 py-1 rounded-full inline-block mb-3">TRANSMISSION LINES</span>
-                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">220kV Line – Garden Mill Pvt. Ltd.</h3>
+                <h3 class="font-['Montserrat'] text-xl font-bold text-white mb-1 leading-snug">220kV Line – Garden Silk Mill Pvt.Ltd.</h3>
               </div>
             </div>
 

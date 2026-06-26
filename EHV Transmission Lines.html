@@ -1379,33 +1379,56 @@
   <main class="pt-[80px] lg:pt-[104px] bg-[#070f16]">
     
         <!-- Section 1: Hero Banner -->
-    <section class="relative w-full h-[60vh] md:h-[70vh] flex items-center bg-[#0a2540] overflow-hidden">
+    <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-white">
+      <!-- Background Image with Overlay -->
       <div class="absolute inset-0 z-0">
-        <img id="hero-bg" src="projects/project-1.png" alt="EHV Transmission Tower" class="w-full h-full object-cover opacity-50" style="transform: scale(1.05);" />
-        <div class="absolute inset-0 bg-gradient-to-r from-[#07131f]/90 via-[#07131f]/70 to-transparent"></div>
+        <img id="hero-bg" src="projects/project-1.png" alt="Hero Background" class="w-full h-full object-cover object-center opacity-15 mix-blend-luminosity" style="transform: scale(1.05);" />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#F4F8FC]/95 via-[#E6F0F9]/80 to-[#FFFFFF]"></div>
       </div>
       
-      <div class="relative z-10 w-full px-5 md:px-[80px] lg:px-[100px]">
-        <div class="max-w-3xl">
-          <nav class="flex items-center gap-2 text-sm text-[#a2caf7] mb-6 font-body-md font-semibold tracking-wide">
-            <a href="index.html" class="hover:text-white transition-colors">Home</a>
-            <span class="text-white/40">/</span>
-            <span class="hover:text-white transition-colors cursor-pointer">Our Solutions</span>
-            <span class="text-white/40">/</span>
-            <span id="breadcrumb-current" class="text-white">EHV Transmission Lines</span>
-          </nav>
-          <h1 id="hero-heading" class="font-headline-xl text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-tight mb-6 tracking-tight">
+      <!-- Animated Energy Lines -->
+      <style>@keyframes heroStreak { from { transform: translateX(-100%); } to { transform: translateX(100%); } }</style>
+      <div class="absolute inset-0 z-0 pointer-events-none hidden md:block">
+        <div class="absolute top-[30%] left-0 w-[40%] h-px bg-gradient-to-r from-transparent via-[#E9924A]/60 to-transparent -translate-x-full animate-[heroStreak_7s_linear_infinite_1s]"></div>
+        <div class="absolute top-[60%] right-0 w-[60%] h-px bg-gradient-to-l from-transparent via-[#0A3D62]/30 to-transparent translate-x-full animate-[heroStreak_6s_linear_infinite_3s]"></div>
+      </div>
+
+      <div class="max-w-[1400px] mx-auto px-5 md:px-12 relative z-10 w-full text-center flex flex-col items-center justify-center">
+        
+        <div class="max-w-3xl flex flex-col items-center">
+          <!-- Breadcrumb/Pill -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0B3558]/10 bg-white/60 backdrop-blur-md mb-6 shadow-sm mx-auto">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#E9924A] animate-pulse"></span>
+            <span class="font-mono text-xs font-bold tracking-[0.15em] text-[#0B3558] uppercase">
+              <a href="index.html" class="hover:text-[#E9924A] transition-colors">Home</a> / 
+              <span class="hover:text-[#E9924A] transition-colors cursor-pointer">Solutions</span> / 
+              <span id="breadcrumb-current">EHV Transmission Lines</span>
+            </span>
+          </div>
+          
+          <h1 id="hero-heading" class="font-['Montserrat'] text-4xl md:text-5xl lg:text-[64px] font-extrabold text-[#0B3558] leading-[1.1] mb-6 tracking-tight text-center mx-auto">
             EHV Transmission Lines
           </h1>
-          <p id="hero-subheading" class="font-body-lg text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed mb-10 font-light">
+          
+          <p id="hero-subheading" class="text-[#52606d] text-lg md:text-xl leading-relaxed font-['Open_Sans'] max-w-2xl mx-auto font-medium mb-10 text-center">
             High-voltage transmission infrastructure for reliable power evacuation
           </p>
-          <a id="hero-cta" href="projects.html" class="inline-flex items-center gap-3 bg-[#f39449] hover:bg-[#d47831] text-white px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
-            <span id="hero-cta-text">Explore Project Gallery</span>
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </a>
+          
+          <div class="mt-4 flex gap-4 justify-center">
+            <a id="hero-cta" href="projects.html" class="inline-flex items-center justify-center gap-2 bg-[#E9924A] text-[#0B3558] font-bold text-sm uppercase tracking-wider px-7 py-3.5 rounded-full hover:bg-white transition-all shadow-sm hover:-translate-y-1 mx-auto">
+              <span id="hero-cta-text">Explore Project Gallery</span>
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </a>
+            <a href="#overview-grid" class="inline-flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#0B3558]/20 hover:border-[#E9924A] hover:bg-white transition-colors duration-300 group backdrop-blur-sm cursor-pointer shadow-sm mx-auto">
+              <span class="material-symbols-outlined text-[#0B3558]/70 group-hover:text-[#E9924A] text-3xl">arrow_downward</span>
+            </a>
+          </div>
         </div>
+        
       </div>
+      
+      <!-- Gradient Fade to next section -->
+      <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#f8fbfd] to-transparent z-10 pointer-events-none"></div>
     </section>
 
     <!-- Section 2: Overview -->

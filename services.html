@@ -156,50 +156,48 @@
     </div>
   </header>
   <main>
-    <section class="services-hero relative min-h-[700px] overflow-hidden pt-28 text-white">
-      <div class="absolute inset-0 opacity-20">
-        <img src="projects/project-1.png" alt="" class="h-full w-full object-cover mix-blend-luminosity" />
+    <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-white">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="projects/project-2.png" alt="Hero Background" class="w-full h-full object-cover object-center opacity-15 mix-blend-luminosity" />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#F4F8FC]/95 via-[#E6F0F9]/80 to-[#FFFFFF]"></div>
       </div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#07131f]/95 via-[#0a3d62]/84 to-[#0a3d62]/45"></div>
-      <div class="absolute -right-24 top-24 h-96 w-96 rounded-full border border-white/10"></div>
-      <div class="absolute -right-4 top-44 h-64 w-64 rounded-full border border-white/10"></div>
-      <div class="relative z-10 mx-auto grid min-h-[572px] max-w-[1400px] grid-cols-1 items-center gap-12 px-5 py-16 md:px-12 lg:grid-cols-[1.05fr_0.95fr]">
-        <div class="services-hero-copy max-w-3xl">
-          <span class="inline-flex items-center gap-3 font-mono text-xs font-bold uppercase tracking-[0.22em] text-[#f2a65a]">
-            <span class="h-px w-9 bg-[#f2a65a]"></span>
-            Our Solutions
-          </span>
-          <h1 class="mt-6 font-['Montserrat'] text-[42px] font-extrabold leading-[1.06] tracking-tight sm:text-[56px] lg:text-[68px]">
+      
+      <!-- Faint Technical Graphics / Blueprint Lines -->
+      <div class="absolute inset-0 opacity-[0.3] bg-[linear-gradient(rgba(11,53,88,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(11,53,88,0.08)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none"></div>
+      
+      <!-- Animated Energy Lines -->
+      <style>@keyframes heroStreak { from { transform: translateX(-100%); } to { transform: translateX(100%); } }</style>
+      <div class="absolute inset-0 z-0 pointer-events-none hidden md:block">
+        <div class="absolute top-[30%] left-0 w-[40%] h-px bg-gradient-to-r from-transparent via-[#E9924A]/60 to-transparent -translate-x-full animate-[heroStreak_7s_linear_infinite_1s]"></div>
+        <div class="absolute top-[60%] right-0 w-[60%] h-px bg-gradient-to-l from-transparent via-[#0A3D62]/30 to-transparent translate-x-full animate-[heroStreak_6s_linear_infinite_3s]"></div>
+      </div>
+
+      <div class="max-w-[1400px] mx-auto px-5 md:px-12 relative z-10 w-full text-center flex flex-col items-center justify-center">
+        
+        <div class="max-w-3xl flex flex-col items-center">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0B3558]/10 bg-white/60 backdrop-blur-md mb-6 shadow-sm mx-auto">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#E9924A] animate-pulse"></span>
+            <span class="font-mono text-xs font-bold tracking-[0.15em] text-[#0B3558] uppercase">Our Solutions</span>
+          </div>
+          
+          <h1 class="font-['Montserrat'] text-4xl md:text-5xl lg:text-[64px] font-extrabold text-[#0B3558] leading-[1.1] mb-6 tracking-tight text-center mx-auto">
             End-to-End Power<br />Infrastructure Expertise
           </h1>
-          <p class="mt-7 max-w-2xl text-lg leading-8 text-white/76 md:text-xl">
+          
+          <p class="text-[#52606d] text-lg md:text-xl leading-relaxed font-['Open_Sans'] max-w-2xl mx-auto font-medium mb-10 text-center">
             Integrated engineering, procurement, construction and commissioning solutions for utility, industrial and renewable power projects.
           </p>
-          <div class="mt-9 flex flex-wrap gap-4">
-            <a href="#services-overview" class="rounded-full bg-[#f2a65a] px-7 py-3.5 font-bold text-[#0a3d62] transition-all duration-300 hover:-translate-y-1 hover:bg-white">Explore Services</a>
-            <a href="contact.html" class="rounded-full border border-white/30 bg-white/5 px-7 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0a3d62]">Discuss a Project</a>
-          </div>
+
+          <a href="#services-overview" class="inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-[#0B3558]/20 hover:border-[#E9924A] hover:bg-white transition-colors duration-300 group backdrop-blur-sm animate-bounce cursor-pointer shadow-sm mx-auto">
+            <span class="material-symbols-outlined text-[#0B3558]/70 group-hover:text-[#E9924A] text-3xl">arrow_downward</span>
+          </a>
         </div>
-        <div class="services-hero-stats grid grid-cols-2 gap-4 lg:justify-self-end lg:max-w-[500px]">
-          <div class="rounded-2xl border border-white/14 bg-white/10 p-6 backdrop-blur-md">
-            <strong class="block font-['Montserrat'] text-4xl font-extrabold text-[#a2caf7]">7</strong>
-            <span class="mt-2 block text-sm font-semibold text-white/72">Integrated service verticals</span>
-          </div>
-          <div class="rounded-2xl border border-white/14 bg-white/10 p-6 backdrop-blur-md">
-            <strong class="block font-['Montserrat'] text-4xl font-extrabold text-[#f2a65a]">220kV+</strong>
-            <span class="mt-2 block text-sm font-semibold text-white/72">Transmission capability</span>
-          </div>
-          <div class="col-span-2 rounded-2xl border border-white/14 bg-[#07131f]/40 p-6 backdrop-blur-md">
-            <div class="flex items-center gap-4">
-              <span class="material-symbols-outlined text-4xl text-[#a2caf7]">hub</span>
-              <div>
-                <strong class="font-['Montserrat'] text-xl font-bold">Single-point EPC responsibility</strong>
-                <p class="mt-1 text-sm text-white/65">Design, approvals, execution, testing and commissioning.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
+      
+      <!-- Gradient Fade to next section -->
+      <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#f4f8fc] to-transparent z-10 pointer-events-none"></div>
     </section>
 
     <section id="services-overview" class="services-grid-section relative overflow-hidden py-20 text-[#0a3d62] md:py-28">

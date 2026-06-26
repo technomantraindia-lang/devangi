@@ -506,61 +506,48 @@
   </header>
 
   <main class="bg-[#f4f8fc] text-[#0a3d62]">
-    <section class="about-inner-hero relative overflow-hidden pt-28 lg:min-h-[660px]">
-      <div class="pointer-events-none absolute left-[8%] top-32 font-mono text-xs uppercase tracking-[0.28em] text-[#0a3d62]/18">
-        X 21.1702 / Y 72.8311
+    <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-white">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="projects/project-2.png" alt="Hero Background" class="w-full h-full object-cover object-center opacity-15 mix-blend-luminosity" />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#F4F8FC]/95 via-[#E6F0F9]/80 to-[#FFFFFF]"></div>
       </div>
-      <div class="pointer-events-none absolute right-[8%] top-44 hidden h-px w-52 bg-gradient-to-r from-transparent via-[#0a3d62]/24 to-transparent md:block"></div>
-      <div class="about-hero-year pointer-events-none absolute bottom-10 left-[6%] hidden font-['Montserrat'] text-[170px] font-extrabold leading-none tracking-tight opacity-80 lg:block">
-        2017
+      
+      <!-- Faint Technical Graphics / Blueprint Lines -->
+      <div class="absolute inset-0 opacity-[0.3] bg-[linear-gradient(rgba(11,53,88,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(11,53,88,0.08)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none"></div>
+      
+      <!-- Animated Energy Lines -->
+      <style>@keyframes heroStreak { from { transform: translateX(-100%); } to { transform: translateX(100%); } }</style>
+      <div class="absolute inset-0 z-0 pointer-events-none hidden md:block">
+        <div class="absolute top-[30%] left-0 w-[40%] h-px bg-gradient-to-r from-transparent via-[#E9924A]/60 to-transparent -translate-x-full animate-[heroStreak_7s_linear_infinite_1s]"></div>
+        <div class="absolute top-[60%] right-0 w-[60%] h-px bg-gradient-to-l from-transparent via-[#0A3D62]/30 to-transparent translate-x-full animate-[heroStreak_6s_linear_infinite_3s]"></div>
       </div>
 
-      <div class="relative z-10 mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-5 pb-20 md:px-12 lg:min-h-[560px] lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
-        <div class="relative max-w-2xl py-8 lg:py-0">
-          <div class="about-hero-year pointer-events-none absolute -left-3 top-2 font-['Montserrat'] text-[92px] font-extrabold leading-none tracking-tight opacity-55 lg:hidden">
-            2017
+      <div class="max-w-[1400px] mx-auto px-5 md:px-12 relative z-10 w-full text-center flex flex-col items-center justify-center">
+        
+        <div class="max-w-3xl flex flex-col items-center">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0B3558]/10 bg-white/60 backdrop-blur-md mb-6 shadow-sm mx-auto">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#E9924A] animate-pulse"></span>
+            <span class="font-mono text-xs font-bold tracking-[0.15em] text-[#0B3558] uppercase">Company Profile</span>
           </div>
-          <div class="relative z-10">
-            <p class="mb-5 font-mono text-xs font-medium uppercase tracking-[0.22em] text-[#386188]">
-              About Devangi Power
-            </p>
-            <h1 class="font-['Montserrat'] text-[42px] font-extrabold leading-[1.05] tracking-tight text-[#0a3d62] sm:text-[54px] lg:text-[64px]">
-              Built on Execution.<br />
-              Driven by Trust.
-            </h1>
-            <p class="mt-7 max-w-xl text-lg leading-8 text-[#52606d] md:text-xl">
-              Devangi Power Pvt. Ltd. is a Surat-based EPC company specializing in EHV cable transmission line and
-              substation EPC projects through disciplined engineering, skilled execution and a safety-first approach.
-            </p>
-            <div class="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3 text-sm font-semibold uppercase tracking-[0.08em] text-[#386188]">
-              <span>Established 2017</span>
-              <span class="hidden h-4 w-px bg-[#0a3d62]/22 sm:block"></span>
-              <span>Surat, Gujarat</span>
-              <span class="hidden h-4 w-px bg-[#0a3d62]/22 sm:block"></span>
-              <span>EPC Power Infrastructure</span>
-            </div>
-          </div>
+          
+          <h1 class="font-['Montserrat'] text-4xl md:text-5xl lg:text-[64px] font-extrabold text-[#0B3558] leading-[1.1] mb-6 tracking-tight text-center mx-auto">
+            Discover DPPL
+          </h1>
+          
+          <p class="text-[#52606d] text-lg md:text-xl leading-relaxed font-['Open_Sans'] max-w-2xl mx-auto font-medium mb-10 text-center">
+            With decades of expertise, DPPL executes high-voltage transmission, smart substations and turnkey power projects with precision and reliability.
+          </p>
+
+          <a href="#next-section" class="inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-[#0B3558]/20 hover:border-[#E9924A] hover:bg-white transition-colors duration-300 group backdrop-blur-sm animate-bounce cursor-pointer shadow-sm mx-auto">
+            <span class="material-symbols-outlined text-[#0B3558]/70 group-hover:text-[#E9924A] text-3xl">arrow_downward</span>
+          </a>
         </div>
-
-        <div class="relative pb-10 lg:pb-0">
-          <div class="absolute -right-3 top-4 z-20 hidden rounded-full border border-[#0a3d62]/12 bg-white/80 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[#386188] shadow-[0_16px_45px_rgba(10,61,98,0.10)] backdrop-blur-md md:block">
-            Engineering - Procurement - Construction
-          </div>
-          <div class="relative ml-auto max-w-[620px]">
-            <img src="projects/project-1.png" alt="Power infrastructure execution site"
-              class="about-hero-image h-[360px] w-full rounded-2xl border border-white object-cover object-center shadow-[0_34px_90px_rgba(10,61,98,0.22)] sm:h-[460px] lg:h-[540px]" />
-            <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#0a3d62]/14 via-transparent to-[#07131f]/26"></div>
-            <div class="absolute -bottom-8 left-5 right-5 rounded-2xl border border-white bg-white/95 p-5 shadow-[0_24px_70px_rgba(10,61,98,0.22)] backdrop-blur-xl sm:left-8 sm:right-auto sm:w-[330px]">
-              <p class="font-['Montserrat'] text-4xl font-extrabold leading-none text-[#0a3d62]">220kV+</p>
-              <p class="mt-2 font-semibold text-[#386188]">Transmission Capability</p>
-              <p class="mt-3 text-sm font-semibold leading-6 text-[#334155]">
-                Integrated EPC execution for utility and industrial power infrastructure.
-              </p>
-            </div>
-          </div>
-        </div>
+        
       </div>
-
+      
+      <!-- Gradient Fade to next section -->
+      <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#f4f8fc] to-transparent z-10 pointer-events-none"></div>
     </section>
 
     <section class="journey-section relative overflow-hidden py-20 md:py-28">
